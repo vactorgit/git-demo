@@ -201,6 +201,25 @@
       font-size: 0.9rem;
       font-weight: 600;
     }
+
+    #guide-output a {
+      color: #6c5ce7;
+      text-decoration: none;
+      font-weight: 700;
+      border-bottom: 1px solid #c5bef7;
+      transition: color 0.12s, border-color 0.12s;
+    }
+
+    #guide-output a:hover {
+      color: #5a4bd1;
+      border-bottom-color: #5a4bd1;
+    }
+
+    .affiliate-note {
+      margin-top: 14px;
+      font-size: 0.78rem;
+      color: #999;
+    }
   </style>
 </head>
 <body>
@@ -253,6 +272,35 @@
   </div>
 
   <script>
+    // Replace with your Amazon Associates tag once approved:
+    // https://affiliate-program.amazon.com/
+    const AMAZON_TAG = 'comicguide-20';
+
+    function escapeHtml(str) {
+      return str
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    function renderGuide(text) {
+      // Escape all HTML first, then selectively inject safe markup.
+      let safe = escapeHtml(text);
+
+      // Convert **Title** → Amazon search link + bold
+      safe = safe.replace(/\*\*([^*\n]+)\*\*/g, (_, title) => {
+        const query = encodeURIComponent(title + ' comic book');
+        const url = `https://www.amazon.com/s?k=${query}&tag=${AMAZON_TAG}`;
+        return `<a href="${url}" target="_blank" rel="noopener noreferrer">${title}</a>`;
+      });
+
+      // Preserve line breaks
+      safe = safe.replace(/\n/g, '<br>');
+
+      return safe + '<p class="affiliate-note">As an Amazon Associate I earn from qualifying purchases.</p>';
+    }
+
     let currentCharacter = '';
 
     const searchForm     = document.getElementById('search-form');
@@ -302,7 +350,7 @@
 
         currentCharacter = character;
         resultsHeading.textContent = character + ' — Reading Guide';
-        guideOutput.textContent = data.guide;
+        guideOutput.innerHTML = renderGuide(data.guide);
         resultsCard.style.display = 'block';
         emailCard.style.display = 'block';
       } catch {
