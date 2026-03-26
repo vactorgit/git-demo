@@ -1,0 +1,5 @@
+.env
+emails.csv
+__pycache__/
+*.pyc
+*.pyo

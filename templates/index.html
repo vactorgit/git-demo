@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Comic Reading Guide</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f5f5f0;
+      color: #1a1a1a;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 48px 16px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 640px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #111;
+    }
+
+    header p {
+      margin-top: 8px;
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .search-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 28px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08), 0 4px 16px rgba(0,0,0,0.04);
+    }
+
+    .search-row {
+      display: flex;
+      gap: 10px;
+    }
+
+    #character-input {
+      flex: 1;
+      border: 1.5px solid #ddd;
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 1rem;
+      color: #111;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+
+    #character-input:focus {
+      border-color: #6c5ce7;
+    }
+
+    #search-btn {
+      background: #6c5ce7;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 20px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background 0.15s, opacity 0.15s;
+    }
+
+    #search-btn:hover { background: #5a4bd1; }
+    #search-btn:disabled { opacity: 0.55; cursor: not-allowed; }
+
+    .error-msg {
+      margin-top: 14px;
+      color: #c0392b;
+      font-size: 0.9rem;
+    }
+
+    /* Loading */
+    #loading {
+      display: none;
+      text-align: center;
+      padding: 32px 0 8px;
+      color: #777;
+      font-size: 0.95rem;
+    }
+
+    .dots::after {
+      content: '';
+      animation: dots 1.2s steps(3, end) infinite;
+    }
+
+    @keyframes dots {
+      0%   { content: ''; }
+      33%  { content: '.'; }
+      66%  { content: '..'; }
+      100% { content: '...'; }
+    }
+
+    /* Results */
+    #results-card {
+      display: none;
+      background: #fff;
+      border-radius: 12px;
+      padding: 28px;
+      margin-top: 20px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08), 0 4px 16px rgba(0,0,0,0.04);
+    }
+
+    #results-card h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+      color: #333;
+    }
+
+    #guide-output {
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #222;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    /* Email capture */
+    #email-card {
+      display: none;
+      background: #faf8ff;
+      border: 1.5px solid #e0d9ff;
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin-top: 20px;
+    }
+
+    #email-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 14px;
+    }
+
+    .email-row {
+      display: flex;
+      gap: 10px;
+    }
+
+    #email-input {
+      flex: 1;
+      border: 1.5px solid #ddd;
+      border-radius: 8px;
+      padding: 9px 13px;
+      font-size: 0.95rem;
+      color: #111;
+      outline: none;
+      background: #fff;
+      transition: border-color 0.15s;
+    }
+
+    #email-input:focus { border-color: #6c5ce7; }
+
+    #email-btn {
+      background: #6c5ce7;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 9px 18px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background 0.15s, opacity 0.15s;
+    }
+
+    #email-btn:hover { background: #5a4bd1; }
+    #email-btn:disabled { opacity: 0.55; cursor: not-allowed; }
+
+    .email-error {
+      margin-top: 10px;
+      color: #c0392b;
+      font-size: 0.85rem;
+    }
+
+    #email-success {
+      display: none;
+      margin-top: 12px;
+      color: #27ae60;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Comic Reading Guide</h1>
+      <p>Type a character's name and get a beginner-friendly reading order.</p>
+    </header>
+
+    <div class="search-card">
+      <form id="search-form">
+        <div class="search-row">
+          <input
+            id="character-input"
+            type="text"
+            placeholder="e.g. Spider-Man, Daredevil, Storm..."
+            autocomplete="off"
+            maxlength="100"
+          />
+          <button id="search-btn" type="submit">Get Reading Guide</button>
+        </div>
+        <div id="search-error" class="error-msg" role="alert"></div>
+      </form>
+    </div>
+
+    <div id="loading" aria-live="polite">
+      Looking up <span id="loading-name"></span><span class="dots"></span>
+    </div>
+
+    <div id="results-card" aria-live="polite">
+      <h2 id="results-heading"></h2>
+      <div id="guide-output"></div>
+    </div>
+
+    <div id="email-card">
+      <h3>Want a full PDF reading guide? Drop your email.</h3>
+      <div class="email-row">
+        <input
+          id="email-input"
+          type="email"
+          placeholder="you@example.com"
+          autocomplete="email"
+          maxlength="254"
+        />
+        <button id="email-btn" type="button">Send me the guide</button>
+      </div>
+      <div id="email-error" class="email-error" role="alert"></div>
+      <div id="email-success">You're on the list!</div>
+    </div>
+  </div>
+
+  <script>
+    let currentCharacter = '';
+
+    const searchForm     = document.getElementById('search-form');
+    const characterInput = document.getElementById('character-input');
+    const searchBtn      = document.getElementById('search-btn');
+    const searchError    = document.getElementById('search-error');
+    const loadingEl      = document.getElementById('loading');
+    const loadingName    = document.getElementById('loading-name');
+    const resultsCard    = document.getElementById('results-card');
+    const resultsHeading = document.getElementById('results-heading');
+    const guideOutput    = document.getElementById('guide-output');
+    const emailCard      = document.getElementById('email-card');
+    const emailInput     = document.getElementById('email-input');
+    const emailBtn       = document.getElementById('email-btn');
+    const emailError     = document.getElementById('email-error');
+    const emailSuccess   = document.getElementById('email-success');
+
+    searchForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const character = characterInput.value.trim();
+      if (!character) return;
+
+      searchError.textContent = '';
+      resultsCard.style.display = 'none';
+      emailCard.style.display = 'none';
+      emailSuccess.style.display = 'none';
+      emailError.textContent = '';
+      emailInput.value = '';
+      emailBtn.disabled = false;
+
+      searchBtn.disabled = true;
+      loadingName.textContent = character;
+      loadingEl.style.display = 'block';
+
+      try {
+        const res = await fetch('/api/reading-guide', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ character }),
+        });
+        const data = await res.json();
+
+        if (!res.ok) {
+          searchError.textContent = data.error || 'Something went wrong. Please try again.';
+          return;
+        }
+
+        currentCharacter = character;
+        resultsHeading.textContent = character + ' — Reading Guide';
+        guideOutput.textContent = data.guide;
+        resultsCard.style.display = 'block';
+        emailCard.style.display = 'block';
+      } catch {
+        searchError.textContent = 'Network error. Please check your connection.';
+      } finally {
+        loadingEl.style.display = 'none';
+        searchBtn.disabled = false;
+      }
+    });
+
+    emailBtn.addEventListener('click', async () => {
+      const email = emailInput.value.trim();
+      emailError.textContent = '';
+
+      if (!email) {
+        emailError.textContent = 'Please enter your email address.';
+        return;
+      }
+
+      emailBtn.disabled = true;
+
+      try {
+        const res = await fetch('/api/save-email', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, character: currentCharacter }),
+        });
+        const data = await res.json();
+
+        if (!res.ok) {
+          emailError.textContent = data.error || 'Could not save your email. Please try again.';
+          emailBtn.disabled = false;
+          return;
+        }
+
+        emailInput.disabled = true;
+        emailSuccess.style.display = 'block';
+      } catch {
+        emailError.textContent = 'Network error. Please try again.';
+        emailBtn.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>
