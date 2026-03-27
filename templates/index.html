@@ -220,6 +220,76 @@
       font-size: 0.78rem;
       color: #999;
     }
+
+    .section-divider {
+      width: 100%;
+      border: none;
+      border-top: 1.5px solid #e8e8e0;
+      margin: 48px 0 40px;
+    }
+
+    #jobs-results-card {
+      display: none;
+      background: #fff;
+      border-radius: 12px;
+      padding: 28px;
+      margin-top: 20px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08), 0 4px 16px rgba(0,0,0,0.04);
+    }
+
+    #jobs-results-card h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+      color: #333;
+    }
+
+    #jobs-output {
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #222;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    #jobs-loading {
+      display: none;
+      text-align: center;
+      padding: 32px 0 8px;
+      color: #777;
+      font-size: 0.95rem;
+    }
+
+    #jobs-search-btn {
+      background: #00b894;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 20px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background 0.15s, opacity 0.15s;
+    }
+
+    #jobs-search-btn:hover { background: #00a381; }
+    #jobs-search-btn:disabled { opacity: 0.55; cursor: not-allowed; }
+
+    #skills-input {
+      flex: 1;
+      border: 1.5px solid #ddd;
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 1rem;
+      color: #111;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+
+    #skills-input:focus {
+      border-color: #00b894;
+    }
   </style>
 </head>
 <body>
@@ -268,6 +338,38 @@
       </div>
       <div id="email-error" class="email-error" role="alert"></div>
       <div id="email-success">You're on the list!</div>
+    </div>
+
+    <hr class="section-divider" />
+
+    <header>
+      <h1>Comic Industry Jobs</h1>
+      <p>Enter your skills or interests and discover roles in the comic book world.</p>
+    </header>
+
+    <div class="search-card">
+      <form id="jobs-form">
+        <div class="search-row">
+          <input
+            id="skills-input"
+            type="text"
+            placeholder="e.g. drawing, Photoshop, writing, coding..."
+            autocomplete="off"
+            maxlength="200"
+          />
+          <button id="jobs-search-btn" type="submit">Find Jobs</button>
+        </div>
+        <div id="jobs-search-error" class="error-msg" role="alert"></div>
+      </form>
+    </div>
+
+    <div id="jobs-loading" aria-live="polite">
+      Finding opportunities<span class="dots"></span>
+    </div>
+
+    <div id="jobs-results-card" aria-live="polite">
+      <h2>Job Opportunities</h2>
+      <div id="jobs-output"></div>
     </div>
   </div>
 
@@ -391,6 +493,56 @@
       } catch {
         emailError.textContent = 'Network error. Please try again.';
         emailBtn.disabled = false;
+      }
+    });
+
+    function renderJobs(text) {
+      let safe = escapeHtml(text);
+      // Bold job titles: **Title**
+      safe = safe.replace(/\*\*([^*\n]+)\*\*/g, '<strong>$1</strong>');
+      safe = safe.replace(/\n/g, '<br>');
+      return safe;
+    }
+
+    const jobsForm        = document.getElementById('jobs-form');
+    const skillsInput     = document.getElementById('skills-input');
+    const jobsSearchBtn   = document.getElementById('jobs-search-btn');
+    const jobsSearchError = document.getElementById('jobs-search-error');
+    const jobsLoading     = document.getElementById('jobs-loading');
+    const jobsResultsCard = document.getElementById('jobs-results-card');
+    const jobsOutput      = document.getElementById('jobs-output');
+
+    jobsForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const skills = skillsInput.value.trim();
+      if (!skills) return;
+
+      jobsSearchError.textContent = '';
+      jobsResultsCard.style.display = 'none';
+
+      jobsSearchBtn.disabled = true;
+      jobsLoading.style.display = 'block';
+
+      try {
+        const res = await fetch('/api/job-opportunities', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ skills }),
+        });
+        const data = await res.json();
+
+        if (!res.ok) {
+          jobsSearchError.textContent = data.error || 'Something went wrong. Please try again.';
+          return;
+        }
+
+        jobsOutput.innerHTML = renderJobs(data.jobs);
+        jobsResultsCard.style.display = 'block';
+      } catch {
+        jobsSearchError.textContent = 'Network error. Please check your connection.';
+      } finally {
+        jobsLoading.style.display = 'none';
+        jobsSearchBtn.disabled = false;
       }
     });
   </script>

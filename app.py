@@ -21,6 +21,31 @@ SYSTEM_PROMPT = (
     "who has never read a single comic before."
 )
 
+JOBS_SYSTEM_PROMPT = (
+    "You are a career advisor specializing in the comic book and graphic novel industry. "
+    "You have deep knowledge of roles at major publishers (Marvel, DC, Image, Dark Horse, etc.), "
+    "indie studios, webcomic platforms, and adjacent fields like animation, video games, and licensing. "
+    "You give practical, honest career guidance with specific role titles, required skills, and how to break in."
+)
+
+JOBS_PROMPT_TEMPLATE = """\
+Suggest 5 comic industry job opportunities for someone with these skills/interests: {skills}
+
+For each job use this exact format:
+
+1. **[Job Title]** — [Company type or example employer]
+   Skills needed: [comma-separated list of 3-5 key skills]
+   How to break in: [One concrete, actionable sentence on how to get this role.]
+
+Rules:
+- Include a mix of creative, technical, and business roles where relevant to the skills given.
+- Be specific — name real role titles used in the industry (e.g. "Colorist", "Licensing Coordinator", "Comic Editor").
+- If the input is not skills or interests at all (e.g. gibberish), respond with exactly: INVALID_INPUT
+- Do not add any preamble, closing remarks, or commentary outside the numbered list.\
+"""
+
+SKILLS_RE = re.compile(r"[<>{}`\n]")
+
 USER_PROMPT_TEMPLATE = """\
 Create a beginner-friendly reading guide for the comic character: {character}
 
@@ -39,6 +64,15 @@ Rules:
 
 CHAR_RE = re.compile(r"[<>{}`\n]")
 EMAIL_RE = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
+
+
+def sanitize_skills(skills: str) -> str | None:
+    skills = skills.strip()
+    if not skills or len(skills) > 200:
+        return None
+    if SKILLS_RE.search(skills):
+        return None
+    return skills
 
 
 def sanitize_character(name: str) -> str | None:
@@ -123,6 +157,38 @@ def save_email():
         return jsonify({"error": f"Could not save email: {e}"}), 500
 
     return jsonify({"success": True})
+
+
+@app.route("/api/job-opportunities", methods=["POST"])
+def job_opportunities():
+    data = request.get_json(silent=True)
+    if not data:
+        return jsonify({"error": "Invalid request."}), 400
+
+    skills = sanitize_skills(data.get("skills", ""))
+    if not skills:
+        return jsonify({"error": "Please enter your skills or interests (up to 200 characters)."}), 400
+
+    try:
+        client = anthropic.Anthropic()
+        response = client.messages.create(
+            model="claude-opus-4-6",
+            max_tokens=1024,
+            system=JOBS_SYSTEM_PROMPT,
+            messages=[
+                {"role": "user", "content": JOBS_PROMPT_TEMPLATE.format(skills=skills)}
+            ],
+        )
+        text = response.content[0].text.strip()
+    except anthropic.AuthenticationError:
+        return jsonify({"error": "API key invalid. Check your ANTHROPIC_API_KEY."}), 502
+    except anthropic.APIError as e:
+        return jsonify({"error": f"API error: {e.message}"}), 502
+
+    if text == "INVALID_INPUT":
+        return jsonify({"error": "Please describe your skills or interests (e.g. drawing, writing, Photoshop)."}), 400
+
+    return jsonify({"jobs": text})
 
 
 if __name__ == "__main__":
