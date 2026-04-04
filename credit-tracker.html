@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pen Fed CC Tracker</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      background: #f5f5f5;
+      padding: 20px;
+    }
+
+    h1 {
+      background: #4a148c;
+      color: white;
+      padding: 12px 20px;
+      font-size: 18px;
+      border-radius: 6px 6px 0 0;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      overflow: hidden;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    thead tr {
+      background: #6a1b9a;
+      color: white;
+    }
+
+    thead th {
+      padding: 10px 12px;
+      text-align: left;
+      font-weight: 600;
+      font-size: 13px;
+    }
+
+    thead th:nth-child(3),
+    thead th:nth-child(4) {
+      text-align: right;
+    }
+
+    /* Starting limit row */
+    .limit-row td {
+      background: #ede7f6;
+      font-weight: bold;
+      padding: 8px 12px;
+      text-align: center;
+    }
+
+    .limit-row td:last-child {
+      background: #c8e6c9;
+      color: #1b5e20;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: right;
+    }
+
+    /* Transaction rows */
+    tbody tr.tx-row:nth-child(odd) td  { background: #e8eaf6; }
+    tbody tr.tx-row:nth-child(even) td { background: #e8f5e9; }
+
+    tbody td {
+      padding: 7px 12px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    tbody td:nth-child(3),
+    tbody td:nth-child(4) {
+      text-align: right;
+    }
+
+    /* Input row */
+    .input-row td {
+      background: #fff8e1;
+      padding: 8px 6px;
+      border-top: 2px solid #6a1b9a;
+    }
+
+    .input-row input {
+      width: 100%;
+      padding: 6px 8px;
+      border: 1px solid #bbb;
+      border-radius: 4px;
+      font-size: 13px;
+    }
+
+    .input-row input:focus {
+      outline: none;
+      border-color: #6a1b9a;
+    }
+
+    .btn-add {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background: #6a1b9a;
+      color: white;
+      border: none;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .btn-add:hover { background: #4a148c; }
+
+    .controls {
+      display: flex;
+      gap: 10px;
+      padding: 12px;
+      background: #f3e5f5;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .controls label {
+      font-weight: bold;
+      color: #4a148c;
+      white-space: nowrap;
+    }
+
+    .controls input {
+      padding: 6px 10px;
+      border: 1px solid #bbb;
+      border-radius: 4px;
+      font-size: 14px;
+      width: 130px;
+    }
+
+    .btn-delete {
+      background: none;
+      border: none;
+      color: #c62828;
+      cursor: pointer;
+      font-size: 16px;
+      padding: 0 4px;
+      line-height: 1;
+    }
+
+    .btn-delete:hover { color: #b71c1c; }
+
+    .summary {
+      padding: 10px 12px;
+      background: #ede7f6;
+      font-size: 13px;
+      color: #4a148c;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .summary span { font-weight: bold; }
+
+    .low-balance { color: #c62828 !important; }
+
+    @media (max-width: 500px) {
+      thead th:nth-child(1),
+      tbody td:nth-child(1) { display: none; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>Pen Fed CC &nbsp;&#9733; Balance Tracker</h1>
+
+  <!-- Credit limit control -->
+  <div class="controls">
+    <label for="creditLimit">Credit Limit ($):</label>
+    <input type="number" id="creditLimit" value="1000" min="0" step="0.01" onchange="renderTable()">
+    <span style="color:#555; font-size:13px;">Change the limit above, then add transactions below.</span>
+  </div>
+
+  <table id="tracker">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Description</th>
+        <th>Charge Amount</th>
+        <th>Remaining Balance</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+  </table>
+
+  <button class="btn-add" onclick="addRow()">+ Add Transaction</button>
+
+  <div class="summary" id="summary"></div>
+</div>
+
+<script>
+  // --- Data ---
+  let transactions = JSON.parse(localStorage.getItem('penFedTx') || '[]');
+
+  // Seed with the example data if empty
+  if (transactions.length === 0) {
+    transactions = [
+      { date: '04/03/2026', desc: 'Pizza Hut',           amount: 12.77 },
+      { date: '04/04/2026', desc: "Fry's #615 Gilbert",  amount: 23.36 },
+      { date: '04/03/2026', desc: '4 Silos Brewery',     amount: 24.63 },
+      { date: '04/03/2026', desc: 'Amazon.com',          amount: 13.42 },
+      { date: '04/03/2026', desc: 'Amazon.com',          amount: 19.99 },
+      { date: '04/02/2026', desc: "McDonald's",          amount: 16.12 },
+      { date: '04/02/2026', desc: 'Harkins SanTan',      amount: 16.75 },
+      { date: '04/02/2026', desc: 'Amazon Marketplace',  amount: 15.60 },
+    ];
+    save();
+  }
+
+  function save() {
+    localStorage.setItem('penFedTx', JSON.stringify(transactions));
+  }
+
+  function fmt(n) {
+    return '$' + n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  }
+
+  function renderTable() {
+    const limit = parseFloat(document.getElementById('creditLimit').value) || 0;
+    const tbody = document.getElementById('tableBody');
+    tbody.innerHTML = '';
+
+    // Starting limit row
+    const lr = document.createElement('tr');
+    lr.className = 'limit-row';
+    lr.innerHTML = `<td colspan="3" style="text-align:center">Starting Limit</td>
+                    <td>${fmt(limit)}</td><td></td>`;
+    tbody.appendChild(lr);
+
+    let remaining = limit;
+    let totalCharged = 0;
+
+    transactions.forEach((tx, i) => {
+      remaining -= tx.amount;
+      totalCharged += tx.amount;
+
+      const tr = document.createElement('tr');
+      tr.className = 'tx-row';
+      const balColor = remaining < 0 ? ' style="color:#c62828;font-weight:bold"' : '';
+      tr.innerHTML = `
+        <td>${tx.date}</td>
+        <td>${escHtml(tx.desc)}</td>
+        <td>${fmt(tx.amount)}</td>
+        <td${balColor}>${fmt(remaining)}</td>
+        <td><button class="btn-delete" onclick="deleteRow(${i})" title="Delete">&#x2715;</button></td>
+      `;
+      tbody.appendChild(tr);
+    });
+
+    // Input row
+    const inputRow = document.createElement('tr');
+    inputRow.className = 'input-row';
+    inputRow.innerHTML = `
+      <td><input type="date" id="newDate" value="${todayStr()}"></td>
+      <td><input type="text" id="newDesc" placeholder="Description" onkeydown="enterAdd(event)"></td>
+      <td><input type="number" id="newAmount" placeholder="0.00" min="0" step="0.01" onkeydown="enterAdd(event)"></td>
+      <td colspan="2" style="color:#777; font-size:12px; padding-left:8px;">Press Enter or click + Add</td>
+    `;
+    tbody.appendChild(inputRow);
+
+    // Summary
+    const pct = limit > 0 ? ((totalCharged / limit) * 100).toFixed(1) : '0.0';
+    const sumEl = document.getElementById('summary');
+    const remColor = remaining < 0 ? 'class="low-balance"' : '';
+    sumEl.innerHTML = `
+      <div>Total Charged: <span>${fmt(totalCharged)}</span></div>
+      <div>Transactions: <span>${transactions.length}</span></div>
+      <div>Utilization: <span>${pct}%</span></div>
+      <div>Remaining: <span ${remColor}>${fmt(remaining)}</span></div>
+    `;
+  }
+
+  function addRow() {
+    const dateEl   = document.getElementById('newDate');
+    const descEl   = document.getElementById('newDesc');
+    const amountEl = document.getElementById('newAmount');
+
+    const date   = dateEl.value;
+    const desc   = descEl.value.trim();
+    const amount = parseFloat(amountEl.value);
+
+    if (!date || !desc || isNaN(amount) || amount <= 0) {
+      alert('Please fill in date, description, and a valid charge amount.');
+      return;
+    }
+
+    // Format date as MM/DD/YYYY
+    const [y, m, d] = date.split('-');
+    const fmtDate = `${m}/${d}/${y}`;
+
+    transactions.push({ date: fmtDate, desc, amount });
+    save();
+    renderTable();
+
+    // Refocus description for quick entry
+    document.getElementById('newDesc').focus();
+  }
+
+  function deleteRow(i) {
+    if (!confirm(`Delete "${transactions[i].desc}" (${fmt(transactions[i].amount)})?`)) return;
+    transactions.splice(i, 1);
+    save();
+    renderTable();
+  }
+
+  function enterAdd(e) {
+    if (e.key === 'Enter') addRow();
+  }
+
+  function escHtml(s) {
+    return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  function todayStr() {
+    const d = new Date();
+    return d.toISOString().slice(0, 10);
+  }
+
+  renderTable();
+</script>
+</body>
+</html>
