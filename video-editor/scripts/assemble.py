@@ -18,7 +18,7 @@ edit.json (all times in seconds):
 Overlay/SFX/music times are either "at" (finished-video time) or "src_at" (time in source 0,
 mapped through the cut; use this when picking moments off the transcript).
 """
-import argparse, concurrent.futures as cf, json, os, subprocess, sys, tempfile
+import argparse, concurrent.futures as cf, json, os, re, subprocess, sys, tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -46,8 +46,14 @@ def q(t):
     return round(t * FPS) / FPS
 
 
+def norm_word(w):
+    return re.sub(r"[^a-z0-9]", "", w.lower())
+
+
 class Timeline:
-    def __init__(self, segments):
+    def __init__(self, segments, words=None):
+        self.words = [w for w in (words or []) if any(a <= w["start"] < b for a, b in
+                                                      ((s["in"], s["out"]) for s in segments if s.get("src", 0) == 0))]
         self.segs, pos = [], 0.0
         for s in segments:
             self.segs.append((s.get("src", 0), s["in"], s["out"], pos))
@@ -62,10 +68,49 @@ class Timeline:
         later = [(pos, a) for sid, a, b, pos in self.segs if sid == src and a >= src_t]
         return min(later)[0] if later else None
 
+    def find_cue(self, phrase, occurrence=1):
+        """Source time where the kept transcript says `phrase` (nth occurrence)."""
+        target = [norm_word(x) for x in phrase.split() if norm_word(x)]
+        keys = [norm_word(w["w"]) for w in self.words]
+        seen = 0
+        for i in range(len(keys) - len(target) + 1):
+            if keys[i:i + len(target)] == target:
+                seen += 1
+                if seen == occurrence:
+                    return self.words[i]["start"], self.words[i + len(target) - 1]["end"]
+        sys.exit(f"cue not found in transcript: {phrase!r} (occurrence {occurrence})")
+
     def resolve(self, item):
         if "at" in item:
             return item["at"]
-        return self.to_out(item["src_at"], item.get("src", 0))
+        if "cue" in item:
+            start, _ = self.find_cue(item["cue"], item.get("occurrence", 1))
+            return self.to_out(start) + item.get("offset", 0.0)
+        return self.to_out(item["src_at"], item.get("src", 0)) + item.get("offset", 0.0)
+
+
+def apply_zooms(segs, zooms, words):
+    """Split segments so each zoom {"cue", "dur", "zoom"} covers whole words; splits are seamless (no audio fade)."""
+    tl = Timeline(segs, words)
+    for z in zooms:
+        start, _ = tl.find_cue(z["cue"], z.get("occurrence", 1))
+        want_end = start + z.get("dur", 3.0)
+        later = [w["start"] for w in tl.words if w["start"] >= want_end]
+        end = later[0] - 0.02 if later else want_end
+        out = []
+        for s in segs:
+            a, b = s["in"], s["out"]
+            if b <= start or a >= end or s.get("src", 0) != 0:
+                out.append(s)
+                continue
+            if a < start:
+                out.append(dict(s, out=q(start - 0.02), join_out=True))
+            out.append(dict(s, **{"in": q(max(a, start - 0.02)), "out": q(min(b, end)), "zoom": z.get("zoom", 1.15),
+                                  "join_in": a < start, "join_out": b > end}))
+            if b > end:
+                out.append(dict(s, **{"in": q(end), "join_in": True}))
+        segs = out
+    return segs
 
 
 def cut_segment(i, seg, src, size, fmt, reframe_x, sw, sh, tmp):
@@ -79,10 +124,12 @@ def cut_segment(i, seg, src, size, fmt, reframe_x, sw, sh, tmp):
         vf.append(f"crop=iw/{z}:ih/{z}:(iw-iw/{z})/2:(ih-ih/{z})*0.4")
     vf += [f"scale={w}:{h}:force_original_aspect_ratio=increase", f"crop={w}:{h}", "setsar=1", f"fps={FPS}"]
     dur = seg["out"] - seg["in"]
-    fade = min(0.012, dur / 4)
+    fade_in = 0 if seg.get("join_in") else min(0.012, dur / 4)
+    fade_out = 0 if seg.get("join_out") else min(0.012, dur / 4)
     out = tmp / f"seg{i:04d}.mkv"
     run(["ffmpeg", "-v", "error", "-y", "-ss", f"{seg['in']:.3f}", "-i", str(src), "-t", f"{dur:.3f}",
-         "-vf", ",".join(vf), "-af", f"aresample=48000,afade=t=in:d={fade},afade=t=out:st={dur - fade:.3f}:d={fade}",
+         "-vf", ",".join(vf), "-af", ",".join(["aresample=48000"] + ([f"afade=t=in:d={fade_in}"] if fade_in else [])
+                         + ([f"afade=t=out:st={dur - fade_out:.3f}:d={fade_out}"] if fade_out else [])),
          "-frames:v", str(round(dur * FPS)), "-c:v", "libx264", "-crf", "14", "-preset", "fast", "-pix_fmt", "yuv420p",
          "-c:a", "pcm_s16le", "-ac", "2", str(out)])
     return out
@@ -162,7 +209,9 @@ def main():
     size = SIZES[fmt]
     sources = [base / s for s in E["sources"]]
     segs = [dict(s, **{"in": q(s["in"]), "out": q(s["out"])}) for s in E["segments"]]
-    tl = Timeline(segs)
+    words = json.loads((base / E["transcript"]).read_text())["words"] if E.get("transcript") else []
+    segs = apply_zooms(segs, E.get("zooms", []), words)
+    tl = Timeline(segs, words)
     out = Path(a.out) if a.out else base / "renders" / ("draft.mp4" if a.draft else "final.mp4")
     out.parent.mkdir(parents=True, exist_ok=True)
 

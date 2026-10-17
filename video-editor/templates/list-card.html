@@ -1,0 +1,58 @@
+<!doctype html>
+<!-- Numbered/ticked list that builds item by item, full-screen. Use for recaps, comparisons, "three things" beats.
+     vars: title ("THE STORY MATH"), items (["Jarvis ran security", ...]), mark ("check" | "x" | "number"),
+           stagger (seconds between items, default 0.6) -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width={{W}}, height={{H}}" />
+    <link rel="stylesheet" href="assets/brand.css" />
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      html, body { width: {{W}}px; height: {{H}}px; }
+      #stage { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
+      #card { width: min(120vmin, 88vw); padding: 5vmin 6vmin 4vmin; }
+      #title { font-size: 8vmin; display: inline-block; padding: 1vmin 2.6vmin 0.4vmin; background: var(--fire); border: var(--border) solid var(--ink);
+               box-shadow: var(--shadow); transform: rotate(-2deg); margin-bottom: 3.4vmin; }
+      .item { display: flex; align-items: center; gap: 2.4vmin; font-size: 4.6vmin; color: var(--ink); margin-top: 2.2vmin; line-height: 1.15; }
+      .mark { flex: 0 0 auto; width: 6.4vmin; height: 6.4vmin; border: var(--border) solid var(--ink); background: var(--red); color: var(--paper);
+              display: flex; align-items: center; justify-content: center; font-family: "Luckiest Guy", sans-serif; font-size: 4vmin; padding-top: 0.6vmin; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="{{DUR}}" data-width="{{W}}" data-height="{{H}}">
+      <div id="stage" class="clip halftone-bg" data-start="0" data-duration="{{DUR}}">
+        <div id="card" class="panel">
+          <div id="title" class="display ink-outline"></div>
+          <div id="items"></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const V = {{VARS}};
+      const D = {{DUR}};
+      document.getElementById("title").textContent = V.title || "";
+      const box = document.getElementById("items");
+      (V.items || []).forEach((txt, i) => {
+        const row = document.createElement("div");
+        row.className = "item body";
+        const m = V.mark === "x" ? "✕" : V.mark === "number" ? String(i + 1) : "✓";
+        row.innerHTML = '<span class="mark"></span><span></span>';
+        row.firstChild.textContent = m;
+        row.lastChild.textContent = txt;
+        box.appendChild(row);
+      });
+      const st = V.stagger || 0.6;
+
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#stage", { opacity: 0 }, { opacity: 1, duration: 0.15 }, 0);
+      tl.fromTo("#card", { y: 80, rotation: 2, scale: 0.9 }, { y: 0, rotation: 0, scale: 1, duration: 0.4, ease: "back.out(1.6)" }, 0);
+      tl.fromTo("#title", { scale: 0 }, { scale: 1, duration: 0.35, ease: "back.out(2.5)" }, 0.25);
+      tl.fromTo(".item", { opacity: 0, x: -50 }, { opacity: 1, x: 0, duration: 0.3, stagger: st, ease: "power2.out" }, 0.6);
+      tl.fromTo(".mark", { scale: 0, rotation: -30 }, { scale: 1, rotation: 0, duration: 0.3, stagger: st, ease: "back.out(3)" }, 0.7);
+      tl.to("#stage", { opacity: 0, duration: 0.2 }, D - 0.2);
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

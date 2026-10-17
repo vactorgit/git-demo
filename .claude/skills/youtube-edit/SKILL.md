@@ -35,7 +35,11 @@ Pipeline lives in `video-editor/` (see its README for setup). All scripts are ru
    real decisions: the user stops mid-sentence, restarts, checks notes. Keep the **last complete take** of
    each line. Never cut mid-word; keep ~0.08 s of air at cut edges.
 4. **Write `projects/<slug>/edit.json`** — segments, overlays, sfx, music (schema at the top of
-   `scripts/assemble.py`). Use `src_at` (source time from the transcript) for anything tied to a spoken word.
+   `scripts/assemble.py`). Pin graphics, SFX and zooms to **what is said**, not to seconds:
+   `"cue": "dont be the ship"` (+ optional `"occurrence": 2`, `"offset": 0.4`) — matched against the kept
+   transcript, case/punctuation-insensitive. Cues survive re-cuts and re-takes; write them the way Parakeet
+   spelled the words (check `work/transcript.json` — e.g. it hears "Shepard", "Billy Jean").
+   Punch-ins go in `"zooms": [{"cue": "...", "dur": 3, "zoom": 1.14}]`; they snap to word boundaries.
 5. **Render a draft.** `python3 scripts/assemble.py projects/<slug>/edit.json --draft`
 6. **QC.** `python3 scripts/qc.py projects/<slug>/edit.json projects/<slug>/renders/draft.mp4` — fix every ❌
    before showing the user. Pull a few frames (`ffmpeg -ss T -i draft.mp4 -frames:v 1 f.png`) and **look at them**:
@@ -73,6 +77,9 @@ Pipeline lives in `video-editor/` (see its README for setup). All scripts are ru
 | `title-slam` | hook punchlines, chapter breaks, big reveals (full-screen) | `text`, `sub`, `bg` (`burst`/`none`), `color` (`ink`/`red`) |
 | `show-open` | after the hook in every long-form episode (3 s) | `show`, `episode` |
 | `panel-showcase` | comic panel/cover B-roll (full-screen) | `image`, `caption`, `credit`, `focus` |
+| `quote-card` | the lines the video turns on — "Don't be the ship. Be the king." (full-screen balloon) | `quote`, `speaker`, `source`, `bg` (`halftone`/`dark`) |
+| `list-card` | recaps, "three things", gripes, comparisons (full-screen, builds item by item) | `title`, `items[]`, `mark` (`check`/`x`/`number`), `stagger` |
+| `score-card` | review verdicts (full-screen) | `score`, `out_of`, `label`, `title`, `icon` (`ship`/`star`/`flame`) |
 
 Brand: fire orange `#FF914C`, red `#FE0000`, ink `#111`, white, pan grey `#4B565C`, halftone dots `#D9D9D9`.
 Fonts: Luckiest Guy (display, all caps), Bangers (tags), Nunito (body). New templates must use
@@ -81,6 +88,13 @@ Fonts: Luckiest Guy (display, all caps), Bangers (tags), Nunito (body). New temp
 - Never stack two graphics on the same corner at once; never cover the user's face.
 - Comic art B-roll: covers/panels from the referenced issue. Always credit (`credit` var).
   Prefer official publisher preview pages / covers; screenshot with Playwright if needed.
+
+### Reviews (episode breakdowns)
+- Show open right after the cold-open hook; `episode` = "<Show> · Ep N: <Title>".
+- Spoiler warning lower-third (`tag: "Warning"`) on the line that says spoilers.
+- Every quoted line the argument hinges on gets a `quote-card` with speaker + source.
+- The verdict gets a `score-card` using the episode's own motif as the icon when possible.
+- Comment prompt → lower-third `tag: "Your turn"`; next-episode tease → lower-third `tag: "Next on This Comic Cooks"`.
 
 ### Sound
 - No paid library yet. SFX pack in `video-editor/sfx/` (synthesized, royalty-free):

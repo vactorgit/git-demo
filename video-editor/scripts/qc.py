@@ -10,7 +10,7 @@ import json, re, subprocess, sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from assemble import Timeline, q  # noqa: E402
+from assemble import Timeline, apply_zooms, q  # noqa: E402
 
 
 def ff(args):
@@ -53,7 +53,9 @@ def main():
         problems.append(f"Short is {length:.1f}s — must be over 60 s for TikTok Creator Rewards")
 
     # Review sheet: what is said at each moment of the finished video, with every overlay/SFX placed.
-    tl = Timeline([dict(s, **{"in": q(s["in"]), "out": q(s["out"])}) for s in E["segments"]])
+    all_words = json.loads((edit_path.parent / E["transcript"]).read_text())["words"] if E.get("transcript") else []
+    segs = apply_zooms([dict(s, **{"in": q(s["in"]), "out": q(s["out"])}) for s in E["segments"]], E.get("zooms", []), all_words)
+    tl = Timeline(segs, all_words)
     rows = []
     if E.get("transcript"):
         words = json.loads((edit_path.parent / E["transcript"]).read_text())["words"]
