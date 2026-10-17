@@ -13,8 +13,11 @@ edit.json (all times in seconds):
   "overlays": [{"template": "lower-third", "src_at": 14.2, "dur": 4, "vars": {...}}],
   "sfx":      [{"name": "pop", "src_at": 14.2, "gain_db": -10}],
   "music":    [{"file": "music/bed.mp3", "at": 0, "to": 30, "gain_db": -22, "fade": 1.5}],
-  "captions": true
+  "captions": true,
+  "backdrop": {"show": "The Obsession Report", "episode": "..."}   # voiceover-only episodes
 }
+A source with no video stream (a voiceover .wav/.mp3) switches to voiceover mode: the vo-backdrop
+template loops under everything, captions sit centre screen, and zooms are ignored.
 Overlay/SFX/music times are either "at" (finished-video time) or "src_at" (time in source 0,
 mapped through the cut; use this when picking moments off the transcript).
 """
@@ -25,6 +28,8 @@ ROOT = Path(__file__).resolve().parent.parent
 FPS = 30
 SIZES = {"long": (1920, 1080), "short": (1080, 1920)}
 SHORT_MIN = 61.0
+# Templates that cover the whole frame: captions step aside while they are up.
+FULLSCREEN = {"title-slam", "show-open", "panel-showcase", "quote-card", "list-card", "score-card"}
 
 
 def run(cmd):
@@ -35,10 +40,12 @@ def run(cmd):
 
 
 def probe(path):
+    """(width, height, duration); width/height are None for audio-only sources (voiceover episodes)."""
     r = run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=width,height",
              "-show_entries", "format=duration", "-of", "json", str(path)])
     d = json.loads(r.stdout)
-    return d["streams"][0]["width"], d["streams"][0]["height"], float(d["format"]["duration"])
+    v = d.get("streams") or [{}]
+    return v[0].get("width"), v[0].get("height"), float(d["format"]["duration"])
 
 
 def q(t):
@@ -115,6 +122,16 @@ def apply_zooms(segs, zooms, words):
 
 def cut_segment(i, seg, src, size, fmt, reframe_x, sw, sh, tmp):
     w, h = size
+    dur = seg["out"] - seg["in"]
+    fade_in = 0 if seg.get("join_in") else min(0.012, dur / 4)
+    fade_out = 0 if seg.get("join_out") else min(0.012, dur / 4)
+    af = ",".join(["aresample=48000"] + ([f"afade=t=in:d={fade_in}"] if fade_in else [])
+                  + ([f"afade=t=out:st={dur - fade_out:.3f}:d={fade_out}"] if fade_out else []))
+    out = tmp / f"seg{i:04d}.mkv"
+    if sw is None:  # voiceover: audio only, sample-exact to the frame grid
+        run(["ffmpeg", "-v", "error", "-y", "-ss", f"{seg['in']:.3f}", "-i", str(src), "-t", f"{dur:.3f}", "-vn",
+             "-af", af + f",apad=whole_dur={dur:.3f},atrim=0:{dur:.3f}", "-c:a", "pcm_s16le", "-ac", "2", str(out)])
+        return out
     z = float(seg.get("zoom", 1.0))
     vf = []
     if fmt == "short" and sw > sh:  # reframe 16:9 -> 9:16
@@ -123,13 +140,8 @@ def cut_segment(i, seg, src, size, fmt, reframe_x, sw, sh, tmp):
     if z > 1.0:  # punch-in, anchored a little above centre (faces sit in the upper third)
         vf.append(f"crop=iw/{z}:ih/{z}:(iw-iw/{z})/2:(ih-ih/{z})*0.4")
     vf += [f"scale={w}:{h}:force_original_aspect_ratio=increase", f"crop={w}:{h}", "setsar=1", f"fps={FPS}"]
-    dur = seg["out"] - seg["in"]
-    fade_in = 0 if seg.get("join_in") else min(0.012, dur / 4)
-    fade_out = 0 if seg.get("join_out") else min(0.012, dur / 4)
-    out = tmp / f"seg{i:04d}.mkv"
     run(["ffmpeg", "-v", "error", "-y", "-ss", f"{seg['in']:.3f}", "-i", str(src), "-t", f"{dur:.3f}",
-         "-vf", ",".join(vf), "-af", ",".join(["aresample=48000"] + ([f"afade=t=in:d={fade_in}"] if fade_in else [])
-                         + ([f"afade=t=out:st={dur - fade_out:.3f}:d={fade_out}"] if fade_out else [])),
+         "-vf", ",".join(vf), "-af", af,
          "-frames:v", str(round(dur * FPS)), "-c:v", "libx264", "-crf", "14", "-preset", "fast", "-pix_fmt", "yuv420p",
          "-c:a", "pcm_s16le", "-ac", "2", str(out)])
     return out
@@ -152,9 +164,13 @@ def ass_time(t):
     return f"{h}:{m:02d}:{s:05.2f}"
 
 
-def write_captions(words, tl, size, path):
-    """Shorts captions: 1-3 word chunks, brand lettering, active word in fire orange."""
+def write_captions(words, tl, size, path, style="short", hide=()):
+    """Burned-in captions in brand lettering, active word in fire orange.
+    short: 1-3 words, lower third of a 9:16 frame. long (voiceover episodes): up to 4 words, centre screen.
+    hide: (start, end) windows in finished-video time with no captions (full-screen graphics)."""
     w, h = size
+    size_px, max_words, max_chars, align, margin_v = ((110, 3, 16, 2, int(h * 0.30)) if style == "short"
+                                                      else (124, 4, 24, 5, 0))
     head = f"""[Script Info]
 ScriptType: v4.00+
 PlayResX: {w}
@@ -162,7 +178,7 @@ PlayResY: {h}
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Cap,Luckiest Guy,110,&H00FFFFFF,&H00FFFFFF,&H00111111,&H00111111,0,0,0,0,100,100,2,0,1,7,4,2,80,80,{int(h * 0.30)},1
+Style: Cap,Luckiest Guy,{size_px},&H00FFFFFF,&H00FFFFFF,&H00111111,&H00111111,0,0,0,0,100,100,2,0,1,8,5,{align},120,120,{margin_v},1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
@@ -175,18 +191,19 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
         # drop words that were cut (their mapped start snapped forward past their own end)
         e = s + (wd["end"] - wd["start"])
         src_kept = any(a <= wd["start"] < b for _, a, b, _ in tl.segs)
-        if src_kept:
+        if src_kept and not any(a <= s < b for a, b in hide):
             mapped.append((s, e, wd["w"].upper()))
     lines, i = [], 0
     while i < len(mapped):
         chunk = [mapped[i]]
-        while (len(chunk) < 3 and i + len(chunk) < len(mapped)
+        while (len(chunk) < max_words and i + len(chunk) < len(mapped)
                and mapped[i + len(chunk)][0] - chunk[-1][1] < 0.25
                and not chunk[-1][2].endswith((".", "?", "!", ","))
-               and sum(len(c[2]) for c in chunk) < 16):
+               and sum(len(c[2]) + 1 for c in chunk) + len(mapped[i + len(chunk)][2]) <= max_chars):
             chunk.append(mapped[i + len(chunk)])
         end_chunk = chunk[-1][1] + 0.15
         nxt = mapped[i + len(chunk)][0] if i + len(chunk) < len(mapped) else end_chunk
+        nxt = min([nxt] + [a for a, b in hide if a > chunk[-1][0]])
         for k, (s, e, _) in enumerate(chunk):
             e2 = chunk[k + 1][0] if k + 1 < len(chunk) else min(end_chunk, nxt)
             text = " ".join(("{\\c&H4C91FF&}" + c[2] + "{\\c&HFFFFFF&}") if j == k else c[2] for j, c in enumerate(chunk))
@@ -219,6 +236,9 @@ def main():
         sys.exit(f"REFUSING: short is {tl.duration:.1f}s; TikTok Creator Rewards needs > 60 s. Add back material.")
 
     probes = {i: probe(s) for i, s in enumerate(sources)}
+    vo_only = all(p[0] is None for p in probes.values())
+    if vo_only and E.get("zooms"):
+        print("voiceover-only: zooms ignored (no camera footage)", file=sys.stderr)
     with tempfile.TemporaryDirectory(prefix="tcc-edit-") as tmpd:
         tmp = Path(tmpd)
         print(f"cutting {len(segs)} segments → {tl.duration:.1f}s", file=sys.stderr)
@@ -238,9 +258,15 @@ def main():
         cut = tmp / "cut.mkv"
         run(["ffmpeg", "-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", str(listing), "-c", "copy", str(cut)])
 
-        inputs, vchain, achain = ["-i", str(cut)], [], []
-        n = 1
-        last = "[0:v]"
+        if vo_only:
+            loop = tmp / "backdrop.mp4"
+            run([sys.executable, str(ROOT / "scripts/render_overlay.py"), "vo-backdrop", str(loop), "--dur", "10",
+                 "--size", f"{size[0]}x{size[1]}", "--format", "mp4", "--vars", json.dumps(E.get("backdrop", {}))])
+            inputs, vchain, achain = ["-stream_loop", "-1", "-i", str(loop), "-i", str(cut)], [], []
+            n, last, voice = 2, "[0:v]", "[1:a]"
+        else:
+            inputs, vchain, achain = ["-i", str(cut)], [], []
+            n, last, voice = 1, "[0:v]", "[0:a]"
         for i, (o, f) in enumerate(zip(overlays, ov_files)):
             t0 = tl.resolve(o)
             if t0 is None:
@@ -252,12 +278,13 @@ def main():
             n += 1
         if E.get("captions") and E.get("transcript"):
             ass = tmp / "captions.ass"
-            write_captions(json.loads((base / E["transcript"]).read_text())["words"], tl, size, ass)
+            hide = [(t, t + o.get("dur", 4)) for o in overlays if o["template"] in FULLSCREEN
+                    for t in [tl.resolve(o)] if t is not None]
+            write_captions(words, tl, size, ass, style="short" if fmt == "short" else "long", hide=hide)
             vchain.append(f"{last}ass={ass}:fontsdir={ROOT / 'brand/fonts-ttf'}[vcap]")
             last = "[vcap]"
         vchain.append(f"{last}format=yuv420p[vout]")
 
-        voice = "[0:a]"
         mix = [voice]
         for i, s in enumerate(E.get("sfx", [])):
             t0 = tl.resolve(s)

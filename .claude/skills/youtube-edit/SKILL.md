@@ -24,6 +24,19 @@ Pipeline lives in `video-editor/` (see its README for setup). All scripts are ru
 | **Put Some Respect On Their Name** (series) | 1920×1080 | long-form | Makes the case for an overlooked character. `show-open` with `show: "Put Some Respect On Their Name"`, `episode: <character>`. Power card for the featured character in the first minute. |
 | **Shorts / TikTok** | 1080×1920 | **always over 60 s** (target 62–90 s) | TikTok Creator Rewards only pays past one minute. **Never trim a Short to 60 s or under, even if pacing guidance says to** — add back material, slow the outro, or hold the end card instead. `assemble.py` refuses to build one. Captions on. |
 
+## Voiceover-only episodes (the default)
+The user provides **only a voiceover file**. Claude does everything else — no questions about footage,
+music or art unless something is truly blocking. In practice:
+- Source is the audio file alone; `assemble.py` switches to voiceover mode automatically (looping
+  `vo-backdrop` + centre-screen captions; zooms are ignored). Set `"backdrop": {"show", "episode"}` and `"captions": true`.
+- With no face on screen, the picture must keep moving: a graphic (card, quote, list, slam, lower-third)
+  at least every ~10 s, and every full-screen graphic leaves room for captions to resume after it.
+- Write the edit from the transcript yourself: hook slam, show open, a power card for every character,
+  callouts for every comic/show/song referenced, a quote card for every quoted line, a list card for every
+  enumerated argument, the score card, the comment prompt and the next-episode tease.
+- Intake from Drive: the connector only downloads files ≤ 10 MB, so the VO should be an MP3 (96–128 kbps).
+  If a WAV is too big, ask once for an MP3 export — that is the only thing to ask for.
+
 ## Workflow
 
 1. **Ingest.** Put raw files in `projects/<slug>/raw/`. From Drive: download with the Google Drive
@@ -114,6 +127,7 @@ Keep text out of the right 15 % (TikTok buttons) and bottom 20 % (caption/UI). C
 <!-- Add dated rules from the user's notes here. Newest first. Format:
 - YYYY-MM-DD — <rule>. Why: <the user's reason>. (from <video slug> @ <timestamp>)
 -->
+- 2026-10-17 — The user supplies only the voiceover; Claude does all of the editing (cut, graphics, sound, captions). Why: the user wants to record and nothing else.
 - 2026-10-17 — Shorts must run over 60 s; never trim one to 1:00 or less. Why: TikTok Creator Rewards only pays past one minute.
 - 2026-10-17 — State every character's powers explicitly on screen. Why: viewers always ask.
 - 2026-10-17 — Referenced comics get an issue/series lower-third. Why: viewers are new to comics and need to know what to read.

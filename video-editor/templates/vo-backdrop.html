@@ -1,0 +1,53 @@
+<!doctype html>
+<!-- Seamless 10 s background loop for voiceover-only episodes (no camera footage).
+     assemble.py renders it once per show/episode and loops it under the captions and graphics.
+     vars: show ("The Obsession Report"), episode (optional, e.g. "Vision Quest · Ep 2") -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width={{W}}, height={{H}}" />
+    <link rel="stylesheet" href="assets/brand.css" />
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      html, body { width: {{W}}px; height: {{H}}px; background: var(--pan-dark); }
+      #stage { position: absolute; inset: 0; overflow: hidden; background: var(--pan-dark); }
+      #dots { position: absolute; left: -12vmin; top: -12vmin; right: -12vmin; bottom: -12vmin;
+              background-image: radial-gradient(rgba(255,255,255,.075) 26%, transparent 29%); background-size: 3vmin 3vmin; }
+      #glow { position: absolute; left: 50%; bottom: -55vmin; width: 150vmin; height: 90vmin; margin-left: -75vmin; border-radius: 50%;
+              background: radial-gradient(closest-side, rgba(255,145,76,.55), rgba(254,0,0,.18) 55%, transparent 100%); filter: blur(2vmin); }
+      #vignette { position: absolute; inset: 0; background: radial-gradient(ellipse at center, transparent 45%, rgba(0,0,0,.45) 100%); }
+      #bug { position: absolute; left: 4vmin; top: 4vmin; display: flex; gap: 1.4vmin; align-items: center; }
+      #show { font-size: 3vmin; }
+      #ep { font-size: 2.6vmin; color: var(--paper); opacity: .85; }
+      #logo { position: absolute; right: 3.4vmin; bottom: 3.4vmin; width: 11vmin; height: 11vmin; opacity: .9; }
+      .portrait #bug { top: 7vh; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="{{DUR}}" data-width="{{W}}" data-height="{{H}}">
+      <div id="stage" class="clip" data-start="0" data-duration="{{DUR}}">
+        <div id="glow"></div>
+        <div id="dots"></div>
+        <div id="vignette"></div>
+        <div id="bug"><div id="show" class="tag"></div><div id="ep" class="body"></div></div>
+        <img id="logo" src="assets/logo-badge-transparent.png" alt="" />
+      </div>
+    </div>
+    <script>
+      const V = {{VARS}};
+      const D = {{DUR}};
+      if ({{H}} > {{W}}) document.body.classList.add("portrait");
+      document.getElementById("show").textContent = V.show || "The Obsession Report";
+      const ep = document.getElementById("ep");
+      if (V.episode) ep.textContent = V.episode; else ep.style.display = "none";
+      // Drift exactly two dot tiles per loop so the last frame meets the first.
+      const tile = 0.03 * Math.min({{W}}, {{H}});
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#dots", { x: 0, y: 0 }, { x: -2 * tile, y: -2 * tile, duration: D, ease: "none" }, 0);
+      tl.fromTo("#glow", { scale: 1, opacity: 0.8 }, { scale: 1.12, opacity: 1, duration: D / 4, ease: "sine.inOut", yoyo: true, repeat: 3 }, 0);
+      tl.fromTo("#logo", { rotation: -4 }, { rotation: 4, duration: D / 2, ease: "sine.inOut", yoyo: true, repeat: 1 }, 0);
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

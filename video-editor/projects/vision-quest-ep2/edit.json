@@ -1,7 +1,7 @@
 {
  "format": "long",
  "sources": [
-  "raw/a-cam.mov"
+  "raw/vo-take1.wav"
  ],
  "transcript": "work/transcript.json",
  "segments": [
@@ -844,5 +844,10 @@
    "cue": "quick history lesson",
    "gain_db": -12
   }
- ]
+ ],
+ "captions": true,
+ "backdrop": {
+  "show": "The Obsession Report",
+  "episode": "Vision Quest · Ep 2"
+ }
 }
