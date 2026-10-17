@@ -21,7 +21,7 @@ template loops under everything, captions sit centre screen, and zooms are ignor
 Overlay/SFX/music times are either "at" (finished-video time) or "src_at" (time in source 0,
 mapped through the cut; use this when picking moments off the transcript).
 """
-import argparse, concurrent.futures as cf, json, os, re, subprocess, sys, tempfile
+import argparse, concurrent.futures as cf, hashlib, json, os, re, shutil, subprocess, sys, tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -147,15 +147,24 @@ def cut_segment(i, seg, src, size, fmt, reframe_x, sw, sh, tmp):
     return out
 
 
-def render_overlay(o, size, tmp, i):
-    out = tmp / f"ov{i:03d}.webm"
+def render_overlay(o, size, cache, i):
+    """Render one graphic, reusing a cached render when template, assets, vars, duration and size are unchanged."""
     tpl = o["template"]
     vars_ = dict(o.get("vars", {}))
+    h = hashlib.sha256()
     for k, v in vars_.items():  # media paths in vars are relative to edit.json
         if isinstance(v, str) and (o["_base"] / v).is_file():
             vars_[k] = str((o["_base"] / v).resolve())
-    run([sys.executable, str(ROOT / "scripts/render_overlay.py"), tpl, str(out), "--dur", str(o.get("dur", 4)),
-         "--size", f"{size[0]}x{size[1]}", "--vars", json.dumps(vars_)])
+            h.update(Path(vars_[k]).read_bytes())
+    h.update((ROOT / "templates" / f"{tpl}.html").read_bytes())
+    h.update((ROOT / "templates/assets/brand.css").read_bytes())
+    h.update(json.dumps([tpl, vars_, o.get("dur", 4), size], sort_keys=True).encode())
+    out = cache / f"{tpl}-{h.hexdigest()[:16]}.webm"
+    if not out.exists():
+        part = out.with_suffix(".part.webm")
+        run([sys.executable, str(ROOT / "scripts/render_overlay.py"), tpl, str(part), "--dur", str(o.get("dur", 4)),
+             "--size", f"{size[0]}x{size[1]}", "--vars", json.dumps(vars_)])
+        part.rename(out)
     return out
 
 
@@ -164,10 +173,11 @@ def ass_time(t):
     return f"{h}:{m:02d}:{s:05.2f}"
 
 
-def write_captions(words, tl, size, path, style="short", hide=()):
+def write_captions(words, tl, size, path, style="short", hide=(), shift=()):
     """Burned-in captions in brand lettering, active word in fire orange.
     short: 1-3 words, lower third of a 9:16 frame. long (voiceover episodes): up to 4 words, centre screen.
-    hide: (start, end) windows in finished-video time with no captions (full-screen graphics)."""
+    hide: (start, end) windows in finished-video time with no captions (full-screen graphics).
+    shift: (start, end, x_fraction) windows where a side card is up: captions move to x and shrink."""
     w, h = size
     size_px, max_words, max_chars, align, margin_v = ((110, 3, 16, 2, int(h * 0.30)) if style == "short"
                                                       else (124, 4, 24, 5, 0))
@@ -204,10 +214,14 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
         end_chunk = chunk[-1][1] + 0.15
         nxt = mapped[i + len(chunk)][0] if i + len(chunk) < len(mapped) else end_chunk
         nxt = min([nxt] + [a for a, b in hide if a > chunk[-1][0]])
+        side = next((x for a, b, x in shift if a <= chunk[0][0] < b), None)
+        sc = 72 if side is not None else 100
+        place = f"\\an5\\pos({int(w * side)},{int(h * 0.5)})" if side is not None else ""
         for k, (s, e, _) in enumerate(chunk):
             e2 = chunk[k + 1][0] if k + 1 < len(chunk) else min(end_chunk, nxt)
             text = " ".join(("{\\c&H4C91FF&}" + c[2] + "{\\c&HFFFFFF&}") if j == k else c[2] for j, c in enumerate(chunk))
-            pop = "{\\fscx112\\fscy112\\t(0,90,\\fscx100\\fscy100)}" if k == 0 else ""
+            pop = (f"{{{place}\\fscx{int(sc * 1.12)}\\fscy{int(sc * 1.12)}\\t(0,90,\\fscx{sc}\\fscy{sc})}}" if k == 0
+                   else f"{{{place}\\fscx{sc}\\fscy{sc}}}")
             lines.append(f"Dialogue: 0,{ass_time(s)},{ass_time(max(e2, s + 0.05))},Cap,,0,0,0,,{pop}{text}")
         i += len(chunk)
     Path(path).write_text(head + "\n".join(lines) + "\n")
@@ -251,7 +265,9 @@ def main():
             seg_files = [j.result() for j in seg_jobs]
         print(f"rendering {len(overlays)} overlays", file=sys.stderr)
         with cf.ThreadPoolExecutor(max_workers=2) as ex:  # each Hyperframes render already uses several Chrome workers
-            ov_files = list(ex.map(lambda p: render_overlay(p[1], size, tmp, p[0]), enumerate(overlays)))
+            cache = base / "work" / "overlay-cache"
+            cache.mkdir(parents=True, exist_ok=True)
+            ov_files = list(ex.map(lambda p: render_overlay(p[1], size, cache, p[0]), enumerate(overlays)))
 
         listing = tmp / "concat.txt"
         listing.write_text("".join(f"file '{f}'\n" for f in seg_files))
@@ -280,7 +296,9 @@ def main():
             ass = tmp / "captions.ass"
             hide = [(t, t + o.get("dur", 4)) for o in overlays if o["template"] in FULLSCREEN
                     for t in [tl.resolve(o)] if t is not None]
-            write_captions(words, tl, size, ass, style="short" if fmt == "short" else "long", hide=hide)
+            shift = [(t, t + o.get("dur", 4), 0.62 if o["vars"].get("side") == "left" else 0.38) for o in overlays
+                     if o["template"] == "power-card" and fmt != "short" for t in [tl.resolve(o)] if t is not None]
+            write_captions(words, tl, size, ass, style="short" if fmt == "short" else "long", hide=hide, shift=shift)
             vchain.append(f"{last}ass={ass}:fontsdir={ROOT / 'brand/fonts-ttf'}[vcap]")
             last = "[vcap]"
         vchain.append(f"{last}format=yuv420p[vout]")
