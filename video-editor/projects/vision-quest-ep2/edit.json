@@ -172,7 +172,8 @@
      "Phases through solid matter",
      "Flies and controls his own density",
      "Hosts a whole family of AIs in his mind"
-    ]
+    ],
+    "side": "right"
    }
   },
   {
@@ -216,7 +217,8 @@
     "powers": [
      "Electric current feeds back through him (powers just waking up)",
      "In the comics he's Speed: super-speed"
-    ]
+    ],
+    "side": "right"
    }
   },
   {
@@ -275,7 +277,8 @@
      "From a long line of bounty hunters",
      "Never drops a contract until it's done",
      "Shotgun loaded with adamantium rounds"
-    ]
+    ],
+    "side": "right"
    }
   },
   {
@@ -334,7 +337,7 @@
      "Rogue AI that has tried to wipe out the Avengers",
      "Brutally honest — says what no one else will"
     ],
-    "side": "left"
+    "side": "right"
    }
   },
   {
@@ -347,7 +350,8 @@
     "powers": [
      "Runs the mindscape's security",
      "The wall between Ultron and everyone else"
-    ]
+    ],
+    "side": "right"
    }
   },
   {
@@ -361,7 +365,8 @@
      "Bursts into flame without burning up",
      "Flies and hurls fireballs",
      "An android built by Professor Phineas Horton"
-    ]
+    ],
+    "side": "right"
    }
   },
   {

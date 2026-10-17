@@ -29,6 +29,7 @@ The user provides **only a voiceover file**. Claude does everything else — no 
 music or art unless something is truly blocking. In practice:
 - Source is the audio file alone; `assemble.py` switches to voiceover mode automatically (looping
   `vo-backdrop` + centre-screen captions; zooms are ignored). Set `"backdrop": {"show", "episode"}` and `"captions": true`.
+- Side cards go on the right in voiceover episodes — the top-left corner holds the show bug.
 - With no face on screen, the picture must keep moving: a graphic (card, quote, list, slam, lower-third)
   at least every ~10 s, and every full-screen graphic leaves room for captions to resume after it.
 - Write the edit from the transcript yourself: hook slam, show open, a power card for every character,
