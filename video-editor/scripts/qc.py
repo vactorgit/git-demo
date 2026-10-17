@@ -14,6 +14,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from assemble import FULLSCREEN, Timeline, apply_zooms, probe, q  # noqa: E402
 
 VO_MAX_GAP = 15.0  # voiceover episodes: a new graphic at least this often
+LIST_MAX_EMPTY = 1.5  # a list card shows its first item within this many seconds
 
 
 def ff(args):
@@ -86,6 +87,14 @@ def timeline_checks(edit_path, E, render, problems, notes):
                 break
             if az == bz or "full" in (az, bz):
                 problems.append(f"{an} and {bn} on screen together at {mmss(b0)} ({az}/{bz})")
+    for o in E.get("overlays", []):
+        items = o.get("vars", {}).get("items") or []
+        first = items[0] if items else None
+        if isinstance(first, dict) and "cue" in first and tl.resolve(o) is not None:
+            wait = tl.resolve(first) - tl.resolve(o)
+            if wait > LIST_MAX_EMPTY:
+                problems.append(f"{o['template']} \"{o['vars'].get('title', '')}\" sits empty for {wait:.1f}s at "
+                                f"{mmss(tl.resolve(o))} — start it closer to its first item")
     vo_only = all(probe(edit_path.parent / s)[0] is None for s in E["sources"])
     if vo_only:
         cursor, gaps = 0.0, []

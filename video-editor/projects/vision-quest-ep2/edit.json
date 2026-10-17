@@ -464,8 +464,8 @@
   },
   {
    "template": "list-card",
-   "cue": "now look at the story math",
-   "dur": 24,
+   "cue": "jarvis ran security",
+   "dur": 22.7,
    "vars": {
     "title": "The story math",
     "items": [
@@ -483,7 +483,8 @@
      }
     ],
     "mark": "number"
-   }
+   },
+   "offset": -0.7
   },
   {
    "template": "title-slam",
@@ -568,8 +569,8 @@
   },
   {
    "template": "list-card",
-   "cue": "the comics have her and tommy",
-   "dur": 6.2,
+   "cue": "juvenile detention",
+   "dur": 4.18,
    "vars": {
     "title": "Comics vs. show",
     "mark": "number",
@@ -583,7 +584,8 @@
       "cue": "and that prison bus"
      }
     ]
-   }
+   },
+   "offset": -0.7
   },
   {
    "template": "lower-third",
@@ -647,8 +649,8 @@
   },
   {
    "template": "list-card",
-   "cue": "edith scouts the lobby",
-   "dur": 8,
+   "cue": "tactical boots",
+   "dur": 4.7,
    "vars": {
     "title": "Edith's scouting report",
     "mark": "x",
@@ -662,7 +664,8 @@
       "cue": "earpieces"
      }
     ]
-   }
+   },
+   "offset": -0.7
   },
   {
    "template": "title-slam",
@@ -732,8 +735,8 @@
   },
   {
    "template": "list-card",
-   "cue": "so heres the episode",
-   "dur": 18,
+   "cue": "vision stops arguing",
+   "dur": 16.86,
    "vars": {
     "title": "Who they chose to be",
     "mark": "check",
@@ -751,7 +754,8 @@
       "cue": "jarvis gives up his own"
      }
     ]
-   }
+   },
+   "offset": -0.7
   }
  ],
  "sfx": [
@@ -1023,14 +1027,15 @@
   },
   {
    "name": "whoosh",
-   "cue": "now look at the story math",
-   "gain_db": -14
+   "cue": "jarvis ran security",
+   "gain_db": -14,
+   "offset": -0.7
   },
   {
    "name": "pop",
-   "cue": "now look at the story math",
+   "cue": "jarvis ran security",
    "gain_db": -13,
-   "offset": 0.45
+   "offset": -0.25
   },
   {
    "name": "whoosh",
@@ -1123,14 +1128,15 @@
   },
   {
    "name": "whoosh",
-   "cue": "the comics have her and tommy",
-   "gain_db": -14
+   "cue": "juvenile detention",
+   "gain_db": -14,
+   "offset": -0.7
   },
   {
    "name": "pop",
-   "cue": "the comics have her and tommy",
+   "cue": "juvenile detention",
    "gain_db": -13,
-   "offset": 0.45
+   "offset": -0.25
   },
   {
    "name": "whoosh",
@@ -1200,14 +1206,15 @@
   },
   {
    "name": "whoosh",
-   "cue": "edith scouts the lobby",
-   "gain_db": -14
+   "cue": "tactical boots",
+   "gain_db": -14,
+   "offset": -0.7
   },
   {
    "name": "pop",
-   "cue": "edith scouts the lobby",
+   "cue": "tactical boots",
    "gain_db": -13,
-   "offset": 0.45
+   "offset": -0.25
   },
   {
    "name": "whoosh",
@@ -1288,14 +1295,15 @@
   },
   {
    "name": "whoosh",
-   "cue": "so heres the episode",
-   "gain_db": -14
+   "cue": "vision stops arguing",
+   "gain_db": -14,
+   "offset": -0.7
   },
   {
    "name": "pop",
-   "cue": "so heres the episode",
+   "cue": "vision stops arguing",
    "gain_db": -13,
-   "offset": 0.45
+   "offset": -0.25
   }
  ],
  "captions": true,

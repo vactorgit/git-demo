@@ -120,6 +120,7 @@ Every fix — yours or the user's — is a lesson. Turn each one into a rule so 
 | is a story beat with nothing new to show | nothing — captions carry it (but mind the 15 s rule) |
 
 ### Never
+- **Never** leave a list card empty — cue the card ~0.7 s before its first item (`qc.py` fails > 1.5 s).
 - **Never** let a list build on a timer. Each item appears when its line is spoken (`items: [{"text", "cue"}]`).
 - **Never** restart or replace a graphic while the point it illustrates is still building — extend it instead.
 - **Never** have a number bounce in — numbers slam or count, a bounce reads as a glitch.
@@ -171,6 +172,7 @@ Keep text out of the right 15 % (TikTok buttons) and bottom 20 % (caption/UI). C
 <!-- Add dated rules from the user's notes here. Newest first. Format:
 - YYYY-MM-DD — <rule>. Why: <the user's reason>. (from <video slug> @ <timestamp>)
 -->
+- 2026-10-17 — Check contractions in captions ("I'd", "he'd", "won't"): Parakeet sometimes drops the "'d". Why: a caption that misquotes the user reads as a mistake. (self-review, Vision Quest Ep 2)
 - 2026-10-17 — The user supplies only the voiceover; Claude does all of the editing (cut, graphics, sound, captions). Why: the user wants to record and nothing else.
 - 2026-10-17 — Shorts must run over 60 s; never trim one to 1:00 or less. Why: TikTok Creator Rewards only pays past one minute.
 - 2026-10-17 — State every character's powers explicitly on screen. Why: viewers always ask.
