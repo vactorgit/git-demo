@@ -230,7 +230,7 @@
      "Magic coat gives her two extra pairs of arms",
      "Career thief"
     ],
-    "side": "left"
+    "side": "right"
    }
   },
   {
@@ -481,7 +481,7 @@
   {
    "template": "lower-third",
    "cue": "who should it have been",
-   "dur": 5,
+   "dur": 4.2,
    "vars": {
     "title": "Who should've been deleted?",
     "subtitle": "Tell me in the comments",
