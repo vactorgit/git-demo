@@ -155,7 +155,7 @@
   {
    "template": "title-slam",
    "cue": "is it still the same ship",
-   "dur": 2.4,
+   "dur": 1.8,
    "vars": {
     "text": "Is it still the same ship?",
     "sub": "The Ship of Theseus"
@@ -304,16 +304,24 @@
   {
    "template": "list-card",
    "cue": "theseus sailed that ship to crete",
-   "dur": 6.5,
+   "dur": 9,
    "vars": {
     "title": "What Theseus actually did",
     "items": [
-     "Sailed to Crete",
-     "Killed the Minotaur",
-     "Brought the children of Athens home"
+     {
+      "text": "Sailed to Crete",
+      "cue": "sailed that ship to crete"
+     },
+     {
+      "text": "Killed the Minotaur",
+      "cue": "kill the minotaur"
+     },
+     {
+      "text": "Brought the children of Athens home",
+      "cue": "bring the children"
+     }
     ],
-    "mark": "check",
-    "stagger": 1.2
+    "mark": "check"
    }
   },
   {
@@ -404,12 +412,20 @@
    "vars": {
     "title": "My one gripe",
     "items": [
-     "No charge",
-     "No dodge",
-     "No phasing"
+     {
+      "text": "No charge",
+      "cue": "no charge"
+     },
+     {
+      "text": "No dodge",
+      "cue": "no dodge"
+     },
+     {
+      "text": "No phasing",
+      "cue": "no phasing"
+     }
     ],
-    "mark": "x",
-    "stagger": 0.45
+    "mark": "x"
    }
   },
   {
@@ -426,37 +442,53 @@
   {
    "template": "list-card",
    "cue": "jarvis is the big brother",
-   "dur": 6,
+   "dur": 9,
    "vars": {
     "title": "The emotional math",
     "items": [
-     "Jarvis is the big brother",
-     "He came first, so he goes first",
-     "You are what you choose to do"
+     {
+      "text": "Jarvis is the big brother",
+      "cue": "jarvis is the big brother"
+     },
+     {
+      "text": "He came first, so he goes first",
+      "cue": "the one who came first"
+     },
+     {
+      "text": "You are what you choose to do",
+      "cue": "you are what you choose"
+     }
     ],
-    "mark": "check",
-    "stagger": 1.5
+    "mark": "check"
    }
   },
   {
    "template": "list-card",
    "cue": "now look at the story math",
-   "dur": 11,
+   "dur": 24,
    "vars": {
     "title": "The story math",
     "items": [
-     "Jarvis ran security",
-     "Dummy & U were the weak spot",
-     "Ultron pitched the sacrifice"
+     {
+      "text": "Jarvis ran security",
+      "cue": "jarvis ran security"
+     },
+     {
+      "text": "Dummy & U were the weak spot",
+      "cue": "lose them and the house"
+     },
+     {
+      "text": "Ultron pitched the sacrifice",
+      "cue": "and remember who pitched"
+     }
     ],
-    "mark": "number",
-    "stagger": 3.2
+    "mark": "number"
    }
   },
   {
    "template": "title-slam",
    "cue": "like father like son",
-   "dur": 2.2,
+   "dur": 1.6,
    "vars": {
     "text": "Like father, like son"
    }
@@ -501,6 +533,224 @@
     "title": "Episodes 3 & 4",
     "subtitle": "Reviewed right here · next week",
     "tag": "Next on This Comic Cooks"
+   }
+  },
+  {
+   "template": "list-card",
+   "cue": "he has a dead mom",
+   "dur": 6.5,
+   "vars": {
+    "title": "Tommy's backstory",
+    "mark": "x",
+    "items": [
+     {
+      "text": "A dead mom",
+      "cue": "a dead mom"
+     },
+     {
+      "text": "A dad who walked out",
+      "cue": "a dad who walked out"
+     },
+     {
+      "text": "A string of foster homes",
+      "cue": "a string of foster homes"
+     }
+    ]
+   }
+  },
+  {
+   "template": "title-slam",
+   "cue": "his powers are waking up",
+   "dur": 2,
+   "vars": {
+    "text": "His powers are waking up"
+   }
+  },
+  {
+   "template": "list-card",
+   "cue": "the comics have her and tommy",
+   "dur": 6.2,
+   "vars": {
+    "title": "Comics vs. show",
+    "mark": "number",
+    "items": [
+     {
+      "text": "Comics: they meet in juvenile detention",
+      "cue": "juvenile detention"
+     },
+     {
+      "text": "Show: they meet on a prison bus",
+      "cue": "and that prison bus"
+     }
+    ]
+   }
+  },
+  {
+   "template": "lower-third",
+   "cue": "he meets paladin in the wrecked",
+   "dur": 4.5,
+   "vars": {
+    "title": "The Selkie",
+    "subtitle": "The pub where Fiona died",
+    "tag": "Location"
+   }
+  },
+  {
+   "template": "quote-card",
+   "cue": "theres more to this world",
+   "dur": 2.8,
+   "vars": {
+    "quote": "There's more to this world than science.",
+    "speaker": "Paladin",
+    "source": "Vision Quest · Ep 2",
+    "bg": "dark"
+   }
+  },
+  {
+   "template": "title-slam",
+   "cue": "but its still a bluff",
+   "dur": 1.8,
+   "vars": {
+    "text": "Still a bluff.",
+    "color": "red"
+   }
+  },
+  {
+   "template": "lower-third",
+   "cue": "thats the debate the two visions",
+   "dur": 4.2,
+   "vars": {
+    "title": "WandaVision · Episode 9",
+    "subtitle": "The series finale · 2021",
+    "tag": "Callback"
+   }
+  },
+  {
+   "template": "title-slam",
+   "cue": "the whole debate garbage",
+   "dur": 1.8,
+   "vars": {
+    "text": "Garbage.",
+    "sub": "Ultron",
+    "color": "red"
+   }
+  },
+  {
+   "template": "lower-third",
+   "cue": "paladin has taken tommy",
+   "dur": 4.5,
+   "vars": {
+    "title": "St. Mabon's",
+    "subtitle": "Where that prison bus was headed",
+    "tag": "Location"
+   }
+  },
+  {
+   "template": "list-card",
+   "cue": "edith scouts the lobby",
+   "dur": 8,
+   "vars": {
+    "title": "Edith's scouting report",
+    "mark": "x",
+    "items": [
+     {
+      "text": "Tactical boots, not sneakers",
+      "cue": "tactical boots"
+     },
+     {
+      "text": "Earpieces, not earrings",
+      "cue": "earpieces"
+     }
+    ]
+   }
+  },
+  {
+   "template": "title-slam",
+   "cue": "then the real trap springs",
+   "dur": 1.8,
+   "vars": {
+    "text": "The real trap"
+   }
+  },
+  {
+   "template": "lower-third",
+   "cue": "adamantium rounds",
+   "dur": 4.5,
+   "vars": {
+    "title": "Adamantium",
+    "subtitle": "The near-unbreakable metal in Wolverine's claws",
+    "tag": "Comics lesson"
+   }
+  },
+  {
+   "template": "title-slam",
+   "cue": "what comes next is my favorite",
+   "dur": 2.6,
+   "vars": {
+    "text": "My favorite moment",
+    "sub": "…and the one I'd change"
+   }
+  },
+  {
+   "template": "lower-third",
+   "cue": "if his body dies",
+   "dur": 5,
+   "vars": {
+    "title": "The stakes",
+    "subtitle": "If Vision's body dies, the whole mindscape dies with him",
+    "tag": "Stakes"
+   }
+  },
+  {
+   "template": "quote-card",
+   "cue": "says that if there was ever",
+   "dur": 3.6,
+   "vars": {
+    "quote": "If there was ever a moment for a noble sacrifice, this is it.",
+    "speaker": "Ultron",
+    "source": "Vision Quest · Ep 2",
+    "bg": "dark"
+   }
+  },
+  {
+   "template": "lower-third",
+   "cue": "jarvis certainly wasnt",
+   "dur": 4.5,
+   "vars": {
+    "title": "Ultron's reaction",
+    "subtitle": "Jarvis \"certainly wasn't his first choice\"",
+    "tag": "Honest to the end"
+   }
+  },
+  {
+   "template": "title-slam",
+   "cue": "tommy doesnt",
+   "dur": 1.8,
+   "vars": {
+    "text": "Tommy doesn't."
+   }
+  },
+  {
+   "template": "list-card",
+   "cue": "so heres the episode",
+   "dur": 18,
+   "vars": {
+    "title": "Who they chose to be",
+    "mark": "check",
+    "items": [
+     {
+      "text": "Vision walks into the trap",
+      "cue": "vision stops arguing"
+     },
+     {
+      "text": "Tommy turns the car around",
+      "cue": "tommy turns the car"
+     },
+     {
+      "text": "Jarvis gives up his code",
+      "cue": "jarvis gives up his own"
+     }
+    ]
    }
   }
  ],
@@ -848,6 +1098,204 @@
    "name": "page-flip",
    "cue": "quick history lesson",
    "gain_db": -12
+  },
+  {
+   "name": "whoosh",
+   "cue": "he has a dead mom",
+   "gain_db": -14
+  },
+  {
+   "name": "pop",
+   "cue": "he has a dead mom",
+   "gain_db": -13,
+   "offset": 0.45
+  },
+  {
+   "name": "whoosh",
+   "cue": "his powers are waking up",
+   "gain_db": -14
+  },
+  {
+   "name": "impact",
+   "cue": "his powers are waking up",
+   "gain_db": -9,
+   "offset": 0.35
+  },
+  {
+   "name": "whoosh",
+   "cue": "the comics have her and tommy",
+   "gain_db": -14
+  },
+  {
+   "name": "pop",
+   "cue": "the comics have her and tommy",
+   "gain_db": -13,
+   "offset": 0.45
+  },
+  {
+   "name": "whoosh",
+   "cue": "he meets paladin in the wrecked",
+   "gain_db": -14
+  },
+  {
+   "name": "pop",
+   "cue": "he meets paladin in the wrecked",
+   "gain_db": -13,
+   "offset": 0.45
+  },
+  {
+   "name": "whoosh",
+   "cue": "theres more to this world",
+   "gain_db": -14
+  },
+  {
+   "name": "pop",
+   "cue": "theres more to this world",
+   "gain_db": -13,
+   "offset": 0.45
+  },
+  {
+   "name": "whoosh",
+   "cue": "but its still a bluff",
+   "gain_db": -14
+  },
+  {
+   "name": "impact",
+   "cue": "but its still a bluff",
+   "gain_db": -9,
+   "offset": 0.35
+  },
+  {
+   "name": "whoosh",
+   "cue": "thats the debate the two visions",
+   "gain_db": -14
+  },
+  {
+   "name": "pop",
+   "cue": "thats the debate the two visions",
+   "gain_db": -13,
+   "offset": 0.45
+  },
+  {
+   "name": "whoosh",
+   "cue": "the whole debate garbage",
+   "gain_db": -14
+  },
+  {
+   "name": "impact",
+   "cue": "the whole debate garbage",
+   "gain_db": -9,
+   "offset": 0.35
+  },
+  {
+   "name": "whoosh",
+   "cue": "paladin has taken tommy",
+   "gain_db": -14
+  },
+  {
+   "name": "pop",
+   "cue": "paladin has taken tommy",
+   "gain_db": -13,
+   "offset": 0.45
+  },
+  {
+   "name": "whoosh",
+   "cue": "edith scouts the lobby",
+   "gain_db": -14
+  },
+  {
+   "name": "pop",
+   "cue": "edith scouts the lobby",
+   "gain_db": -13,
+   "offset": 0.45
+  },
+  {
+   "name": "whoosh",
+   "cue": "then the real trap springs",
+   "gain_db": -14
+  },
+  {
+   "name": "impact",
+   "cue": "then the real trap springs",
+   "gain_db": -9,
+   "offset": 0.35
+  },
+  {
+   "name": "whoosh",
+   "cue": "adamantium rounds",
+   "gain_db": -14
+  },
+  {
+   "name": "pop",
+   "cue": "adamantium rounds",
+   "gain_db": -13,
+   "offset": 0.45
+  },
+  {
+   "name": "whoosh",
+   "cue": "what comes next is my favorite",
+   "gain_db": -14
+  },
+  {
+   "name": "impact",
+   "cue": "what comes next is my favorite",
+   "gain_db": -9,
+   "offset": 0.35
+  },
+  {
+   "name": "whoosh",
+   "cue": "if his body dies",
+   "gain_db": -14
+  },
+  {
+   "name": "pop",
+   "cue": "if his body dies",
+   "gain_db": -13,
+   "offset": 0.45
+  },
+  {
+   "name": "whoosh",
+   "cue": "says that if there was ever",
+   "gain_db": -14
+  },
+  {
+   "name": "pop",
+   "cue": "says that if there was ever",
+   "gain_db": -13,
+   "offset": 0.45
+  },
+  {
+   "name": "whoosh",
+   "cue": "jarvis certainly wasnt",
+   "gain_db": -14
+  },
+  {
+   "name": "pop",
+   "cue": "jarvis certainly wasnt",
+   "gain_db": -13,
+   "offset": 0.45
+  },
+  {
+   "name": "whoosh",
+   "cue": "tommy doesnt",
+   "gain_db": -14
+  },
+  {
+   "name": "impact",
+   "cue": "tommy doesnt",
+   "gain_db": -9,
+   "offset": 0.35
+  },
+  {
+   "name": "whoosh",
+   "cue": "so heres the episode",
+   "gain_db": -14
+  },
+  {
+   "name": "pop",
+   "cue": "so heres the episode",
+   "gain_db": -13,
+   "offset": 0.45
   }
  ],
  "captions": true,

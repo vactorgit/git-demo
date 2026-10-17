@@ -151,6 +151,8 @@ def render_overlay(o, size, cache, i):
     """Render one graphic, reusing a cached render when template, assets, vars, duration and size are unchanged."""
     tpl = o["template"]
     vars_ = dict(o.get("vars", {}))
+    if "_times" in o:
+        vars_["times"] = o["_times"]
     h = hashlib.sha256()
     for k, v in vars_.items():  # media paths in vars are relative to edit.json
         if isinstance(v, str) and (o["_base"] / v).is_file():
@@ -259,6 +261,13 @@ def main():
         overlays = E.get("overlays", [])
         for o in overlays:
             o["_base"] = base
+            # Builds: items given as {"text", "cue"} appear when their line is spoken.
+            items = o.get("vars", {}).get("items")
+            if items and any(isinstance(x, dict) for x in items):
+                t0 = tl.resolve(o)
+                o["_times"] = [round(tl.resolve(x) - t0, 2) if isinstance(x, dict) and "cue" in x and t0 is not None
+                               else None for x in items]
+                o["vars"] = dict(o["vars"], items=[x["text"] if isinstance(x, dict) else x for x in items])
         with cf.ThreadPoolExecutor(max_workers=os.cpu_count() or 4) as ex:
             seg_jobs = [ex.submit(cut_segment, i, s, sources[s.get("src", 0)], size, fmt, E.get("reframe_x", 0.5),
                                   *probes[s.get("src", 0)][:2], tmp) for i, s in enumerate(segs)]

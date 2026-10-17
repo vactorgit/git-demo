@@ -14,6 +14,10 @@ a moment, the edit must explain it on screen.
 The user is the director. They record and give notes; you do every other job. Their notes become rules in
 the **Learned rules** section at the bottom — read those first, they override everything above them.
 
+**You get better with every edit.** Before starting, read **Learned rules** and the last few entries of
+`video-editor/EDIT_LOG.md` (what went wrong last time). After every edit, run the **Learning loop** below.
+The goal is fewer fixes per video, round after round — first from your own self-review, then from the user.
+
 Pipeline lives in `video-editor/` (see its README for setup). All scripts are run from that folder.
 
 ## Formats
@@ -30,8 +34,8 @@ music or art unless something is truly blocking. In practice:
 - Source is the audio file alone; `assemble.py` switches to voiceover mode automatically (looping
   `vo-backdrop` + centre-screen captions; zooms are ignored). Set `"backdrop": {"show", "episode"}` and `"captions": true`.
 - Side cards go on the right in voiceover episodes — the top-left corner holds the show bug.
-- With no face on screen, the picture must keep moving: a graphic (card, quote, list, slam, lower-third)
-  at least every ~10 s, and every full-screen graphic leaves room for captions to resume after it.
+- With no face on screen, the picture must keep moving: a new graphic (card, quote, list, slam, lower-third)
+  at least every 15 s — `qc.py` fails the edit otherwise. Aim for ~10 s.
 - Write the edit from the transcript yourself: hook slam, show open, a power card for every character,
   callouts for every comic/show/song referenced, a quote card for every quoted line, a list card for every
   enumerated argument, the score card, the comment prompt and the next-episode tease.
@@ -54,15 +58,34 @@ music or art unless something is truly blocking. In practice:
    transcript, case/punctuation-insensitive. Cues survive re-cuts and re-takes; write them the way Parakeet
    spelled the words (check `work/transcript.json` — e.g. it hears "Shepard", "Billy Jean").
    Punch-ins go in `"zooms": [{"cue": "...", "dur": 3, "zoom": 1.14}]`; they snap to word boundaries.
-5. **Render a draft.** `python3 scripts/assemble.py projects/<slug>/edit.json --draft`
-6. **QC.** `python3 scripts/qc.py projects/<slug>/edit.json projects/<slug>/renders/draft.mp4` — fix every ❌
+5. **Check the plan before rendering.** `python3 scripts/qc.py projects/<slug>/edit.json` (no render
+   argument) checks layout and pacing in seconds: stacked graphics, caption-only stretches. Fix every ❌ first —
+   a render costs ~10 minutes.
+6. **Render a draft.** `python3 scripts/assemble.py projects/<slug>/edit.json --draft`
+7. **QC.** `python3 scripts/qc.py projects/<slug>/edit.json projects/<slug>/renders/draft.mp4` — fix every ❌
    before showing the user. Pull a few frames (`ffmpeg -ss T -i draft.mp4 -frames:v 1 f.png`) and **look at them**:
    overlays readable, not covering the face, nothing cropped off.
-7. **Deliver** the draft + its `.review.md` (timestamped sheet the user gives notes against). Upload to the
+8. **Deliver** the draft + its `.review.md` (timestamped sheet the user gives notes against). Upload to the
    Drive folder they used. Report: raw length → cut length, what you added, anything you weren't sure about.
-8. **Notes round.** Apply timestamped notes, re-render, re-QC. Final: drop `--draft`.
-9. **Learn.** When the user says "learn this" / "save that" — or gives the same kind of note twice — add a
-   rule to **Learned rules** below (dated, specific, with the why). Never silently forget a note.
+9. **Notes round.** Apply timestamped notes, re-render, re-QC (cached graphics make this ~5 min). Final: drop `--draft`.
+10. **Learning loop** — every edit, no exceptions (see next section).
+
+## Learning loop
+Every fix — yours or the user's — is a lesson. Turn each one into a rule so it never needs fixing again.
+
+1. **Self-review before the user sees anything.** After QC passes, watch for the things QC can't see:
+   pull a frame from every graphic and from the gaps between them and look at each one. Ask:
+   does every graphic match what the line is doing (see **Line → visual**)? Any text cut off, colliding,
+   or unreadable? Any graphic that says nothing the voice isn't already saying better? Any stretch that
+   feels slow? Fix what you find, and write each fix down.
+2. **Collect the user's notes** on the delivered cut — even three quick ones are valuable. Ask once, briefly,
+   at delivery: "Anything that bugged you? Timestamps help." Don't nag if they don't answer.
+3. **Promote notes to rules.** Go through every fix (self-review + user notes) and ask: *would this apply to
+   every video?* If yes, add it to **Learned rules** (dated, specific, with the why). If it's a mechanical
+   check (overlap, timing, length), also add it to `scripts/qc.py` so it is caught automatically from now on.
+   One-off fixes stay in the log only.
+4. **Log it.** Append an entry to `video-editor/EDIT_LOG.md`: video, date, fixes caught by QC, fixes caught
+   by self-review, user notes per round, and the rules added. The trend in those numbers is the scoreboard.
 
 ## Style rules
 
@@ -83,6 +106,26 @@ music or art unless something is truly blocking. In practice:
    `tag` = "READ THIS" for a recommendation, "START HERE" for an entry point, "FROM" when it's just a source.
    Get facts right — look them up (web search) if unsure; never guess an issue number or creator.
 
+### Line → visual (pick the graphic by what the line is *doing*)
+| The line… | Gets |
+|---|---|
+| introduces a character | `power-card` (powers in plain English) |
+| names a comic, run, show, episode, song or place | `lower-third` callout |
+| quotes someone | `quote-card` with speaker + source |
+| makes a point in steps, lists things, or compares | `list-card` — **one item per spoken line, cued to that line** |
+| lands a punchline, reveal, or verdict in a few words | `title-slam` |
+| explains a comics concept a movie fan won't know | `lower-third` with `tag: "Comics lesson"` |
+| gives the score | `score-card` |
+| asks for comments / teases the next video | lower-third (`Your turn` / `Next on This Comic Cooks`) |
+| is a story beat with nothing new to show | nothing — captions carry it (but mind the 15 s rule) |
+
+### Never
+- **Never** let a list build on a timer. Each item appears when its line is spoken (`items: [{"text", "cue"}]`).
+- **Never** restart or replace a graphic while the point it illustrates is still building — extend it instead.
+- **Never** have a number bounce in — numbers slam or count, a bounce reads as a glitch.
+- **Never** stack two graphics in the same zone, or anything over a full-screen graphic (`qc.py` checks this).
+- **Never** show a graphic that only repeats the caption word for word — it must add something (a name, a fact, a structure).
+
 ### Graphics (templates in `video-editor/templates/`)
 | Template | Use | Vars |
 |---|---|---|
@@ -92,7 +135,7 @@ music or art unless something is truly blocking. In practice:
 | `show-open` | after the hook in every long-form episode (3 s) | `show`, `episode` |
 | `panel-showcase` | comic panel/cover B-roll (full-screen) | `image`, `caption`, `credit`, `focus` |
 | `quote-card` | the lines the video turns on — "Don't be the ship. Be the king." (full-screen balloon) | `quote`, `speaker`, `source`, `bg` (`halftone`/`dark`) |
-| `list-card` | recaps, "three things", gripes, comparisons (full-screen, builds item by item) | `title`, `items[]`, `mark` (`check`/`x`/`number`), `stagger` |
+| `list-card` | recaps, "three things", gripes, comparisons (full-screen, builds item by item) | `title`, `items[]` (`{"text", "cue"}` so each lands on its line), `mark` (`check`/`x`/`number`) |
 | `score-card` | review verdicts (full-screen) | `score`, `out_of`, `label`, `title`, `icon` (`ship`/`star`/`flame`) |
 
 Brand: fire orange `#FF914C`, red `#FE0000`, ink `#111`, white, pan grey `#4B565C`, halftone dots `#D9D9D9`.

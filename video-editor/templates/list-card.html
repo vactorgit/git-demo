@@ -1,7 +1,9 @@
 <!doctype html>
 <!-- Numbered/ticked list that builds item by item, full-screen. Use for recaps, comparisons, "three things" beats.
      vars: title ("THE STORY MATH"), items (["Jarvis ran security", ...]), mark ("check" | "x" | "number"),
-           stagger (seconds between items, default 0.6) -->
+           stagger (seconds between items, default 0.6)
+           times (optional: seconds from card start for each item — assemble.py fills this from per-item cues
+                  so each point lands when it is said; never rebuild the card while the point is still building) -->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -48,8 +50,11 @@
       tl.fromTo("#stage", { opacity: 0 }, { opacity: 1, duration: 0.15 }, 0);
       tl.fromTo("#card", { y: 80, rotation: 2, scale: 0.9 }, { y: 0, rotation: 0, scale: 1, duration: 0.4, ease: "back.out(1.6)" }, 0);
       tl.fromTo("#title", { scale: 0 }, { scale: 1, duration: 0.35, ease: "back.out(2.5)" }, 0.25);
-      tl.fromTo(".item", { opacity: 0, x: -50 }, { opacity: 1, x: 0, duration: 0.3, stagger: st, ease: "power2.out" }, 0.6);
-      tl.fromTo(".mark", { scale: 0, rotation: -30 }, { scale: 1, rotation: 0, duration: 0.3, stagger: st, ease: "back.out(3)" }, 0.7);
+      const at = (i) => (V.times && V.times[i] != null ? Math.max(0.5, V.times[i]) : 0.6 + i * st);
+      document.querySelectorAll(".item").forEach((row, i) => {
+        tl.fromTo(row, { opacity: 0, x: -50 }, { opacity: 1, x: 0, duration: 0.3, ease: "power2.out" }, at(i));
+        tl.fromTo(row.firstChild, { scale: 0, rotation: -30 }, { scale: 1, rotation: 0, duration: 0.3, ease: "back.out(3)" }, at(i) + 0.1);
+      });
       tl.to("#stage", { opacity: 0, duration: 0.2 }, D - 0.2);
       window.__timelines["main"] = tl;
       tl.seek(0);
