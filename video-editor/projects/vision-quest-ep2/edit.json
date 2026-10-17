@@ -1,0 +1,848 @@
+{
+ "format": "long",
+ "sources": [
+  "raw/a-cam.mov"
+ ],
+ "transcript": "work/transcript.json",
+ "segments": [
+  {
+   "in": 0.0,
+   "out": 19.36
+  },
+  {
+   "in": 25.17,
+   "out": 43.65
+  },
+  {
+   "in": 43.97,
+   "out": 73.65
+  },
+  {
+   "in": 73.96,
+   "out": 95.32
+  },
+  {
+   "in": 95.64,
+   "out": 136.69
+  },
+  {
+   "in": 139.57,
+   "out": 189.55
+  },
+  {
+   "in": 190.07,
+   "out": 197.19
+  },
+  {
+   "in": 197.51,
+   "out": 240.83
+  },
+  {
+   "in": 241.22,
+   "out": 276.42
+  },
+  {
+   "in": 276.82,
+   "out": 290.42
+  },
+  {
+   "in": 290.71,
+   "out": 386.87
+  },
+  {
+   "in": 387.47,
+   "out": 407.31
+  },
+  {
+   "in": 407.72,
+   "out": 420.68
+  },
+  {
+   "in": 421.0,
+   "out": 432.36
+  },
+  {
+   "in": 432.9,
+   "out": 462.58
+  },
+  {
+   "in": 462.98,
+   "out": 483.54
+  },
+  {
+   "in": 483.97,
+   "out": 513.25
+  }
+ ],
+ "zooms": [
+  {
+   "cue": "ultron finally answers",
+   "dur": 3.5,
+   "zoom": 1.14
+  },
+  {
+   "cue": "the short version",
+   "dur": 3,
+   "zoom": 1.12
+  },
+  {
+   "cue": "his powers are waking up",
+   "dur": 2.2,
+   "zoom": 1.16
+  },
+  {
+   "cue": "tommy shepard has no way",
+   "dur": 2.5,
+   "zoom": 1.15
+  },
+  {
+   "cue": "theres more to this world",
+   "dur": 3,
+   "zoom": 1.12
+  },
+  {
+   "cue": "but its still a bluff",
+   "dur": 2.2,
+   "zoom": 1.16
+  },
+  {
+   "cue": "which brings us to the best",
+   "dur": 3,
+   "zoom": 1.12
+  },
+  {
+   "cue": "nobody preserved the ship",
+   "dur": 4,
+   "zoom": 1.14
+  },
+  {
+   "cue": "he isnt telling vision",
+   "dur": 3.5,
+   "zoom": 1.12
+  },
+  {
+   "cue": "hes as brutal here",
+   "dur": 3,
+   "zoom": 1.14
+  },
+  {
+   "cue": "and heres my one gripe",
+   "dur": 2.5,
+   "zoom": 1.16
+  },
+  {
+   "cue": "its beautiful",
+   "dur": 3.5,
+   "zoom": 1.14
+  },
+  {
+   "cue": "and remember who pitched",
+   "dur": 3,
+   "zoom": 1.16
+  },
+  {
+   "cue": "tommy doesnt",
+   "dur": 3.5,
+   "zoom": 1.14
+  },
+  {
+   "cue": "as a dad",
+   "dur": 4.5,
+   "zoom": 1.12
+  }
+ ],
+ "overlays": [
+  {
+   "template": "title-slam",
+   "cue": "is it still the same ship",
+   "dur": 2.4,
+   "vars": {
+    "text": "Is it still the same ship?",
+    "sub": "The Ship of Theseus"
+   }
+  },
+  {
+   "template": "power-card",
+   "cue": "is the white vision still vision",
+   "dur": 5,
+   "vars": {
+    "name": "Vision",
+    "alias": "The White Vision",
+    "powers": [
+     "Phases through solid matter",
+     "Flies and controls his own density",
+     "Hosts a whole family of AIs in his mind"
+    ]
+   }
+  },
+  {
+   "template": "show-open",
+   "cue": "lets get into it",
+   "dur": 3.2,
+   "vars": {
+    "show": "The Obsession Report",
+    "episode": "Vision Quest · Ep 2: Theseus"
+   },
+   "offset": 0.5
+  },
+  {
+   "template": "lower-third",
+   "cue": "spoilers for both episodes",
+   "dur": 3.5,
+   "vars": {
+    "title": "Spoilers ahead",
+    "subtitle": "Vision Quest episodes 1 & 2",
+    "tag": "Warning"
+   }
+  },
+  {
+   "template": "quote-card",
+   "cue": "i have your son",
+   "dur": 2.6,
+   "vars": {
+    "quote": "I have your son.",
+    "speaker": "Paladin",
+    "source": "Vision Quest · Ep 1",
+    "bg": "dark"
+   }
+  },
+  {
+   "template": "power-card",
+   "cue": "in his police psych evaluation",
+   "dur": 5.5,
+   "vars": {
+    "name": "Tommy Shepherd",
+    "alias": "London grifter · Wanda & Vision's son",
+    "powers": [
+     "Electric current feeds back through him (powers just waking up)",
+     "In the comics he's Speed: super-speed"
+    ]
+   }
+  },
+  {
+   "template": "power-card",
+   "cue": "in the comics lisa",
+   "dur": 5.5,
+   "vars": {
+    "name": "Code of Arms",
+    "alias": "Lisa Molinari",
+    "powers": [
+     "Magic coat gives her two extra pairs of arms",
+     "Career thief"
+    ],
+    "side": "left"
+   }
+  },
+  {
+   "template": "lower-third",
+   "cue": "in the comics lisa",
+   "dur": 4.5,
+   "vars": {
+    "title": "Code of Arms",
+    "subtitle": "Lisa Molinari · Marvel Comics",
+    "tag": "In the comics"
+   },
+   "offset": 0.6
+  },
+  {
+   "template": "lower-third",
+   "cue": "sitcom laugh track",
+   "dur": 4,
+   "vars": {
+    "title": "WandaVision",
+    "subtitle": "Disney+ · 2021",
+    "tag": "Callback"
+   }
+  },
+  {
+   "template": "quote-card",
+   "cue": "grief is just love",
+   "dur": 3.4,
+   "vars": {
+    "quote": "Grief is just love persevering.",
+    "speaker": "Vision",
+    "source": "WandaVision · 2021"
+   }
+  },
+  {
+   "template": "power-card",
+   "cue": "briefing on paladin",
+   "dur": 5.5,
+   "vars": {
+    "name": "Paladin",
+    "alias": "Bounty hunter",
+    "powers": [
+     "From a long line of bounty hunters",
+     "Never drops a contract until it's done",
+     "Shotgun loaded with adamantium rounds"
+    ]
+   }
+  },
+  {
+   "template": "title-slam",
+   "cue": "billy jean is not my lover",
+   "dur": 2.6,
+   "vars": {
+    "text": "Billie Jean is not my lover",
+    "sub": "Vision, probably",
+    "color": "red"
+   }
+  },
+  {
+   "template": "lower-third",
+   "cue": "plutarch",
+   "dur": 4.5,
+   "vars": {
+    "title": "Plutarch, Life of Theseus",
+    "subtitle": "Greek biographer · c. 100 AD",
+    "tag": "History lesson"
+   }
+  },
+  {
+   "template": "list-card",
+   "cue": "theseus sailed that ship to crete",
+   "dur": 6.5,
+   "vars": {
+    "title": "What Theseus actually did",
+    "items": [
+     "Sailed to Crete",
+     "Killed the Minotaur",
+     "Brought the children of Athens home"
+    ],
+    "mark": "check",
+    "stagger": 1.2
+   }
+  },
+  {
+   "template": "quote-card",
+   "cue": "dont be the ship",
+   "dur": 3.6,
+   "vars": {
+    "quote": "Don't be the ship. Be the king.",
+    "speaker": "Ultron",
+    "source": "Vision Quest · Ep 2"
+   }
+  },
+  {
+   "template": "power-card",
+   "cue": "vision goes to ultron",
+   "dur": 5,
+   "vars": {
+    "name": "Ultron",
+    "alias": "Locked in the attic of Vision's mind",
+    "powers": [
+     "Rogue AI that has tried to wipe out the Avengers",
+     "Brutally honest — says what no one else will"
+    ],
+    "side": "left"
+   }
+  },
+  {
+   "template": "power-card",
+   "cue": "jarvis pushes back",
+   "dur": 5,
+   "vars": {
+    "name": "Jarvis",
+    "alias": "The oldest AI in Vision's mind",
+    "powers": [
+     "Runs the mindscape's security",
+     "The wall between Ultron and everyone else"
+    ]
+   }
+  },
+  {
+   "template": "power-card",
+   "cue": "jim hammond",
+   "dur": 6,
+   "vars": {
+    "name": "Jim Hammond",
+    "alias": "The original Human Torch",
+    "powers": [
+     "Bursts into flame without burning up",
+     "Flies and hurls fireballs",
+     "An android built by Professor Phineas Horton"
+    ]
+   }
+  },
+  {
+   "template": "lower-third",
+   "cue": "marvel comics issue number one",
+   "dur": 4.5,
+   "vars": {
+    "title": "Marvel Comics #1",
+    "subtitle": "Carl Burgos · Timely Comics, Oct 1939",
+    "tag": "First appearance"
+   }
+  },
+  {
+   "template": "title-slam",
+   "cue": "its a trap",
+   "dur": 1.8,
+   "vars": {
+    "text": "It's a trap!"
+   }
+  },
+  {
+   "template": "lower-third",
+   "cue": "calypso playing",
+   "dur": 4,
+   "vars": {
+    "title": "Calypso — John Denver",
+    "subtitle": "1975",
+    "tag": "Needle drop"
+   }
+  },
+  {
+   "template": "list-card",
+   "cue": "no charge",
+   "dur": 4.2,
+   "vars": {
+    "title": "My one gripe",
+    "items": [
+     "No charge",
+     "No dodge",
+     "No phasing"
+    ],
+    "mark": "x",
+    "stagger": 0.45
+   }
+  },
+  {
+   "template": "quote-card",
+   "cue": "family is forever",
+   "dur": 4,
+   "vars": {
+    "quote": "Family is forever, and it's worth the fight.",
+    "speaker": "Jarvis",
+    "source": "Vision Quest · Ep 2",
+    "bg": "dark"
+   }
+  },
+  {
+   "template": "list-card",
+   "cue": "jarvis is the big brother",
+   "dur": 6,
+   "vars": {
+    "title": "The emotional math",
+    "items": [
+     "Jarvis is the big brother",
+     "He came first, so he goes first",
+     "You are what you choose to do"
+    ],
+    "mark": "check",
+    "stagger": 1.5
+   }
+  },
+  {
+   "template": "list-card",
+   "cue": "now look at the story math",
+   "dur": 11,
+   "vars": {
+    "title": "The story math",
+    "items": [
+     "Jarvis ran security",
+     "Dummy & U were the weak spot",
+     "Ultron pitched the sacrifice"
+    ],
+    "mark": "number",
+    "stagger": 3.2
+   }
+  },
+  {
+   "template": "title-slam",
+   "cue": "like father like son",
+   "dur": 2.2,
+   "vars": {
+    "text": "Like father, like son"
+   }
+  },
+  {
+   "template": "title-slam",
+   "cue": "dont be the ship",
+   "dur": 2.6,
+   "vars": {
+    "text": "Don't be the ship. Be the king.",
+    "color": "red"
+   },
+   "occurrence": 2
+  },
+  {
+   "template": "score-card",
+   "cue": "four out of five",
+   "dur": 4.6,
+   "vars": {
+    "score": 4,
+    "out_of": 5,
+    "label": "Ships of Theseus",
+    "title": "Episode 2 verdict",
+    "icon": "ship"
+   }
+  },
+  {
+   "template": "lower-third",
+   "cue": "who should it have been",
+   "dur": 5,
+   "vars": {
+    "title": "Who should've been deleted?",
+    "subtitle": "Tell me in the comments",
+    "tag": "Your turn"
+   }
+  },
+  {
+   "template": "lower-third",
+   "cue": "drop next tuesday",
+   "dur": 4.5,
+   "vars": {
+    "title": "Episodes 3 & 4",
+    "subtitle": "Reviewed right here · next week",
+    "tag": "Next on This Comic Cooks"
+   }
+  }
+ ],
+ "sfx": [
+  {
+   "name": "whoosh",
+   "cue": "is it still the same ship",
+   "gain_db": -14
+  },
+  {
+   "name": "impact",
+   "cue": "is it still the same ship",
+   "gain_db": -9,
+   "offset": 0.35
+  },
+  {
+   "name": "whoosh",
+   "cue": "is the white vision still vision",
+   "gain_db": -14
+  },
+  {
+   "name": "pop",
+   "cue": "is the white vision still vision",
+   "gain_db": -13,
+   "offset": 0.45
+  },
+  {
+   "name": "whoosh",
+   "cue": "lets get into it",
+   "gain_db": -14,
+   "offset": 0.5
+  },
+  {
+   "name": "pop",
+   "cue": "lets get into it",
+   "gain_db": -13,
+   "offset": 0.95
+  },
+  {
+   "name": "whoosh",
+   "cue": "spoilers for both episodes",
+   "gain_db": -14
+  },
+  {
+   "name": "pop",
+   "cue": "spoilers for both episodes",
+   "gain_db": -13,
+   "offset": 0.45
+  },
+  {
+   "name": "whoosh",
+   "cue": "i have your son",
+   "gain_db": -14
+  },
+  {
+   "name": "pop",
+   "cue": "i have your son",
+   "gain_db": -13,
+   "offset": 0.45
+  },
+  {
+   "name": "whoosh",
+   "cue": "in his police psych evaluation",
+   "gain_db": -14
+  },
+  {
+   "name": "pop",
+   "cue": "in his police psych evaluation",
+   "gain_db": -13,
+   "offset": 0.45
+  },
+  {
+   "name": "whoosh",
+   "cue": "in the comics lisa",
+   "gain_db": -14
+  },
+  {
+   "name": "pop",
+   "cue": "in the comics lisa",
+   "gain_db": -13,
+   "offset": 0.45
+  },
+  {
+   "name": "whoosh",
+   "cue": "in the comics lisa",
+   "gain_db": -14,
+   "offset": 0.6
+  },
+  {
+   "name": "pop",
+   "cue": "in the comics lisa",
+   "gain_db": -13,
+   "offset": 1.05
+  },
+  {
+   "name": "whoosh",
+   "cue": "sitcom laugh track",
+   "gain_db": -14
+  },
+  {
+   "name": "pop",
+   "cue": "sitcom laugh track",
+   "gain_db": -13,
+   "offset": 0.45
+  },
+  {
+   "name": "whoosh",
+   "cue": "grief is just love",
+   "gain_db": -14
+  },
+  {
+   "name": "pop",
+   "cue": "grief is just love",
+   "gain_db": -13,
+   "offset": 0.45
+  },
+  {
+   "name": "whoosh",
+   "cue": "briefing on paladin",
+   "gain_db": -14
+  },
+  {
+   "name": "pop",
+   "cue": "briefing on paladin",
+   "gain_db": -13,
+   "offset": 0.45
+  },
+  {
+   "name": "whoosh",
+   "cue": "billy jean is not my lover",
+   "gain_db": -14
+  },
+  {
+   "name": "impact",
+   "cue": "billy jean is not my lover",
+   "gain_db": -9,
+   "offset": 0.35
+  },
+  {
+   "name": "whoosh",
+   "cue": "plutarch",
+   "gain_db": -14
+  },
+  {
+   "name": "pop",
+   "cue": "plutarch",
+   "gain_db": -13,
+   "offset": 0.45
+  },
+  {
+   "name": "whoosh",
+   "cue": "theseus sailed that ship to crete",
+   "gain_db": -14
+  },
+  {
+   "name": "pop",
+   "cue": "theseus sailed that ship to crete",
+   "gain_db": -13,
+   "offset": 0.45
+  },
+  {
+   "name": "whoosh",
+   "cue": "dont be the ship",
+   "gain_db": -14
+  },
+  {
+   "name": "pop",
+   "cue": "dont be the ship",
+   "gain_db": -13,
+   "offset": 0.45
+  },
+  {
+   "name": "whoosh",
+   "cue": "vision goes to ultron",
+   "gain_db": -14
+  },
+  {
+   "name": "pop",
+   "cue": "vision goes to ultron",
+   "gain_db": -13,
+   "offset": 0.45
+  },
+  {
+   "name": "whoosh",
+   "cue": "jarvis pushes back",
+   "gain_db": -14
+  },
+  {
+   "name": "pop",
+   "cue": "jarvis pushes back",
+   "gain_db": -13,
+   "offset": 0.45
+  },
+  {
+   "name": "whoosh",
+   "cue": "jim hammond",
+   "gain_db": -14
+  },
+  {
+   "name": "pop",
+   "cue": "jim hammond",
+   "gain_db": -13,
+   "offset": 0.45
+  },
+  {
+   "name": "whoosh",
+   "cue": "marvel comics issue number one",
+   "gain_db": -14
+  },
+  {
+   "name": "pop",
+   "cue": "marvel comics issue number one",
+   "gain_db": -13,
+   "offset": 0.45
+  },
+  {
+   "name": "whoosh",
+   "cue": "its a trap",
+   "gain_db": -14
+  },
+  {
+   "name": "impact",
+   "cue": "its a trap",
+   "gain_db": -9,
+   "offset": 0.35
+  },
+  {
+   "name": "whoosh",
+   "cue": "calypso playing",
+   "gain_db": -14
+  },
+  {
+   "name": "pop",
+   "cue": "calypso playing",
+   "gain_db": -13,
+   "offset": 0.45
+  },
+  {
+   "name": "whoosh",
+   "cue": "no charge",
+   "gain_db": -14
+  },
+  {
+   "name": "pop",
+   "cue": "no charge",
+   "gain_db": -13,
+   "offset": 0.45
+  },
+  {
+   "name": "whoosh",
+   "cue": "family is forever",
+   "gain_db": -14
+  },
+  {
+   "name": "pop",
+   "cue": "family is forever",
+   "gain_db": -13,
+   "offset": 0.45
+  },
+  {
+   "name": "whoosh",
+   "cue": "jarvis is the big brother",
+   "gain_db": -14
+  },
+  {
+   "name": "pop",
+   "cue": "jarvis is the big brother",
+   "gain_db": -13,
+   "offset": 0.45
+  },
+  {
+   "name": "whoosh",
+   "cue": "now look at the story math",
+   "gain_db": -14
+  },
+  {
+   "name": "pop",
+   "cue": "now look at the story math",
+   "gain_db": -13,
+   "offset": 0.45
+  },
+  {
+   "name": "whoosh",
+   "cue": "like father like son",
+   "gain_db": -14
+  },
+  {
+   "name": "impact",
+   "cue": "like father like son",
+   "gain_db": -9,
+   "offset": 0.35
+  },
+  {
+   "name": "whoosh",
+   "cue": "dont be the ship",
+   "gain_db": -14,
+   "occurrence": 2
+  },
+  {
+   "name": "impact",
+   "cue": "dont be the ship",
+   "gain_db": -9,
+   "offset": 0.35,
+   "occurrence": 2
+  },
+  {
+   "name": "whoosh",
+   "cue": "four out of five",
+   "gain_db": -14
+  },
+  {
+   "name": "pop",
+   "cue": "four out of five",
+   "gain_db": -13,
+   "offset": 0.45
+  },
+  {
+   "name": "whoosh",
+   "cue": "who should it have been",
+   "gain_db": -14
+  },
+  {
+   "name": "pop",
+   "cue": "who should it have been",
+   "gain_db": -13,
+   "offset": 0.45
+  },
+  {
+   "name": "whoosh",
+   "cue": "drop next tuesday",
+   "gain_db": -14
+  },
+  {
+   "name": "pop",
+   "cue": "drop next tuesday",
+   "gain_db": -13,
+   "offset": 0.45
+  },
+  {
+   "name": "riser",
+   "cue": "what comes next is my favorite",
+   "gain_db": -18
+  },
+  {
+   "name": "page-flip",
+   "cue": "quick history lesson",
+   "gain_db": -12
+  }
+ ]
+}
