@@ -1,0 +1,50 @@
+<!doctype html>
+<!-- Issue / series callout. Use whenever a specific comic is referenced.
+     vars: title ("Immortal Hulk #1"), subtitle ("Al Ewing & Joe Bennett · 2018"), tag ("READ THIS") -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width={{W}}, height={{H}}" />
+    <link rel="stylesheet" href="assets/brand.css" />
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      html, body { width: {{W}}px; height: {{H}}px; }
+      #wrap { position: absolute; left: 5vmin; bottom: 9vmin; max-width: 70vw; }
+      #tag { font-size: 3.2vmin; position: relative; z-index: 2; margin-left: 2vmin; margin-bottom: -1.2vmin; transform-origin: left bottom; }
+      #box { padding: 2.2vmin 3vmin 1.8vmin 3vmin; box-shadow: 1.1vmin 1.1vmin 0 var(--fire), 1.1vmin 1.1vmin 0 var(--border) var(--ink); }
+      #title { font-size: 6vmin; color: var(--ink); white-space: nowrap; }
+      #sub { font-size: 2.9vmin; color: var(--pan); margin-top: 0.8vmin; white-space: nowrap; }
+      #bar { position: absolute; left: 0; top: 0; bottom: 0; width: 1.4vmin; background: var(--red); border-right: var(--border) solid var(--ink); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="{{DUR}}" data-width="{{W}}" data-height="{{H}}">
+      <div id="wrap" class="clip" data-start="0" data-duration="{{DUR}}">
+        <div id="tag" class="tag"></div>
+        <div id="box" class="panel">
+          <div id="bar"></div>
+          <div id="title" class="display"></div>
+          <div id="sub" class="body"></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const V = {{VARS}};
+      const D = {{DUR}};
+      document.getElementById("title").textContent = V.title || "";
+      document.getElementById("sub").textContent = V.subtitle || "";
+      const tag = document.getElementById("tag");
+      if (V.tag) tag.textContent = V.tag; else tag.style.display = "none";
+      if (!V.subtitle) document.getElementById("sub").style.display = "none";
+
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#box", { x: "-120%", rotation: -3 }, { x: 0, rotation: 0, duration: 0.45, ease: "back.out(1.6)" }, 0);
+      tl.fromTo("#title", { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.3, ease: "power2.out" }, 0.18);
+      tl.fromTo("#sub", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 0.32);
+      tl.fromTo("#tag", { scale: 0, rotation: -12 }, { scale: 1, rotation: -4, duration: 0.35, ease: "back.out(3)" }, 0.4);
+      tl.to("#wrap", { x: "-130%", duration: 0.35, ease: "power3.in" }, D - 0.4);
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

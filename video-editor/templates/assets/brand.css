@@ -1,0 +1,58 @@
+/* This Comic Cooks — shared overlay styles. Sizes use vmin so one template works for 16:9 and 9:16. */
+@font-face { font-family: "Luckiest Guy"; src: url("luckiest-guy-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Bangers"; src: url("bangers-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Nunito"; font-weight: 600; src: url("nunito-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Nunito"; font-weight: 800; src: url("nunito-latin-800-normal.woff2") format("woff2"); }
+@font-face { font-family: "Nunito"; font-weight: 900; src: url("nunito-latin-900-normal.woff2") format("woff2"); }
+
+:root {
+  --fire: #FF914C;
+  --red: #FE0000;
+  --ink: #111111;
+  --paper: #FFFFFF;
+  --pan: #4B565C;
+  --pan-dark: #192426;
+  --halftone: #D9D9D9;
+  --border: max(4px, 0.55vmin);
+  --shadow: 1.1vmin 1.1vmin 0 var(--ink);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 100%; height: 100%; overflow: hidden; background: transparent; }
+#root { position: relative; width: 100%; height: 100%; }
+
+.display { font-family: "Luckiest Guy", "Bangers", sans-serif; letter-spacing: 0.02em; line-height: 1; text-transform: uppercase; }
+.accent, .tag { text-transform: uppercase; }
+.accent { font-family: "Bangers", sans-serif; letter-spacing: 0.06em; }
+.body { font-family: "Nunito", sans-serif; font-weight: 800; }
+
+/* Logo-style lettering: black fill, white outline (like "THIS COMIC"). */
+.ink-outline {
+  color: var(--ink);
+  -webkit-text-stroke: calc(var(--border) * 1.1) var(--paper);
+  paint-order: stroke fill;
+}
+/* "COOKS!" lettering: red fill, black outline. */
+.red-outline {
+  color: var(--red);
+  -webkit-text-stroke: var(--border) var(--ink);
+  paint-order: stroke fill;
+}
+.halftone-bg {
+  background-color: var(--paper);
+  background-image: radial-gradient(var(--halftone) 28%, transparent 30%);
+  background-size: 2.4vmin 2.4vmin;
+}
+.panel {
+  background: var(--paper);
+  border: var(--border) solid var(--ink);
+  box-shadow: var(--shadow);
+}
+.tag {
+  display: inline-block;
+  background: var(--red);
+  color: var(--paper);
+  border: var(--border) solid var(--ink);
+  padding: 0.3vmin 1.4vmin 0 1.4vmin;
+  font-family: "Bangers", sans-serif;
+  letter-spacing: 0.08em;
+}

@@ -1,0 +1,27 @@
+{
+  "channel": "This Comic Cooks",
+  "handle": "@thiscomiccooks",
+  "mission": "The channel that gets you INTO comics",
+  "colors": {
+    "fire": "#FF914C",
+    "red": "#FE0000",
+    "ink": "#111111",
+    "paper": "#FFFFFF",
+    "pan": "#4B565C",
+    "panDark": "#192426",
+    "halftone": "#D9D9D9"
+  },
+  "fonts": {
+    "display": "Luckiest Guy",
+    "accent": "Bangers",
+    "body": "Nunito"
+  },
+  "logos": {
+    "badge": "brand/logo-badge-transparent.png",
+    "square": "brand/logo-halftone.jpg"
+  },
+  "shows": {
+    "obsession-report": "The Obsession Report",
+    "respect": "Put Some Respect On Their Name"
+  }
+}

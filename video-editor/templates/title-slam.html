@@ -1,0 +1,56 @@
+<!doctype html>
+<!-- Full-screen comic title slam for hooks, chapter breaks and big reveals.
+     vars: text ("HE CAN'T DIE"), sub (optional small line), bg ("burst" | "none"), color ("ink" | "red") -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width={{W}}, height={{H}}" />
+    <link rel="stylesheet" href="assets/brand.css" />
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      html, body { width: {{W}}px; height: {{H}}px; }
+      #stage { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+      #burst { position: absolute; left: 50%; top: 50%; width: 200vmax; height: 200vmax; margin: -100vmax 0 0 -100vmax;
+               background: repeating-conic-gradient(var(--fire) 0 7.5deg, #ffa66e 7.5deg 15deg); }
+      #dots { position: absolute; inset: 0; background-image: radial-gradient(rgba(17,17,17,.13) 28%, transparent 31%); background-size: 2.6vmin 2.6vmin;
+              -webkit-mask-image: radial-gradient(circle, transparent 25%, #000 75%); mask-image: radial-gradient(circle, transparent 25%, #000 75%); }
+      #text { position: relative; font-size: 15vmin; text-align: center; max-width: 90vw; line-height: 0.95; }
+      #sub { position: relative; font-size: 4.2vmin; margin-top: 3vmin; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="{{DUR}}" data-width="{{W}}" data-height="{{H}}">
+      <div id="stage" class="clip" data-start="0" data-duration="{{DUR}}">
+        <div id="burst"></div>
+        <div id="dots"></div>
+        <div id="text" class="display"></div>
+        <div id="sub" class="tag"></div>
+      </div>
+    </div>
+    <script>
+      const V = {{VARS}};
+      const D = {{DUR}};
+      const t = document.getElementById("text");
+      t.textContent = V.text || "";
+      t.classList.add(V.color === "red" ? "red-outline" : "ink-outline");
+      const sub = document.getElementById("sub");
+      if (V.sub) sub.textContent = V.sub; else sub.style.display = "none";
+      if (V.bg === "none") { document.getElementById("burst").remove(); document.getElementById("dots").remove(); }
+
+      const tl = gsap.timeline({ paused: true });
+      if (V.bg !== "none") {
+        tl.fromTo("#burst", { scale: 0 }, { scale: 1, duration: 0.3, ease: "power3.out" }, 0);
+        tl.fromTo("#burst", { rotation: 0 }, { rotation: 25, duration: D, ease: "none" }, 0);
+        tl.fromTo("#dots", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 0.1);
+      }
+      tl.fromTo("#text", { scale: 3.2, opacity: 0, rotation: -8 }, { scale: 1, opacity: 1, rotation: -3, duration: 0.28, ease: "power4.in" }, 0.12);
+      // impact shake
+      tl.to("#stage", { x: 14, y: -10, duration: 0.04, yoyo: true, repeat: 5, ease: "none" }, 0.4);
+      tl.fromTo("#sub", { y: 60, opacity: 0 }, { y: 0, opacity: 1, duration: 0.3, ease: "back.out(2)" }, 0.55);
+      tl.to("#text", { scale: 1.06, duration: D - 1.0, ease: "none" }, 0.4);
+      tl.to("#stage", { opacity: 0, scale: 1.15, duration: 0.25, ease: "power2.in" }, D - 0.25);
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>
