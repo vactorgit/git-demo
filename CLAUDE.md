@@ -20,4 +20,14 @@ When the user says "TCC", "This Comic Cooks", "This Comic COOKS!", or "my YouTub
 - **Daily pick:** https://claude.ai/artifact/H2aL2FtMZVGrgsEf9GWd53, rewritten every day by the "TCC Daily Pick" scheduled task (5:25 AM Phoenix, America/Phoenix time zone). It holds the day's top mutant video topic, a Short script and a long-form outline.
 - **Growth plan:** https://claude.ai/artifact/JQ3HEsUx1VsNMZLvb9r4QA
 
+## Fact rule for scripts and video content
+
+The user wants nothing in a script that isn't a verified fact.
+- Every factual claim needs at least two independent sources from different publishers. Two fan wikis count as one source at most.
+- Read the article body, not just the headline or snippet.
+- If a claim can't be double-sourced, cut it. Don't keep it with a "verify" label.
+- Call rumors "reportedly" and name who made them. Only include a rumor if at least two outlets report it.
+- Word opinions as the host's opinion.
+- Include a fact-check list mapping each claim to its sources.
+
 Never guess what the channel covers from its name. If something isn't listed here, ask.
