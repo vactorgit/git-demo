@@ -17,7 +17,7 @@ When the user says "TCC", "This Comic Cooks", "This Comic COOKS!", or "my YouTub
 - **Brand and income plan (Oct 2026):** https://claude.ai/artifact/3j1erCUABqoMmoMWhPGVzW
   - Brand (confirmed by the user 22 Oct 2026): "the X-Men channel for movie fans," with content 80% mutants.
   - Money: affiliate links on reading guides, an email list built from the reading-guide app, a $12 X-Men Reading Map, sponsors, and TikTok payouts. YouTube Memberships come later, replacing Patreon.
-- **Daily pick:** https://claude.ai/artifact/H2aL2FtMZVGrgsEf9GWd53, rewritten every day by the "TCC Daily Pick" scheduled task (5:25 AM Phoenix, America/Phoenix time zone). It holds the day's top mutant video topic, a Short script and a long-form outline.
+- **Daily pick:** https://claude.ai/artifact/H2aL2FtMZVGrgsEf9GWd53, rewritten every day by the "TCC Daily Pick" scheduled task (5:25 AM Phoenix, America/Phoenix time zone). It holds the day's top mutant video topic, a Short script and a long-form outline. It also has a viewer-request list (the page's database, collection "requests"). Each run reviews the open requests and asks the user whether their comments had new ones.
 - **Growth plan:** https://claude.ai/artifact/JQ3HEsUx1VsNMZLvb9r4QA
 
 ## Fact rule for scripts and video content
