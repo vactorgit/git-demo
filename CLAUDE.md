@@ -15,9 +15,9 @@ When the user says "TCC", "This Comic Cooks", "This Comic COOKS!", or "my YouTub
 ## Current plans
 
 - **Brand and income plan (Oct 2026):** https://claude.ai/artifact/3j1erCUABqoMmoMWhPGVzW
-  - Recommended positioning: "the X-Men channel for movie fans," with content 80% mutants.
+  - Brand (confirmed by the user 22 Oct 2026): "the X-Men channel for movie fans," with content 80% mutants.
   - Money: affiliate links on reading guides, an email list built from the reading-guide app, a $12 X-Men Reading Map, sponsors, and TikTok payouts. YouTube Memberships come later, replacing Patreon.
-  - The user hasn't confirmed this plan yet.
+- **Daily pick:** https://claude.ai/artifact/H2aL2FtMZVGrgsEf9GWd53, rewritten every day by the "TCC Daily Pick" scheduled task (5:25 AM Phoenix, America/Phoenix time zone). It holds the day's top mutant video topic, a Short script and a long-form outline.
 - **Growth plan:** https://claude.ai/artifact/JQ3HEsUx1VsNMZLvb9r4QA
 
 Never guess what the channel covers from its name. If something isn't listed here, ask.
