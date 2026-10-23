@@ -22,7 +22,7 @@ When the user says "TCC", "This Comic Cooks", "This Comic COOKS!", or "my YouTub
   - Video descriptions name specific books but carry no affiliate links. Several still point to Marvel Unlimited, which shuts down in Dec 2026.
 - **Series:** The Obsession Report (long-form) and Put Some Respect On Their Name (overlooked characters). Shorts run over 60 s so they qualify for TikTok Creator Rewards.
 - **Money so far:** Patreon has had almost no paying members, only family and friends. A steady income from the channel is the user's main goal.
-- **Analytics:** connected through the vidIQ connector. The free plan has 150 credits a month, and most lookups cost 5.
+- **Analytics:** connected through the vidIQ connector. Since 23 Oct 2026 the plan has about 6,000 credits a month, and most lookups cost 5.
 
 ## Current plans
 
