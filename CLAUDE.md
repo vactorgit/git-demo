@@ -22,7 +22,14 @@ When the user says "TCC", "This Comic Cooks", "This Comic COOKS!", or "my YouTub
   - Video descriptions name specific books but carry no affiliate links. Several still point to Marvel Unlimited, which shuts down in Dec 2026.
 - **Series:** The Obsession Report (long-form) and Put Some Respect On Their Name (overlooked characters). Shorts run over 60 s so they qualify for TikTok Creator Rewards.
 - **Money so far:** Patreon has had almost no paying members, only family and friends. A steady income from the channel is the user's main goal.
-- **Ultimate goal (stated 23 Oct 2026):** make enough money from content to quit the day job. Every recommendation should be a stepping stone to that goal, and should say how it moves income forward. The monthly income needed to quit hasn't been stated yet, so ask for it.
+- **Ultimate goal (stated 23 Oct 2026):** make enough money from content to quit the day job. Every recommendation should be a stepping stone to that goal, and should say how it moves income forward.
+  - **Target (stated 23 Oct 2026):** $1,200 a week, about $5,200 a month. The day job pays $600 a week.
+  - **Monthly YouTube revenue, 2026:** Apr $111, May $689, Jun $597, Jul $1,521, Aug $2,091 (peak, about $480 a week), Sep $1,154, Oct about $403 through the 22nd (about $130 a week pace). Ads alone can't reach the target; sponsors and products must close the gap.
+- **Audience keys (from the channel's own titles):**
+  - Title structures that work: "Marvel [did X to] this hero", "The Mutant Who…", "The X-Man/Mutant Who…", "Who IS ___?".
+  - Key contrast: Marvel or the movies got this character wrong, and the comics tell the real story.
+  - What flops: Lantern gimmick Shorts, episode reviews.
+  - Since 23 Oct 2026 the daily pick gives a Short beat map in place of a word-for-word script.
 - **Guiding model (the user liked this Think Media interview with Jenny Hansen Lane):**
   - Views aren't money. Search intent plus a low-ticket offer plus email is.
   - The comment section is free market research.
