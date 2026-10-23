@@ -8,6 +8,11 @@ When the user says "TCC", "This Comic Cooks", "This Comic COOKS!", or "my YouTub
 - **Size (Oct 2026):** about 31.4K subscribers, 36.6M lifetime views, 1,328 videos
 - **Mission:** "the channel that gets you INTO comics." The target viewer loves Marvel and DC movies and shows but has never read a comic.
 - **What works:** mutant and X-Men Shorts, several past 1M views.
+- **Performance (YouTube Analytics, pulled 23 Oct 2026):**
+  - The breakout started in April–May 2026, when average view duration doubled from about 30 s to about 61 s, the switch to Shorts over 60 s.
+  - Engaged views peaked in Jul–Aug 2026 at 4.7M and 5.7M a month, then fell to 2.3M in Sep and about 1M in Oct.
+  - The channel gained about 24.8K net subscribers from Oct 2025 to Oct 2026, most of the channel's total.
+  - In the last 90 days, nearly all subscriber growth came from Shorts. Long-form contributed almost nothing.
 - **Series:** The Obsession Report (long-form) and Put Some Respect On Their Name (overlooked characters). Shorts run over 60 s so they qualify for TikTok Creator Rewards.
 - **Money so far:** Patreon has had almost no paying members, only family and friends. A steady income from the channel is the user's main goal.
 - **Analytics:** connected through the vidIQ connector. The free plan has 150 credits a month, and most lookups cost 5.
