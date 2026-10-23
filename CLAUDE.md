@@ -30,6 +30,10 @@ When the user says "TCC", "This Comic Cooks", "This Comic COOKS!", or "my YouTub
   - Key contrast: Marvel or the movies got this character wrong, and the comics tell the real story.
   - What flops: Lantern gimmick Shorts, episode reviews.
   - Since 23 Oct 2026 the daily pick gives a Short beat map in place of a word-for-word script.
+- **Production format (since 23 Oct 2026):**
+  - The user talks to camera in one take with no editing. No graphics or B-roll, only face plus a held-up comic or tablet.
+  - What the user wants from Claude: researched ideas people will watch, and packaging that gets clicks (title, 2–4 words of thumbnail text, a simple face-plus-cover thumbnail).
+  - Long-form title structures that broke out for small comic channels (Jul–Oct 2026): "Every [X] Explained in [N] Minutes", "The Real Reason [X] Is WAY More Powerful Than Marvel Admits", "Why [hero] [feels about] [hero]", "Misconceptions That Make My Blood Boil", "Where Is EVERY X-Men Before Doomsday".
 - **Guiding model (the user liked this Think Media interview with Jenny Hansen Lane):**
   - Views aren't money. Search intent plus a low-ticket offer plus email is.
   - The comment section is free market research.
