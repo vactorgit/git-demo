@@ -35,6 +35,24 @@ When the user says "TCC", "This Comic Cooks", "This Comic COOKS!", or "my YouTub
   - "where to start with comics": about 5.1K, competition 12, growing
   - "x-men reading order": under 750
   - These match the mission and the Starter Kit funnel.
+- **Host:** Trent Vactor ("Vactor"), contact vactormail@gmail.com.
+  - Also runs the "Before Doomsday" podcast with Tim Costello.
+  - A friend, Kevin Coll, is building a "Worth It?" section on the TCC website.
+- **Real revenue (YouTube Analytics, 24 Jul–22 Oct 2026):**
+  - Total about $3,829, roughly $1,280 a month, all AdSense.
+  - Shorts: $3,685, at about $0.24 RPM per 1K views.
+  - Long-form: $122, at about $2.12 RPM per 1K views and $13.75 playback CPM.
+  - Patreon has 0 patrons and there are no sponsors yet.
+- **Media kit numbers (pulled 23 Oct 2026):**
+  - 3.1M views in the last 28 days.
+  - Audience is 94% male. Ages 25–44 are 61%: 25–34 is 35%, 35–44 is 26%.
+  - Top countries: US 62%, UK 6%, Canada 5%.
+  - Median long-form views since late July: about 1.1K. Median Short views for Aug 20–Sep 19 Shorts: about 25.6K.
+  - "The Man Who Broke Wolverine" (Cyber) is a Short with 1.81M views. Older notes calling it long-form with 115K, and a "Cyber long-form, 247K", are out of date or unverified.
+- **Other-chat plans (TCC Money Plan, 18 Oct 2026):**
+  - Revenue priority: sponsors (GlobalComix first), then long-form ads, affiliates, Patreon, and later panels and consulting.
+  - Product idea: a "Read This Next" guide with Worth It? verdicts.
+  - Artifacts: Media Kit https://claude.ai/artifact/Qj42Kj4L245Rrg4k8VHJfP and Money Plan https://claude.ai/artifact/5ye5f1wC219GEGBEF16ed1.
 - **Analytics:** connected through the vidIQ connector. Since 23 Oct 2026 the plan has about 6,000 credits a month, and most lookups cost 5.
 
 ## Current plans
