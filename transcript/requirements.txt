@@ -1,2 +1,6 @@
 flask>=3.0
 youtube-transcript-api>=1.2
+requests>=2.31
+python-dotenv>=1.0
+anthropic>=1.0
+gunicorn>=22.0; platform_system != "Windows"

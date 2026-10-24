@@ -1,55 +1,22 @@
+import os
 import re
 
-from flask import Flask, jsonify, render_template, request
-from youtube_transcript_api import YouTubeTranscriptApi
-from youtube_transcript_api._errors import (
-    AgeRestricted,
-    InvalidVideoId,
-    IpBlocked,
-    NoTranscriptFound,
-    RequestBlocked,
-    TranscriptsDisabled,
-    VideoUnavailable,
-    YouTubeTranscriptApiException,
-)
+from dotenv import load_dotenv
+from flask import Flask, Response, abort, jsonify, redirect, render_template, request, url_for
+
+import core
+import summary
+
+load_dotenv()
 
 app = Flask(__name__)
 
-VIDEO_ID_RE = re.compile(r"^[A-Za-z0-9_-]{11}$")
-URL_PATTERNS = [
-    re.compile(r"(?:youtube\.com|youtube-nocookie\.com)/(?:watch\?(?:.*&)?v=|embed/|shorts/|live/|v/)([A-Za-z0-9_-]{11})"),
-    re.compile(r"youtu\.be/([A-Za-z0-9_-]{11})"),
-]
+LANG_RE = re.compile(r"^[A-Za-z]{2,3}(-[A-Za-z0-9]{2,8})*$")
 
 
-def extract_video_id(text: str) -> str | None:
-    text = text.strip()
-    if VIDEO_ID_RE.match(text):
-        return text
-    for pattern in URL_PATTERNS:
-        match = pattern.search(text)
-        if match:
-            return match.group(1)
-    return None
-
-
-def pick_transcript(transcript_list, language: str | None):
-    available = list(transcript_list)
-    if language:
-        for t in available:
-            if t.language_code == language:
-                return t, available
-    # Prefer English, then manually written captions, then whatever exists.
-    for t in available:
-        if t.language_code.startswith("en") and not t.is_generated:
-            return t, available
-    for t in available:
-        if t.language_code.startswith("en"):
-            return t, available
-    for t in available:
-        if not t.is_generated:
-            return t, available
-    return available[0], available
+def _language_arg() -> str | None:
+    lang = (request.args.get("lang") or "").strip()
+    return lang if lang and LANG_RE.match(lang) else None
 
 
 @app.route("/")
@@ -57,47 +24,84 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/api/transcript", methods=["POST"])
-def transcript():
-    data = request.get_json(silent=True)
-    if not data:
-        return jsonify({"error": "Invalid request."}), 400
+@app.route("/transcript")
+def transcript_page():
+    video_id = core.extract_video_id(request.args.get("v", ""))
+    if not video_id:
+        return redirect(url_for("index", error="link"))
+    return render_template("transcript.html", video_id=video_id, ai=summary.available())
 
-    video_id = extract_video_id(data.get("url", ""))
+
+# Swap "youtube.com" for your site's address in any video link and it lands here,
+# the same trick youtubetotranscript.com supports.
+@app.route("/watch")
+def watch_redirect():
+    return redirect(url_for("transcript_page", v=request.args.get("v", "")))
+
+
+@app.route("/shorts/<video_id>")
+@app.route("/live/<video_id>")
+@app.route("/embed/<video_id>")
+def path_redirect(video_id):
+    return redirect(url_for("transcript_page", v=video_id))
+
+
+@app.route("/api/transcript")
+def api_transcript():
+    video_id = core.extract_video_id(request.args.get("v", ""))
     if not video_id:
         return jsonify({"error": "That doesn't look like a YouTube link. Paste a video URL or ID."}), 400
-
-    language = data.get("language") or None
-
     try:
-        transcript_list = YouTubeTranscriptApi().list(video_id)
-        chosen, available = pick_transcript(transcript_list, language)
-        fetched = chosen.fetch()
-    except (TranscriptsDisabled, NoTranscriptFound, IndexError):
-        return jsonify({"error": "This video has no captions, so there's no transcript to get."}), 404
-    except (VideoUnavailable, InvalidVideoId):
-        return jsonify({"error": "That video is unavailable or private."}), 404
-    except AgeRestricted:
-        return jsonify({"error": "That video is age-restricted, so YouTube won't share its captions."}), 403
-    except (RequestBlocked, IpBlocked):
-        return jsonify({"error": "YouTube is blocking requests from this server. Try again later or run it from another network."}), 503
-    except YouTubeTranscriptApiException as e:
-        return jsonify({"error": f"Couldn't get the transcript: {type(e).__name__}"}), 502
+        result = core.get_transcript(video_id, _language_arg())
+    except core.TranscriptError as e:
+        return jsonify({"error": e.message}), e.status
+    data = result.to_dict()
+    data["info"] = core.get_video_info(video_id)
+    return jsonify(data)
 
-    return jsonify({
-        "video_id": video_id,
-        "language": fetched.language,
-        "language_code": fetched.language_code,
-        "is_generated": fetched.is_generated,
-        "languages": [
-            {"code": t.language_code, "name": t.language, "generated": t.is_generated}
-            for t in available
-        ],
-        "segments": [
-            {"start": round(s.start, 2), "text": s.text} for s in fetched.snippets
-        ],
-    })
+
+@app.route("/download/<video_id>.<fmt>")
+def download(video_id, fmt):
+    if not core.VIDEO_ID_RE.match(video_id) or fmt not in ("txt", "srt", "vtt"):
+        abort(404)
+    try:
+        result = core.get_transcript(video_id, _language_arg())
+    except core.TranscriptError as e:
+        return Response(e.message, status=e.status, mimetype="text/plain")
+
+    if fmt == "srt":
+        body, mime = core.to_srt(result.segments), "application/x-subrip"
+    elif fmt == "vtt":
+        body, mime = core.to_vtt(result.segments), "text/vtt"
+    else:
+        body = core.to_plain(result.segments, timestamps=request.args.get("timestamps") == "1")
+        mime = "text/plain"
+
+    return Response(
+        body,
+        mimetype=mime,
+        headers={"Content-Disposition": f'attachment; filename="transcript-{video_id}.{fmt}"'},
+    )
+
+
+@app.route("/api/summary", methods=["POST"])
+def api_summary():
+    data = request.get_json(silent=True) or {}
+    video_id = core.extract_video_id(data.get("v", ""))
+    if not video_id:
+        return jsonify({"error": "Missing video."}), 400
+    lang = data.get("lang") or None
+    if lang and not LANG_RE.match(lang):
+        lang = None
+    try:
+        result = core.get_transcript(video_id, lang)
+        info = core.get_video_info(video_id)
+        text = summary.summarize(core.to_plain(result.segments, timestamps=True), info.get("title"))
+    except (core.TranscriptError, summary.SummaryError) as e:
+        return jsonify({"error": e.message}), e.status
+    return jsonify({"summary": text})
 
 
 if __name__ == "__main__":
-    app.run(debug=False, host="127.0.0.1", port=5001)
+    port = int(os.getenv("PORT", "5001"))
+    app.run(debug=False, host="127.0.0.1", port=port)

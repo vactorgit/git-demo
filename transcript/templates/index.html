@@ -1,250 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>YouTube Transcript</title>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: #f5f5f0;
-      color: #1a1a1a;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 48px 16px;
-    }
-
-    .container { width: 100%; max-width: 760px; }
-
-    header { text-align: center; margin-bottom: 32px; }
-    header h1 { font-size: 2rem; font-weight: 700; letter-spacing: -0.5px; color: #111; }
-    header p { margin-top: 8px; color: #555; }
-
-    .card {
-      background: #fff;
-      border-radius: 12px;
-      padding: 24px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.08), 0 4px 16px rgba(0,0,0,0.04);
-    }
-
-    form { display: flex; gap: 10px; }
-    input[type="text"] {
-      flex: 1;
-      min-width: 0;
-      padding: 12px 14px;
-      font-size: 1rem;
-      border: 1.5px solid #ddd;
-      border-radius: 8px;
-      outline: none;
-    }
-    input[type="text"]:focus { border-color: #c4302b; }
-
-    button {
-      padding: 12px 18px;
-      font-size: 0.95rem;
-      font-weight: 600;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      background: #c4302b;
-      color: #fff;
-      white-space: nowrap;
-    }
-    button:disabled { opacity: 0.6; cursor: default; }
-    button.secondary { background: #eee; color: #222; }
-
-    .error { margin-top: 14px; color: #b00020; font-size: 0.95rem; }
-    .error:empty { display: none; }
-
-    #result { margin-top: 24px; display: none; }
-
-    .toolbar {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 16px;
-    }
-    .toolbar .spacer { flex: 1; }
-    .toolbar label { font-size: 0.9rem; color: #444; display: flex; align-items: center; gap: 6px; }
-    select { padding: 8px; border-radius: 6px; border: 1.5px solid #ddd; font-size: 0.9rem; max-width: 220px; }
-
-    .video { aspect-ratio: 16 / 9; width: 100%; border: 0; border-radius: 8px; margin-bottom: 16px; }
-
-    .meta { font-size: 0.85rem; color: #666; margin-bottom: 12px; }
-
-    #transcript {
-      max-height: 60vh;
-      overflow-y: auto;
-      line-height: 1.6;
-      font-size: 1rem;
-      white-space: pre-wrap;
-    }
-    .line { display: flex; gap: 12px; padding: 2px 0; }
-    .line a {
-      flex-shrink: 0;
-      color: #c4302b;
-      text-decoration: none;
-      font-variant-numeric: tabular-nums;
-      font-size: 0.9rem;
-      padding-top: 2px;
-      width: 52px;
-    }
-    .line a:hover { text-decoration: underline; }
-
-    @media (max-width: 520px) {
-      form { flex-direction: column; }
-    }
-  </style>
+  {% include "_head.html" %}
+  <title>Transcript Grabber</title>
+  <meta name="description" content="Paste a YouTube link and get the full transcript. Free, with timestamps, translations and downloads.">
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>YouTube Transcript</h1>
-      <p>Paste a YouTube link and get the full transcript.</p>
-    </header>
+  <header class="topbar">{% include "_brand.html" %}</header>
 
-    <div class="card">
-      <form id="form">
-        <input type="text" id="url" placeholder="https://www.youtube.com/watch?v=..." autocomplete="off" autofocus />
-        <button type="submit" id="go">Get transcript</button>
-      </form>
-      <p class="error" id="error"></p>
-
-      <div id="result">
-        <iframe class="video" id="player" allowfullscreen></iframe>
-
-        <div class="toolbar">
-          <label><input type="checkbox" id="timestamps" checked /> Timestamps</label>
-          <select id="language" title="Caption language"></select>
-          <span class="spacer"></span>
-          <button type="button" class="secondary" id="copy">Copy</button>
-          <button type="button" class="secondary" id="download">Download .txt</button>
-        </div>
-
-        <p class="meta" id="meta"></p>
-        <div id="transcript"></div>
-      </div>
+  <main class="home">
+    <div>
+      <h1>Get the transcript of any YouTube video</h1>
+      <p class="lede">Paste a link. Read, search, copy or download the full transcript.</p>
     </div>
-  </div>
+
+    <form class="bigform" id="form" action="/transcript" method="get" novalidate>
+      <input id="url" name="v" type="text" inputmode="url" autocomplete="off" spellcheck="false" autofocus
+             placeholder="https://www.youtube.com/watch?v=…" aria-label="YouTube link">
+      <button class="btn btn-primary" id="go" type="submit">Get transcript</button>
+    </form>
+    <div class="error" id="error" {% if request.args.get('error') != 'link' %}hidden{% endif %}>
+      That doesn't look like a YouTube link. Copy the link from YouTube's Share button and paste it here.
+    </div>
+
+    <section class="card" id="recent-card" hidden>
+      <h2>Recently opened</h2>
+      <ul class="recent" id="recent"></ul>
+    </section>
+
+    <section class="card">
+      <h2>What you can do</h2>
+      <ul class="features">
+        <li><strong>Any YouTube link</strong>Videos, Shorts, live replays and youtu.be links.</li>
+        <li><strong>Watch along</strong>The line being spoken lights up. Click any line to jump there.</li>
+        <li><strong>Search</strong>Find every place a word comes up.</li>
+        <li><strong>Translate</strong>Switch to any caption language, or machine-translate into another.</li>
+        <li><strong>Copy or download</strong>Plain text, with or without timestamps, or SRT and VTT subtitle files.</li>
+        <li><strong>Shortcut</strong>In any video link, change <code>youtube.com</code> to this site's address.</li>
+      </ul>
+    </section>
+  </main>
 
   <script>
-    const $ = (id) => document.getElementById(id);
-    let current = null;
-
-    function fmt(seconds) {
-      const s = Math.floor(seconds);
-      const h = Math.floor(s / 3600);
-      const m = Math.floor((s % 3600) / 60);
-      const sec = String(s % 60).padStart(2, "0");
-      return h ? `${h}:${String(m).padStart(2, "0")}:${sec}` : `${m}:${sec}`;
+    const ID_RE = /(?:youtube(?:-nocookie)?\.com\/(?:watch\?(?:.*&)?v=|embed\/|shorts\/|live\/|v\/)|youtu\.be\/)([A-Za-z0-9_-]{11})/;
+    function videoId(s) {
+      s = s.trim();
+      if (/^[A-Za-z0-9_-]{11}$/.test(s)) return s;
+      const m = s.match(ID_RE);
+      return m ? m[1] : null;
     }
-
-    function decode(text) {
-      const el = document.createElement("textarea");
-      el.innerHTML = text;
-      return el.value.replace(/\s+/g, " ").trim();
-    }
-
-    function asText(withTimes) {
-      if (!current) return "";
-      if (withTimes) {
-        return current.segments.map((s) => `[${fmt(s.start)}] ${decode(s.text)}`).join("\n");
-      }
-      return current.segments.map((s) => decode(s.text)).join(" ");
-    }
-
-    function render() {
-      const box = $("transcript");
-      box.innerHTML = "";
-      if ($("timestamps").checked) {
-        for (const s of current.segments) {
-          const line = document.createElement("div");
-          line.className = "line";
-          const a = document.createElement("a");
-          a.href = `https://www.youtube.com/watch?v=${current.video_id}&t=${Math.floor(s.start)}s`;
-          a.textContent = fmt(s.start);
-          a.addEventListener("click", (e) => {
-            e.preventDefault();
-            $("player").src = `https://www.youtube-nocookie.com/embed/${current.video_id}?start=${Math.floor(s.start)}&autoplay=1`;
-          });
-          const span = document.createElement("span");
-          span.textContent = decode(s.text);
-          line.append(a, span);
-          box.append(line);
-        }
-      } else {
-        box.textContent = asText(false);
-      }
-    }
-
-    async function load(language) {
-      const url = $("url").value.trim();
-      if (!url) return;
-      $("error").textContent = "";
-      $("go").disabled = true;
-      $("go").textContent = "Loading…";
-      try {
-        const res = await fetch("/api/transcript", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ url, language }),
-        });
-        const data = await res.json();
-        if (!res.ok) throw new Error(data.error || "Something went wrong.");
-
-        const isNewVideo = !current || current.video_id !== data.video_id;
-        current = data;
-        if (isNewVideo) {
-          $("player").src = `https://www.youtube-nocookie.com/embed/${data.video_id}`;
-        }
-
-        const select = $("language");
-        select.innerHTML = "";
-        for (const l of data.languages) {
-          const opt = document.createElement("option");
-          opt.value = l.code;
-          opt.textContent = l.name + (l.generated ? "" : " (manual)");
-          opt.selected = l.code === data.language_code;
-          select.append(opt);
-        }
-        select.style.display = data.languages.length > 1 ? "" : "none";
-
-        const words = asText(false).split(/\s+/).filter(Boolean).length;
-        $("meta").textContent =
-          `${data.language}${data.is_generated && !/auto/i.test(data.language) ? " · auto-generated" : ""} · ${words.toLocaleString()} words`;
-        $("result").style.display = "block";
-        render();
-      } catch (err) {
-        $("error").textContent = err.message;
-      } finally {
-        $("go").disabled = false;
-        $("go").textContent = "Get transcript";
-      }
-    }
-
-    $("form").addEventListener("submit", (e) => { e.preventDefault(); current = null; load(); });
-    $("language").addEventListener("change", (e) => load(e.target.value));
-    $("timestamps").addEventListener("change", render);
-
-    $("copy").addEventListener("click", async () => {
-      await navigator.clipboard.writeText(asText($("timestamps").checked));
-      $("copy").textContent = "Copied!";
-      setTimeout(() => ($("copy").textContent = "Copy"), 1500);
+    const form = document.getElementById("form");
+    const input = document.getElementById("url");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const id = videoId(input.value);
+      if (!id) { document.getElementById("error").hidden = false; return; }
+      location.href = "/transcript?v=" + id;
     });
+    // Pasting a link opens it right away.
+    input.addEventListener("paste", () => setTimeout(() => { if (videoId(input.value)) form.requestSubmit(); }, 0));
 
-    $("download").addEventListener("click", () => {
-      const blob = new Blob([asText($("timestamps").checked)], { type: "text/plain" });
-      const a = document.createElement("a");
-      a.href = URL.createObjectURL(blob);
-      a.download = `transcript-${current.video_id}.txt`;
-      a.click();
-      URL.revokeObjectURL(a.href);
-    });
+    let recent = [];
+    try { recent = JSON.parse(localStorage.getItem("recent") || "[]"); } catch (_) {}
+    if (recent.length) {
+      const list = document.getElementById("recent");
+      for (const r of recent.slice(0, 8)) {
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.href = "/transcript?v=" + encodeURIComponent(r.id);
+        const img = document.createElement("img");
+        img.src = "https://i.ytimg.com/vi/" + encodeURIComponent(r.id) + "/mqdefault.jpg";
+        img.alt = "";
+        img.loading = "lazy";
+        const span = document.createElement("span");
+        span.textContent = r.title || r.id;
+        a.append(img, span);
+        li.append(a);
+        list.append(li);
+      }
+      document.getElementById("recent-card").hidden = false;
+    }
   </script>
 </body>
 </html>

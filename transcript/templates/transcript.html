@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include "_head.html" %}
+  <title>Transcript · Transcript Grabber</title>
+</head>
+<body data-video="{{ video_id }}" data-ai="{{ 'on' if ai else 'off' }}">
+  <header class="topbar">
+    {% include "_brand.html" %}
+    <form id="topform" action="/transcript" method="get" novalidate>
+      <input id="topurl" name="v" type="text" inputmode="url" autocomplete="off" spellcheck="false"
+             placeholder="Paste another YouTube link" aria-label="Another YouTube link">
+      <button class="btn btn-ghost" type="submit">Go</button>
+    </form>
+  </header>
+
+  <main class="page">
+    <section class="videocol">
+      <div class="player"><div id="player"></div></div>
+      <h1 class="vtitle" id="vtitle">Loading video…</h1>
+      <div class="vmeta">
+        <span id="vauthor"></span>
+        <a id="vlink" href="https://www.youtube.com/watch?v={{ video_id }}" target="_blank" rel="noopener">Open on YouTube</a>
+      </div>
+      <section class="card" id="summary-card" {% if not ai %}hidden{% endif %}>
+        <div class="summary-head">
+          <h2>AI summary</h2>
+          <button class="btn btn-ghost" id="summarize" type="button">Summarize</button>
+        </div>
+        <div class="summary" id="summary">Get the main points of this video in a few seconds.</div>
+      </section>
+    </section>
+
+    <section class="tcol" aria-label="Transcript">
+      <div class="toolbar">
+        <input type="search" id="search" placeholder="Search transcript" aria-label="Search transcript">
+        <select id="lang" aria-label="Language" hidden></select>
+        <button class="btn btn-ghost" id="times" type="button" aria-pressed="true">Timestamps</button>
+        <button class="btn btn-ghost" id="para" type="button" aria-pressed="false">Paragraphs</button>
+        <button class="btn btn-ghost" id="follow" type="button" aria-pressed="true">Follow video</button>
+        <button class="btn btn-ghost" id="copy" type="button">Copy</button>
+        <div class="dl">
+          <button class="btn btn-ghost" id="dl" type="button" aria-expanded="false" aria-haspopup="true">Download</button>
+          <div class="dl-menu" id="dl-menu" hidden>
+            <a id="dl-txt" href="#">Text (.txt)</a>
+            <a id="dl-txt-times" href="#">Text with timestamps</a>
+            <a id="dl-srt" href="#">Subtitles (.srt)</a>
+            <a id="dl-vtt" href="#">Subtitles (.vtt)</a>
+          </div>
+        </div>
+      </div>
+      <div class="status" id="status">Getting the transcript…</div>
+      <div class="lines" id="lines">
+        <div class="loading"><div class="spinner"></div>Getting the transcript…</div>
+      </div>
+    </section>
+  </main>
+
+  <script src="{{ url_for('static', filename='transcript.js') }}"></script>
+  <script src="https://www.youtube.com/iframe_api" async></script>
+</body>
+</html>

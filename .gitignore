@@ -4,3 +4,6 @@ __pycache__/
 *.pyc
 *.pyo
 transcript/transcript-*.txt
+.venv/
+transcript/.env
+.pytest_cache/
