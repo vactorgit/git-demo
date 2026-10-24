@@ -3,3 +3,4 @@ emails.csv
 __pycache__/
 *.pyc
 *.pyo
+transcript/transcript-*.txt

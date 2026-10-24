@@ -6,7 +6,20 @@ Paste a YouTube link, get the full transcript. Works with watch links, youtu.be 
 - Switch between caption languages the video has
 - Copy to clipboard or download as .txt
 
-## Run it
+## Quickest way: the script
+
+```
+pip install youtube-transcript-api
+python get_transcript.py
+```
+
+Paste a link when it asks. The transcript prints on screen and saves as `transcript-VIDEO_ID.txt`. Add `--timestamps` for timestamped lines:
+
+```
+python get_transcript.py https://youtu.be/VIDEO_ID --timestamps
+```
+
+## Run the web page version
 
 ```
 cd transcript
