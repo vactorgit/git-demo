@@ -66,6 +66,16 @@ When the user says "TCC", "This Comic Cooks", "This Comic COOKS!", or "my YouTub
   - Top countries: US 62%, UK 6%, Canada 5%.
   - Median long-form views since late July: about 1.1K. Median Short views for Aug 20–Sep 19 Shorts: about 25.6K.
   - "The Man Who Broke Wolverine" (Cyber) is a Short with 1.81M views. Older notes calling it long-form with 115K, and a "Cyber long-form, 247K", are out of date or unverified.
+- **Studio export, 28 days 26 Sep–23 Oct 2026 (user's CSVs, 24 Oct 2026; plain views, not engaged views):**
+  - Totals: 3.04M views, 1,602 subscribers, $699 estimated revenue, 24.3K watch hours.
+  - Weekly views fell fast: 1.68M, then 638K, 399K, 320K. The daily floor is about 42–47K. At about $0.23 per 1K views, the latest week is roughly $75 of ad revenue (an estimate). $1,200 a week from ads alone would take about 5M views a week.
+  - Each Short spikes for about a week, then dies. "Who IS Gentle?" peaked at 76K views a day on 27 Sep and was under 100 a day by 15 Oct.
+  - Shorts: 484 videos, 3.0M views, 0.51 subscribers per 1K, $0.22 RPM. Videos over 3 minutes: 17 videos, 20K views, 26 subscribers, $37. The 10 long-forms posted in the window got about 10.5K views and about 6 subscribers combined. The episode reviews got 289–1,123 views and 1.3–1.9% click-through (Shorts run 9–10%).
+  - Doom and versus content has already flopped: "Doctor Doom Became God" 2.7K views, "Marvel Faked A Stan Lee Hero. Now He's In Doomsday" 804, "Doom Vs Thanos. Who Wins?" 2.4K, "Doctor Doom Stopped Thor's Stormbreaker" 311. Don't plan Doomsday versus or percentage videos.
+  - Top subscriber earners: "Who IS Gentle?" 340K views and 190 subscribers; "The Man Who Broke Wolverine" 259K and 144; "Black Vulcan" 96K and 90; "The Mutant Who Literally Cannot Lose" 142K and 90; Static Shock's Ebon 80K and 50.
+  - Black DC and Milestone hero Shorts (Black Vulcan, Static Shock, the two Black Lightning's-daughter Shorts) got about 289K views and 212 subscribers, about 0.73 per 1K against the 0.51 average.
+  - Shorts posted in the window, sorted by title keyword (crude): mutant Shorts averaged about 41K views, DC and Milestone about 38K with the best conversion, other Marvel about 19K.
+  - Next long-form candidate by the Thursday rule: a long version of "Who IS Gentle?", then Black Vulcan.
 - **Other-chat plans (TCC Money Plan, 18 Oct 2026):**
   - Revenue priority: sponsors (GlobalComix first), then long-form ads, affiliates, Patreon, and later panels and consulting.
   - Product idea: a "Read This Next" guide with Worth It? verdicts.
