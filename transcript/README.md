@@ -8,7 +8,7 @@ Download it from the **Transcript Grabber (desktop app)** release on this repo's
 `TranscriptGrabber-Windows.zip` or `TranscriptGrabber-Mac.zip`. Unzip it and open **Transcript Grabber**. Nothing else to install.
 
 - Windows: if a blue "Windows protected your PC" box appears, click **More info**, then **Run anyway**.
-- Mac (Apple silicon, 2020 or newer): right-click the app, choose **Open**, then **Open**. If macOS still blocks it, go to **System Settings > Privacy & Security** and click **Open Anyway**.
+- Mac (Apple silicon, 2020 or newer): the first time, macOS says it "could not verify" the app. Click **Done**, then open **System Settings > Privacy & Security**, scroll to **Security**, click **Open Anyway**, and confirm. After that it opens normally. If there's no Open Anyway button, run `xattr -dr com.apple.quarantine ~/Downloads/"Transcript Grabber.app"` in Terminal.
 
 Those warnings appear because the app isn't signed with a paid Apple/Microsoft developer certificate.
 For AI summaries in the desktop app, put a `.env` file with `ANTHROPIC_API_KEY=...` in the same folder as the app.
