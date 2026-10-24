@@ -2,7 +2,7 @@ import core
 import fake_youtube
 import pytest
 import summary
-from fake_youtube import GOOD_ID, NO_CAPTIONS_ID, PRIVATE_ID
+from fake_youtube import GOOD_ID, NO_CAPTIONS_ID, OFFLINE_ID, PRIVATE_ID
 
 
 @pytest.mark.parametrize(
@@ -55,6 +55,8 @@ def test_transcript_errors(client):
     assert res.status_code == 404 and "no captions" in res.get_json()["error"]
     res = client.get(f"/api/transcript?v={PRIVATE_ID}")
     assert res.status_code == 404 and "unavailable" in res.get_json()["error"]
+    res = client.get(f"/api/transcript?v={OFFLINE_ID}")
+    assert res.status_code == 502 and "internet connection" in res.get_json()["error"]
 
 
 def test_transcript_is_cached(client):

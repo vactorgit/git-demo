@@ -14,6 +14,8 @@ A Flask app benchmarked against youtubetotranscript.com: paste a YouTube link, g
 - `templates/`, `static/style.css`, `static/transcript.js`: UI. Player sync uses the YouTube IFrame API.
 - `start.command` / `start.bat`: double-click launchers for the user (creates `.venv`, installs, opens the browser).
 - `get_transcript.py`: standalone command-line version.
+- `desktop.py`: desktop app (pywebview window around the Flask server). `TG_HEADLESS=1 TG_PORT=n` runs only the server, which the build uses as a smoke test.
+- `.github/workflows/desktop.yml`: builds Windows (.exe) and Mac (.app) with PyInstaller on GitHub Actions, then republishes the `transcript-grabber-desktop` release. Bundled files resolve through `sys._MEIPASS` in `app.py`.
 
 ## Verify every change
 1. `python -m pytest -q transcript/tests`

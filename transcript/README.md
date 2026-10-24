@@ -2,7 +2,20 @@
 
 Your own version of youtubetotranscript.com. Paste a YouTube link, get the full transcript.
 
-## Start it (on your computer, free)
+## Desktop app (easiest)
+
+Download it from the **Transcript Grabber (desktop app)** release on this repo's Releases page:
+`TranscriptGrabber-Windows.zip` or `TranscriptGrabber-Mac.zip`. Unzip it and open **Transcript Grabber**. Nothing else to install.
+
+- Windows: if a blue "Windows protected your PC" box appears, click **More info**, then **Run anyway**.
+- Mac (Apple silicon, 2020 or newer): right-click the app, choose **Open**, then **Open**. If macOS still blocks it, go to **System Settings > Privacy & Security** and click **Open Anyway**.
+
+Those warnings appear because the app isn't signed with a paid Apple/Microsoft developer certificate.
+For AI summaries in the desktop app, put a `.env` file with `ANTHROPIC_API_KEY=...` in the same folder as the app.
+
+GitHub builds both versions automatically (`.github/workflows/desktop.yml`) whenever anything in `transcript/` changes.
+
+## Start it from the code (on your computer, free)
 
 1. Install Python once from https://www.python.org/downloads/. On Windows, tick **"Add python.exe to PATH"** in the installer.
 2. Download this `transcript` folder.

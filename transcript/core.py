@@ -152,6 +152,8 @@ def get_transcript(video_id: str, language: str | None = None) -> Transcript:
         )
     except YouTubeTranscriptApiException as e:
         raise TranscriptError(f"Couldn't get the transcript ({type(e).__name__}).", 502)
+    except requests.RequestException:
+        raise TranscriptError("Couldn't reach YouTube. Check your internet connection and try again.", 502)
 
     base = tracks[0]
     result = Transcript(

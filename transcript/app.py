@@ -1,5 +1,7 @@
 import os
 import re
+import sys
+from pathlib import Path
 
 from dotenv import load_dotenv
 from flask import Flask, Response, abort, jsonify, redirect, render_template, request, url_for
@@ -7,9 +9,12 @@ from flask import Flask, Response, abort, jsonify, redirect, render_template, re
 import core
 import summary
 
-load_dotenv()
+# In the packaged desktop app, bundled files live in a temp folder and .env sits next to the app.
+FROZEN = getattr(sys, "frozen", False)
+BASE_DIR = Path(getattr(sys, "_MEIPASS", Path(__file__).resolve().parent))
+load_dotenv(Path(sys.executable).parent / ".env" if FROZEN else None)
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder=str(BASE_DIR / "templates"), static_folder=str(BASE_DIR / "static"))
 
 LANG_RE = re.compile(r"^[A-Za-z]{2,3}(-[A-Za-z0-9]{2,8})*$")
 

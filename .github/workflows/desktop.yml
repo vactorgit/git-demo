@@ -1,0 +1,101 @@
+name: Build desktop app
+
+on:
+  push:
+    paths:
+      - "transcript/**"
+      - ".github/workflows/desktop.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: windows-latest
+            zip: TranscriptGrabber-Windows.zip
+          - os: macos-latest
+            zip: TranscriptGrabber-Mac.zip
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        working-directory: transcript
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: pip install -r requirements-desktop.txt pytest
+
+      - name: Test
+        run: python -m pytest -q tests
+
+      - name: Build (Windows)
+        if: runner.os == 'Windows'
+        run: >
+          pyinstaller --noconfirm --onefile --windowed --name "Transcript Grabber"
+          --icon icon.png --add-data "templates:templates" --add-data "static:static" desktop.py
+
+      - name: Build (Mac)
+        if: runner.os == 'macOS'
+        run: >
+          pyinstaller --noconfirm --windowed --name "Transcript Grabber"
+          --osx-bundle-identifier com.thiscomiccooks.transcriptgrabber
+          --icon icon.png --add-data "templates:templates" --add-data "static:static" desktop.py
+
+      - name: Smoke test the packaged app
+        shell: bash
+        run: |
+          if [ "$RUNNER_OS" = "Windows" ]; then APP="dist/Transcript Grabber.exe"; else APP="dist/Transcript Grabber.app/Contents/MacOS/Transcript Grabber"; fi
+          TG_HEADLESS=1 TG_PORT=5099 "$APP" &
+          for i in $(seq 1 60); do curl -sf -o /dev/null http://127.0.0.1:5099/ && break; sleep 1; done
+          curl -sf http://127.0.0.1:5099/ | grep -q "<title>Transcript Grabber"
+          curl -sf -o /dev/null http://127.0.0.1:5099/static/style.css
+          curl -sf -o /dev/null "http://127.0.0.1:5099/transcript?v=dQw4w9WgXcQ"
+          echo "Packaged app serves its pages."
+
+      - name: Zip (Windows)
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: Compress-Archive -Path "dist/Transcript Grabber.exe" -DestinationPath "../${{ matrix.zip }}"
+
+      - name: Zip (Mac)
+        if: runner.os == 'macOS'
+        run: cd dist && ditto -c -k --keepParent "Transcript Grabber.app" "../../${{ matrix.zip }}"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.zip }}
+          path: ${{ matrix.zip }}
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: downloads
+          merge-multiple: true
+
+      - name: Publish to the "Transcript Grabber desktop" release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          gh release delete transcript-grabber-desktop --yes --cleanup-tag || true
+          gh release create transcript-grabber-desktop downloads/*.zip \
+            --target "${{ github.sha }}" \
+            --title "Transcript Grabber (desktop app)" \
+            --notes "Download the zip for your computer, unzip it, and open Transcript Grabber.
+
+          - Windows: if a blue 'Windows protected your PC' box appears, click More info, then Run anyway.
+          - Mac (Apple silicon, 2020 or newer): right-click the app, choose Open, then Open. If macOS still blocks it, go to System Settings > Privacy & Security and click Open Anyway.
+
+          Built from ${{ github.sha }}."

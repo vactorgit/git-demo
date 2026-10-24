@@ -7,6 +7,7 @@ from youtube_transcript_api._errors import TranscriptsDisabled, VideoUnavailable
 GOOD_ID = "dQw4w9WgXcQ"
 NO_CAPTIONS_ID = "nocaptions0"
 PRIVATE_ID = "privatevid0"
+OFFLINE_ID = "offlinevid0"
 
 LINES = [
     "Welcome back to the channel.",
@@ -60,6 +61,10 @@ class FakeApi:
             raise TranscriptsDisabled(video_id)
         if video_id == PRIVATE_ID:
             raise VideoUnavailable(video_id)
+        if video_id == OFFLINE_ID:
+            import requests
+
+            raise requests.ConnectionError("no network")
         return [FakeTrack("es", "Spanish (auto-generated)", True), FakeTrack("en", "English", False)]
 
 
