@@ -30,6 +30,12 @@ When the user says "TCC", "This Comic Cooks", "This Comic COOKS!", or "my YouTub
   - Key contrast: Marvel or the movies got this character wrong, and the comics tell the real story.
   - What flops: Lantern gimmick Shorts, episode reviews.
   - Since 23 Oct 2026 the daily pick gives a Short beat map in place of a word-for-word script.
+- **Video structure rules (23 Oct 2026, from another video the user liked):**
+  - Write the hook (the first 2–3 sentences) word for word, and keep the rest as bullet points to speak from.
+  - Put the call to action once, 10–30% of the way in, right after giving real value.
+  - End long videos with a next-video line ("now that you know X, watch Y next"), never "thanks for watching" or "please subscribe". Use YouTube's best-for-viewer end screen until the next video exists.
+  - Cadence: one Short a day, one long-form video a week.
+  - The Starter Kit page is built (https://claude.ai/artifact/6wcAgMgwGHEsJSXytRzi6o) but its email signup isn't live until the user creates a beehiiv or Kit form. Leave the Starter Kit line out of descriptions until then.
 - **Production format (since 23 Oct 2026):**
   - The user talks to camera in one take with no editing. No graphics or B-roll, only face plus a held-up comic or tablet.
   - What the user wants from Claude: researched ideas people will watch, and packaging that gets clicks (title, 2–4 words of thumbnail text, a simple face-plus-cover thumbnail).
