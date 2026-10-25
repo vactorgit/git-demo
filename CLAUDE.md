@@ -35,6 +35,8 @@ When the user says "TCC", "This Comic Cooks", "This Comic COOKS!", or "my YouTub
   - Put the call to action once, 10–30% of the way in, right after giving real value.
   - End long videos with a next-video line ("now that you know X, watch Y next"), never "thanks for watching" or "please subscribe". Use YouTube's best-for-viewer end screen until the next video exists.
   - Cadence: one Short a day, one long-form video a week.
+  - Pacing (25 Oct 2026): make the first beat the shortest and each later beat a little longer, so the video feels fast. Talk to one viewer: say "you," never "you guys."
+  - Positioning, the channel's "hill to die on" (25 Oct 2026): "You don't need to read 60 years of continuity to start comics." Use it where it fits, especially in search videos, reading guides and Starter Kit lines.
   - The Starter Kit page is built (https://claude.ai/artifact/6wcAgMgwGHEsJSXytRzi6o) but its email signup isn't live until the user creates a beehiiv or Kit form. Leave the Starter Kit line out of descriptions until then.
 - **Production format (since 23 Oct 2026):**
   - The user talks to camera in one take with no editing. No graphics or B-roll, only face plus a held-up comic or tablet.
