@@ -55,6 +55,7 @@ When the user says "TCC", "This Comic Cooks", "This Comic COOKS!", or "my YouTub
   - "x-men reading order": under 750
   - These match the mission and the Starter Kit funnel.
 - **Host:** Trent Vactor ("Vactor"), contact vactormail@gmail.com.
+  - From December 2026: in the office five days a week. Prep the night before, record right after waking. Long-forms can be batched on weekends.
   - Also runs the "Before Doomsday" podcast with Tim Costello.
   - A friend, Kevin Coll, is building a "Worth It?" section on the TCC website.
 - **Real revenue (YouTube Analytics, 24 Jul–22 Oct 2026):**
@@ -90,7 +91,7 @@ When the user says "TCC", "This Comic Cooks", "This Comic COOKS!", or "my YouTub
   - Brand (confirmed by the user 22 Oct 2026): "the X-Men channel for movie fans." Mutants are the anchor.
   - On 23 Oct 2026 the user said not to limit the channel to Marvel. DC, Image, Milestone and other publishers are welcome. The working mix is about 60% mutants and 40% other publishers, chosen when the topic hits a proven angle: a character the publisher wronged, representation, or "who is the character from the new movie or show".
   - Money: affiliate links on reading guides, an email list built from the reading-guide app, a $12 X-Men Reading Map, sponsors, and TikTok payouts. YouTube Memberships come later, replacing Patreon.
-- **Daily pick:** https://claude.ai/artifact/H2aL2FtMZVGrgsEf9GWd53, rewritten every day by the "TCC Daily Pick" scheduled task (5:25 AM Phoenix, America/Phoenix time zone). Since 23 Oct 2026 the task fires into the working session session_01RD1wiFHDit7BF19zsw9R7L so it can use vidIQ, Google Drive and ArtifactData. Scheduled tasks on this account can't attach connectors themselves. The old fresh-session version (trig_01Wgag2UAJKaeCrS7QmqCAf8) is disabled. It holds the day's top mutant video topic, a Short script and a long-form outline. It also has a viewer-request list (the page's database, collection "requests"). Each run reviews the open requests and asks the user whether their comments had new ones.
+- **Daily pick:** https://claude.ai/artifact/H2aL2FtMZVGrgsEf9GWd53, rewritten every day by the "TCC Daily Pick" scheduled task. Since 26 Oct 2026 it runs in the evening (5:23 PM Phoenix, America/Phoenix time zone) and builds the NEXT day's pick, so the user can prep it the night before and film first thing in the morning. From December 2026 the user works in an office five days a week, so night-before prep is the routine; the switch started early on purpose. Since 23 Oct 2026 the task fires into the working session session_01RD1wiFHDit7BF19zsw9R7L so it can use vidIQ, Google Drive and ArtifactData. Scheduled tasks on this account can't attach connectors themselves. The old fresh-session version (trig_01Wgag2UAJKaeCrS7QmqCAf8) is disabled. It holds the day's top mutant video topic, a Short script and a long-form outline. It also has a viewer-request list (the page's database, collection "requests"). Each run reviews the open requests and asks the user whether their comments had new ones.
 - **Growth plan:** https://claude.ai/artifact/JQ3HEsUx1VsNMZLvb9r4QA
 
 ## Fact rule for scripts and video content
