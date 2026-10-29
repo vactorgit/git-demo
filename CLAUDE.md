@@ -136,6 +136,8 @@ The user's instruction: "whatever gets me to quitting my day job." Every plan, p
   6. Weekly 3-in-1 email from the week's picks; draft a month ahead. Batch and schedule Shorts. Bank the November and December Patreon guides.
   Track per week: email signups, replies, signups per 1K Short views, sponsor replies.
 
+- **Reading time vs creating time (29 Oct 2026):** as output grew over 5 years, the user's reading has fallen, and he must read to recommend well. Proposed budget (not yet confirmed): about 4 hours a week now, 2-3 from December. Three tiers: (1) read fully any book he gives a Buy / Library / Skip verdict on, plus the monthly Obsession Report character and the Starter Kit books; (2) read one key issue (about 15-30 minutes) for a character Short and rely on sourced research for the rest; (3) no reading for news, casting and release dates. Rule: only recommend by name what he has read at least one key arc of; everything else is labeled research. Read then record in the same sitting, read on a phone or tablet through Hoopla or Libby, and keep some reading for joy. Log hours per book and what it became. Possible daily-run change, waiting on his yes: add an optional "If you have 20 minutes tonight, read this issue first" line to Tonight's prep.
+
 ## Fact rule for scripts and video content
 
 The user wants nothing in a script that isn't a verified fact.
