@@ -108,6 +108,16 @@ The user's instruction: "whatever gets me to quitting my day job." Every plan, p
 - **Cautions:** the most engaged audiences are not always the highest value, so judge Shorts by email signups and long-form views, not view counts. Don't cut Shorts until long-form and email numbers justify it. Change direction gradually. Keep picks anchored (mutants first).
 - **Recommended quit gates (Claude's recommendation, not yet confirmed by the user):** keep the job until about three consecutive months of non-job income at target, with several months of savings behind it. The target is take-home pay after self-employment tax and health insurance, so check with an accountant. A 90-day test: Starter Kit live and the email list growing, a first sponsor conversation, affiliate links in every description, and long-form median views above the current 1K.
 
+## Mission, brand and Patreon plan (set 29 Oct 2026)
+
+- **Mission (the user's words):** spread the joy of comics, help people, and make people feel represented. The user is Black and Japanese; his 5-year-old son is biracial. Underserved characters get the spotlight. Representation is also the best-converting content (Sunspot about 4.6 subscribers per 1K engaged views, Blood Syndicate 4.3, Sara Grey 3.0, Monica Rambeau 2.7, Black Vulcan 1.9), so mission and conversion point the same way.
+- **Brand line (already on the Patreon page):** "This Comic Cooks is for people who want to love comics but don't know where to start." Use it in the channel description, the beehiiv description and the Patreon page. "[Name], if you're nasty" is the signature and a search handle (a viewer found the channel by Googling it); keep it identical and visible.
+- **Patreon (29 Oct 2026):** 11 members, 1 paid, 307 posts, $4.29 a month. Tiers: $5 The Obsession Report (one character a month, an essay about why they stopped him cold) and $10 The Obsession Report + Reading Guide (adds a one-page reading guide PDF, with a 7-day free trial). The page promises each entry is available "tonight," with no out-of-print trades, so each month's guide must deliver that.
+- **Funnel order:** Short, then the free Starter Kit email, then a weekly email, then the paid monthly guide. The Starter Kit is month zero of the paid guide. Don't restructure Patreon or pitch it hard until the email list exists; after about three weekly emails add a short "what the paid guide is" line and link. Shorts viewers are drive-by, so they won't go straight to a $5-10 monthly tier.
+- **Possible tier change later (not yet decided):** the new reader needs the practical guide more than the essay, so the Reading Guide could move to the lower tier. Wait for list data.
+- **Every Short ends with one specific book and one reason to care.** Drop gimmick Shorts (Lantern crossovers) and plain episode reviews.
+- **Decision rule:** keep the day job. The 90-day test is signups per 1K views, replies, a first sponsor conversation, and long-form median views above 1K. If these aren't moving by the end of January 2027, review direction with the data. No pivot away from comics or Shorts is supported by the evidence so far.
+
 ## Fact rule for scripts and video content
 
 The user wants nothing in a script that isn't a verified fact.
