@@ -127,6 +127,15 @@ The user's instruction: "whatever gets me to quitting my day job." Every plan, p
   - **Jenna, Go Read Some Comics** (@goreadsomecomics), started Sept 2024. 28.9K subscribers, 2.03M lifetime views, 163 videos; 2026 growth +6.5K subscribers on 53 videos. DC/Marvel screen breakdowns and essays, 18-30 minutes. Her top 50 long-forms ran 12.6K-88.7K views (about 43%-307% of her subscriber count), against the user's median long-form of about 1.1K (about 3.5% of his). Her signature is a stated thesis, a history frame from comics, quotes, and the sign-off "go read some comics"; she also sells merch. The user would pay for her channel for her insight and love of the medium.
   - Lesson: the user's reach is far bigger (36.6M lifetime views, +24.8K subscribers this year) but his subscribers are drive-by Shorts viewers who don't watch long-form. Copy the habits (voice, a thesis per video, a consistent weekly show, a monthly personal "what I'm reading" with Worth It? verdicts and book links, collabs, a signature sign-off), not the 20-30 minute scripted essay format.
 
+- **November plan (set 29 Oct 2026), ranked by return per hour before the December time crunch:**
+  1. Finish the beehiiv welcome email, add the brand line and "if you're nasty" to the channel and beehiiv descriptions, and put the signup link in every description, pinned comment and profile.
+  2. Launch a monthly "What I'm Reading in [Month]" Short (Kody's best repeatable format): 3 books the user is really reading, each with creators, a one-line take, a Buy / Library / Skip verdict and who it's for, affiliate links in the description, and the Starter Kit line. Pick one new-reader book, one representation book and one mutant or screen tie-in (reader test). The user chooses the books; verify creators, years and editions with two sources before it goes up.
+  3. Every Thursday long-form states the user's own thesis in the first 30 seconds (his opinion, worded as his, never written for him).
+  4. Film "How to Get Into Comics" (the evergreen search video) on a weekend.
+  5. Send one sponsor inquiry (GlobalComix first; draft only, the user sends it). Don't fill [RATE] placeholders until a reply.
+  6. Weekly 3-in-1 email from the week's picks; draft a month ahead. Batch and schedule Shorts. Bank the November and December Patreon guides.
+  Track per week: email signups, replies, signups per 1K Short views, sponsor replies.
+
 ## Fact rule for scripts and video content
 
 The user wants nothing in a script that isn't a verified fact.
