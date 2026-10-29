@@ -118,6 +118,10 @@ The user's instruction: "whatever gets me to quitting my day job." Every plan, p
 - **Every Short ends with one specific book and one reason to care.** Drop gimmick Shorts (Lantern crossovers) and plain episode reviews.
 - **Decision rule:** keep the day job. The 90-day test is signups per 1K views, replies, a first sponsor conversation, and long-form median views above 1K. If these aren't moving by the end of January 2027, review direction with the data. No pivot away from comics or Shorts is supported by the evidence so far.
 
+- **Day-job context (29 Oct 2026):** the user was hired in July but has had no real work, and has been paid while building the channel. The company launches its product in December, so he will work about 8 hours a day then. The free time is finite, so bank assets that keep earning without him: the welcome email and a month of weekly emails drafted ahead, evergreen search long-forms ("How to Get Into Comics" and "Where to start with X" guides), batched and scheduled Shorts, a Patreon copy refresh with November and December guides banked, and one sponsor inquiry (GlobalComix). Keep the daily routine at about 15 minutes of night prep plus a morning record.
+- **Model he wants (the Film Cast):** hosts paid by about $10 a month Patreon from loyal fans, built over more than a decade. People pay for the people, via a personal bonus episode (After Dark: the hosts talking about their lives). His $5 tier ("the version that doesn't have to perform") is the same idea. The first job is relationship, not product: replies, shout-outs, email, a bit of his own life and voice. Don't copy the name; a monthly "Off the Page" note is the proposed equivalent, and only promise what he can keep up at 8 hours a day.
+- **What people want and pay for:** he has struggled to know this for years. Don't guess: use the requests box, email replies and comments, and test before building (pre-sell the $12 Reading Map to the first people on the list).
+
 ## Fact rule for scripts and video content
 
 The user wants nothing in a script that isn't a verified fact.
