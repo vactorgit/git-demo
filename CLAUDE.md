@@ -149,6 +149,8 @@ The user's instruction: "whatever gets me to quitting my day job." Every plan, p
 
 - **Daily output format (user request, 30 Oct 2026):** every day show (1) the finished script in paragraph form with a timestamp per paragraph, checked against the Paddy Galloway review (script-review skill, with a fresh web search for current guidance and a fact-check table), then (2) only the SEO the user copies: title, description, tags, pinned comment, TikTok caption. No beat map unless he asks.
 
+- **Daily analytics pulse (approved by the user 30 Oct 2026):** every evening run adds a short "Yesterday's results" block at the top of the nightly page and in the reply. Pull with two vidIQ calls (about 10 credits): (1) vidiq_channel_analytics by day for the last 14 days (engagedViews, subscribersGained, averageViewPercentage, estimatedRevenue) to compare the last 7 days with the 7 before; (2) vidiq_user_videos (newest, public) for the last few Shorts' view counts, compared with the median of the last 10 Shorts. Ask the user for two numbers vidIQ cannot give: Studio "viewed vs swiped away" for yesterday's Short, and the beehiiv signup count (use the beehiiv connector if reachable). Judge a Short only at 48-72 hours and make strategy decisions weekly, never off one day. On Mondays add the deeper weekly review already planned (revenue per 1K views by source). Keep the credit budget under about 30 a day.
+
 ## Fact rule for scripts and video content
 
 The user wants nothing in a script that isn't a verified fact.
