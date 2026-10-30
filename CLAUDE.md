@@ -147,6 +147,8 @@ The user's instruction: "whatever gets me to quitting my day job." Every plan, p
 
 - **Newsletter restart (30 Oct 2026):** the user chose to restart the newsletter from scratch in a new beehiiv publication with a This Comic Cooks subdomain (target "thiscomiccooks", fallback "thiscomiccooksnewsletter"), because the old one is stuck at "trents-newsletter". He creates the publication himself (Settings, + New Publication); the connector cannot. Rebuild there in this session: name "Worth It? by This Comic COOKS" (or a new name if he picks one), the one-line description, logo, tags books/comics/entertainment, Arizona time zone, sender "Vactor", the Starter Kit welcome automation (signed "Vactor"), the weekly 3-in-1 template, and remove the sample post feeds from the home page draft. Then update the Starter Kit page, the nightly page and this file to the new link, and leave the old trents-newsletter publication unused. A handoff was delivered to the "First newsletter creation" session; a follow-up asking it to stand down failed because that session was inactive, so the user must tell it to ignore the handoff if he opens it. That session holds an Issue #1 draft (House of X verdict) in the old publication.
 
+- **Daily output format (user request, 30 Oct 2026):** every day show (1) the finished script in paragraph form with a timestamp per paragraph, checked against the Paddy Galloway review (script-review skill, with a fresh web search for current guidance and a fact-check table), then (2) only the SEO the user copies: title, description, tags, pinned comment, TikTok caption. No beat map unless he asks.
+
 ## Fact rule for scripts and video content
 
 The user wants nothing in a script that isn't a verified fact.
