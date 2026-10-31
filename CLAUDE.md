@@ -184,3 +184,5 @@ The user wants nothing in a script that isn't a verified fact.
 - Include a fact-check list mapping each claim to its sources.
 
 Never guess what the channel covers from its name. If something isn't listed here, ask.
+
+- **Long-form production method (user, 31 Oct 2026):** the Polaris long-form took about 1 hour: Claude wrote the script, the user recorded it, and he placed Google-image results back to back as a slideshow. So long-forms = script plus images (the nightly/weekly package must include an image shot list in script order); Shorts stay one take to camera. The user agreed (31 Oct) to record a Kitty Pryde long-form ("Why Marvel Gave Kitty Pryde's Biggest Story to Wolverine") after his Halloween video. Polaris script claims (six documented brainwashings, same powers as Magneto, the Larry Houston quote) are still unaudited; offer a fact-check and a pinned correction if any fail.
