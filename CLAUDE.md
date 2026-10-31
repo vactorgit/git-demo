@@ -162,6 +162,13 @@ The user's instruction: "whatever gets me to quitting my day job." Every plan, p
 
 - **Short performance log (viewed vs swiped away, from the user's Studio screenshots; compare new Shorts against these):** Sentinels Short (posted 30 Oct 2026, hook "Doom raises an army of Sentinels in the Doomsday trailer..."): 57.7% stayed to watch, 42.3% swiped away, 604 engaged views of about 1,100 views at about 19 hours; engaged views plateaued after about 4 hours. The 70-90% benchmark for top Shorts is a second-hand summary of Paddy Galloway, unverified. Ask the user for the same screen on a recent Short with higher views to get his own baseline.
 
+- **ROI gate for every pick (user request, 31 Oct 2026: "only show me videos that maximize ROI and growing the channel ASAP").** The nightly page shows ONE pick plus at most two runners-up, and every one must pass this gate; a topic that fails it is not shown. The pick panel states the evidence line (the channel's own numbers for the pattern it matches).
+  1. **Proven pattern.** It must match a pattern with a track record on this channel: (a) mutant deep cut with an injustice or a catch and plain-word title ("The Mutant Who...", "Marvel did X to this hero"): Isca 617K engaged views and 1.5 subscribers per 1K, Onyxx 416K views, Astra 307K, Cyber 231K and 1.3 per 1K, Gentle 244K and 1.2, Shatterstar 141K and 1.7, Sprite 118K and 1.6; (b) representation: Sunspot 4.8 per 1K, Sara Grey 3.0, Monica Rambeau 2.7, Black Vulcan 1.9; (c) show or movie tie-in "who is X in [current show] and what the comic says": Jocasta 84K views, Paladin 25K, Ultron 12K; (d) search long-form for evergreen income ("How to Get Into Comics", Marvel Unlimited shutdown), made weekly, never daily.
+  2. **Weekly mix of 7 Shorts:** about 4 mutant deep cuts or injustice stories, 1 to 2 representation stories (they convert best), 1 current show tie-in, at most 1 experiment. No more than 1 non-mutant, non-tie-in Short a week.
+  3. **Always cut:** episode reviews, Lantern and gimmick crossovers, Doom or versus videos, broad MCU debates (2.0M engaged views but 0.4 subscribers per 1K), obscure non-mutant teams (Young Masters 4K), and news with no comic to read.
+  4. **Effort and funnel:** must be preppable in 15 minutes, double-sourceable, end on one book plus the Starter Kit, and open with the surprising claim in the first 3 seconds, not a setup.
+  Caveat to repeat when relevant: October Shorts fell to 1K-6K views each even on proven keys (Sentinels 1.1K, Black Bomber 2K, Tom King 2.9K), and the cause (distribution vs topic vs hook) is not yet known, so keep logging "stayed to watch" and test.
+
 ## Fact rule for scripts and video content
 
 The user wants nothing in a script that isn't a verified fact.
