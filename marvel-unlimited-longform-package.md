@@ -10,7 +10,7 @@ Prepared 2 Nov 2026 for Vactor (This Comic COOKS!). Edited video, about 6 minute
 
 **0:50** Thing one: move your library. The new Marvel Comics app, powered by WEBTOON, launches November 16. Marvel's FAQ says that if you were a member as of October 5, your access stays free until December 7, and you can import your library and your reading progress after the app launches. My advice: do it the week it launches. The FAQ also says active subscriptions get a prorated refund on or around November 16, so check your account.
 
-**1:40** Quick pause. If you've been meaning to start somewhere, I made a free X-Men Starter Kit: five comics, in order. The link is in the description.
+**1:40** Quick pause. If you've been meaning to start somewhere, I made a free X-Men Starter Kit: three comics to start with, sent to your email. The link is in the description.
 
 **2:00** Thing two: what the new app costs. The base tier is $9.99 a month or $69.99 a year, and new issues show up about three months after print. The Ultimate tier is $12.49 a month or $99.99 a year, and new issues show up 30 days after print. So the cheapest year is $69.99, and the Ultimate year is $99.99. [Your opinion in your words: who actually needs Ultimate, and who should stick with base. Say "this is my read."]
 
@@ -38,7 +38,7 @@ Prepared 2 Nov 2026 for Vactor (This Comic COOKS!). Edited video, about 6 minute
 **Description:**
 Marvel Unlimited is shutting down and a new Marvel Comics app launches November 16. Here are 3 things to do before December 7, and how to keep reading Marvel for free.
 Dates and prices come from Marvel's FAQ and news coverage and may change. Check Marvel's official FAQ for your account.
-Free X-Men Starter Kit (5 comics, in order): https://this-comic-cooks.beehiiv.com/subscribe
+Free X-Men Starter Kit (3 comics to start with, by email): https://this-comic-cooks.beehiiv.com/subscribe
 You don't need 60 years of continuity to start comics.
 
 **Tags:** marvel unlimited, marvel unlimited shutting down, marvel unlimited december 7, marvel comics app, webtoon marvel, how to read marvel comics for free, hoopla marvel comics, libby comics, marvel unlimited alternative
