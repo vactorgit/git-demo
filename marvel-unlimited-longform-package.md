@@ -1,34 +1,39 @@
-# Long-form: Marvel Unlimited is shutting down (v2, after Paddy Galloway review)
+# Long-form: Marvel Unlimited is shutting down (v3, facts verified from full articles)
 
-Prepared 2 Nov 2026 for Vactor (This Comic COOKS!). Edited video, about 6 minutes, with graphics. Fill every `[ ]` blank in your own words. Do not pad it to 9 minutes.
+Prepared 3 Nov 2026 for Vactor (This Comic COOKS!). Edited video, about 6 to 7 minutes, with graphics. Fill every `[ ]` blank in your own words. Do not pad it to 9 minutes.
+
+## What changed in v3
+- Every date, price and tier was re-checked in the full articles (AIPT, Cosmic Book News, ICv2, Bleeding Cool, Murphy's Multiverse, Hackernoon quoting Marvel's FAQ, Anime Superhero News). They agree on all of it. The December 17 date reported by IGN and Toy-People is the odd one out.
+- Added: you need a WEBTOON account to import, the import covers library, reading progress, redeemed comics and saved issues, and the founding-member offer ($59.99 for the first year of Ultimate).
+- Marvel's own page blocks automated readers (403), so Marvel's FAQ is cited through the outlets that quote it. Open Marvel's FAQ once before you record.
 
 ## Script
 
-**0:00** Marvel Unlimited is shutting down, and if you read on it, you have until December 7 to do three things. I'll show you what to move, what the new app really costs, and how to keep reading Marvel for free.
+**0:00** Marvel Unlimited is shutting down, and if you read on it, you have until December 7 to do three things. I'll show you what to move, what the new app really costs, and how to keep reading Marvel comics for free.
 
-**0:12** [Your receipt: how long you've used Marvel Unlimited and what you read on it.] The dates for this are all over the place, so here's what Marvel's own FAQ says. New sign-ups closed October 5. You can read on Marvel Unlimited until December 7. You can browse your library until December 21. The app is removed December 28. Some outlets report December 17, but I'm trusting Marvel's FAQ, and I'll put it on screen.
+**0:12** [Your receipt: how long you've used Marvel Unlimited and what you read on it.] The dates for this are all over the place, so I'm going by what Marvel's own FAQ says, and I'll put it on screen. New sign-ups closed October 5. You can keep reading on Marvel Unlimited until December 7. You can browse your library until December 21. And the app gets removed on December 28. A couple of outlets have reported December 17, but Marvel's FAQ is the source I trust.
 
-**0:50** Thing one: move your library. The new Marvel Comics app, powered by WEBTOON, launches November 16. Marvel's FAQ says that if you were a member as of October 5, your access stays free until December 7, and you can import your library and your reading progress after the app launches. My advice: do it the week it launches. The FAQ also says active subscriptions get a prorated refund on or around November 16, so check your account.
+**0:50** Thing one: move your library. The new Marvel Comics app, powered by WEBTOON, launches on November 16. If you were a member as of October 5, your access stays free until December 7. After the new app launches, you create a WEBTOON account and import your library, your reading progress, your redeemed comics and your saved issues. My advice is to do it the week it launches, so you're not rushing in December. Marvel also says active subscriptions get an automatic prorated refund for the unused time on or around November 16, so keep an eye on your account.
 
-**1:40** Quick pause. If you've been meaning to start somewhere, I made a free X-Men Starter Kit: three comics to start with, sent to your email. The link is in the description.
+**1:45** Quick pause. If you've been meaning to start reading comics, or you want somewhere to start in the new app, I made a free X-Men Starter Kit: three comics to start with, sent to your email. The link is in the description.
 
-**2:00** Thing two: what the new app costs. The base tier is $9.99 a month or $69.99 a year, and new issues show up about three months after print. The Ultimate tier is $12.49 a month or $99.99 a year, and new issues show up 30 days after print. So the cheapest year is $69.99, and the Ultimate year is $99.99. [Your opinion in your words: who actually needs Ultimate, and who should stick with base. Say "this is my read."]
+**2:05** Thing two: what the new app costs. There are two tiers. Base is $9.99 a month, or $69.99 a year, and new issues show up about three months after they hit print, the same wait Marvel Unlimited had. Ultimate is $12.49 a month, or $99.99 a year, and new issues show up 30 days after print. There's also a limited-time founding member offer: if you pre-register, the first year of Ultimate is $59.99. [Your opinion in your words: who actually needs Ultimate, and who should stick with Base. Say "this is my read."]
 
-**3:20** Thing three: your library, which is free. Hoopla carries Marvel comics, and you can borrow them with a library card, as long as your library offers Hoopla. Libby, the OverDrive app, carries Marvel graphic novels too, but each library's catalog is different. In Libby, go to Explore, then Subject, then Comic and Graphic Books. [Show your own library app on screen and what you found.]
+**3:30** Thing three: your library, which is free. Hoopla carries Marvel comics, and you can borrow them with a library card, as long as your library offers Hoopla. Libby, the OverDrive app, has Marvel graphic novels too, but every library's catalog is different, so what you find depends on yours. In Libby, tap Explore, then Subject, then Comic and Graphic Books, and you'll see what your library has. [Show your own library app on screen and say what you found.]
 
-**4:50** My rule: [your rule in your words, for example "Library First"]. Check what your library has before you pay for anything.
+**5:00** [Your rule in your words, for example "Library First."] Check what your library has before you pay for anything.
 
-**5:20** Here's what I'm doing: [Your plan in your words: which option you're picking, and why.] I haven't used the new app yet, so I can't tell you what it's like. [Only promise "I'll tell you after I've tried it" if you'll actually do it.]
+**5:30** [Your plan in your words: which option you're picking and why. Say "this is my read."] I haven't used the new app yet, so I can't tell you what it's like. [Only say "I'll tell you after I've tried it" if you'll actually do it.]
 
-**5:50** Now that you know how to keep reading, watch [How to Get Into Comics, or your next video] next.
+**6:00** So the plan is: move your library the week of November 16, pick Base or Ultimate only if it's worth it to you, and try your library first. Now that you know how to keep reading, watch [your next video] next.
 
 ## Graphics and visuals
 1. Marvel's FAQ page on screen (0:12) with the four dates highlighted.
 2. Timeline: Oct 5, Nov 16, Dec 7, Dec 21, Dec 28.
-3. Migration screen from the WEBTOON app (0:50), recorded after Nov 16 if possible.
-4. Price table: Base and Ultimate (2:00).
-5. Your own Hoopla and Libby screens (3:20).
-6. Text overlay for your rule (4:50).
+3. WEBTOON account and import screen (0:50), recorded after Nov 16 if possible.
+4. Price table: Base and Ultimate, plus the founding offer (2:05).
+5. Your own Hoopla and Libby screens (3:30).
+6. Text overlay for your rule (5:00).
 7. End screen.
 
 ## SEO
@@ -36,36 +41,52 @@ Prepared 2 Nov 2026 for Vactor (This Comic COOKS!). Edited video, about 6 minute
 **Thumbnail:** your face plus an app icon. Text: "DEC 7"
 
 **Description:**
-Marvel Unlimited is shutting down and a new Marvel Comics app launches November 16. Here are 3 things to do before December 7, and how to keep reading Marvel for free.
-Dates and prices come from Marvel's FAQ and news coverage and may change. Check Marvel's official FAQ for your account.
-Free X-Men Starter Kit (3 comics to start with, by email): https://this-comic-cooks.beehiiv.com/subscribe
-You don't need 60 years of continuity to start comics.
+```
+Marvel Unlimited is shutting down on December 7, and a new Marvel Comics app launches November 16. Here are 3 things to do before December 7, plus how to keep reading Marvel comics for free with Hoopla and Libby.
 
-**Tags:** marvel unlimited, marvel unlimited shutting down, marvel unlimited december 7, marvel comics app, webtoon marvel, how to read marvel comics for free, hoopla marvel comics, libby comics, marvel unlimited alternative
+Free X-Men Starter Kit (3 comics to start with, by email): https://this-comic-cooks.beehiiv.com/subscribe
+
+Dates and prices come from Marvel's FAQ as reported by AIPT, Bleeding Cool, ICv2 and others, and may change. Check Marvel's official FAQ for your own account.
+
+Chapters (update after editing):
+0:00 What's happening to Marvel Unlimited
+0:50 Thing 1: Move your library
+2:05 Thing 2: What the new app costs
+3:30 Thing 3: Read Marvel for free at your library
+5:30 What I'm doing
+
+This Comic COOKS! is for people who want to love comics but don't know where to start. You don't need 60 years of continuity to start comics.
+
+#MarvelUnlimited #MarvelComics #Comics
+```
+
+**Tags:** marvel unlimited, marvel unlimited shutting down, marvel unlimited december 7, marvel unlimited ending, marvel unlimited alternative, marvel comics app, marvel comics powered by webtoon, webtoon marvel, how to read marvel comics for free, hoopla marvel comics, libby comics, marvel unlimited replacement, marvel comics app price, where to read marvel comics, this comic cooks
 
 **Pinned comment:** Moving to the new app or going library-first? One word: App or Library. Free X-Men Starter Kit: https://this-comic-cooks.beehiiv.com/subscribe
 
 **TikTok caption:** Marvel Unlimited shuts down December 7. Do this first. #marvel #comics #marvelunlimited
 
 ## Fact check
-Checked against web search results on 2 Nov 2026, not full articles (page fetches were blocked in the session). Marvel's own FAQ is the primary source for dates, refunds and migration.
+Read in full on 3 Nov 2026. Marvel's own FAQ is quoted by the outlets below; marvel.com itself returned 403 to the reader.
 
 | Claim | Confidence | Sources |
 |---|---|---|
-| New Marvel Comics app (powered by WEBTOON) launches Nov 16 | High | Marvel.com; ICV2; Comics Beat; GeekTyrant |
-| Marvel Unlimited: no new sign-ups after Oct 5; reading ends Dec 7; library browsable to Dec 21; app removed Dec 28 | High | Marvel's FAQ (via Hackernoon and Anime Superhero News); Cosmic Book News (Dec 7) |
-| Some outlets say Dec 17 | Conflict, Marvel's FAQ wins | Toy-People; IGN via Yahoo |
-| Members as of Oct 5 keep free access to Dec 7; can import library and reading progress after Nov 16 | Medium | Marvel's FAQ as quoted by Hackernoon and a second summary |
-| Prorated refund for unused term on or around Nov 16 | Medium | Marvel's FAQ as quoted in two summaries |
-| Base tier $9.99 a month or $69.99 a year, new issues after 3 months | High | ICV2; The Outerhaven; Nerdist |
-| Ultimate tier $12.49 a month or $99.99 a year, new issues 30 days after print | Medium | ICV2; The Outerhaven |
-| Hoopla carries Marvel comics for library cardholders (if the library offers it) | High | Comics Beat; Indianapolis Public Library; CBLDF |
-| Libby/OverDrive carries Marvel graphic novels; catalogs vary; Explore, then Subject, then Comic and Graphic Books | High | OverDrive press release; Rakuten Today; GeekTyrant; library guides |
+| New Marvel Comics app (powered by WEBTOON) launches 16 Nov | High | AIPT; Cosmic Book News; ICv2; Bleeding Cool; Murphy's Multiverse |
+| New Marvel Unlimited sign-ups stopped 5 Oct | High | AIPT; Cosmic Book News; Bleeding Cool; Murphy's Multiverse |
+| Reading ends 7 Dec; library browsable to 21 Dec; app removed 28 Dec | High | Hackernoon (quoting Marvel's FAQ); AIPT; Cosmic Book News; Bleeding Cool; Murphy's Multiverse |
+| Some outlets say Dec 17 | Conflict, Marvel's FAQ wins | Toy-People; IGN via Yahoo (search results) |
+| Existing members keep free access to Dec 7; import library, reading progress, redeemed comics and saved issues via a WEBTOON account | High | AIPT; Cosmic Book News; ICv2 |
+| Automatic prorated refund on or around 16 Nov | High | AIPT; Cosmic Book News; Bleeding Cool; Hackernoon |
+| Base $9.99 a month or $69.99 a year, new issues after 3 months (same wait as Unlimited) | High | AIPT; ICv2; Cosmic Book News; Bleeding Cool; Murphy's Multiverse |
+| Ultimate $12.49 a month or $99.99 a year, new issues 30 days after print | High | AIPT; ICv2; Cosmic Book News; Bleeding Cool; Murphy's Multiverse |
+| Founding member offer: first year of Ultimate annual $59.99, pre-register | High | AIPT; Cosmic Book News; ICv2; Anime Superhero News |
+| Hoopla carries Marvel comics for library cardholders (if the library offers it) | High | Hoopla help page; SlashGear; Comics Beat (search results) |
+| Libby/OverDrive carries Marvel graphic novels; catalogs vary; Explore, then Subject, then Comic and Graphic Books | High | OverDrive press release; Rakuten Today; library guides (search results) |
 
-Cut: the founding-member price, the "35,000+" catalog size, the Infinity Comics claim, and any claim about which Starter Kit books are on Hoopla or Libby.
+Cut: "you must buy a new membership to read purchased comics" (one outlet only), the 35,000-comic catalog size in the script, and any claim about which Starter Kit books are on Hoopla or Libby.
 
 ## Trust check
 - Label: transactional.
-- Met: dates sourced to Marvel's FAQ with the conflict stated, opinions labeled, no overpromising.
-- Your blanks: receipt (0:12), Ultimate opinion (2:00), your library demo (3:20), rule (4:50), plan (5:20), next video (5:50).
+- Met: dates and prices confirmed in five or more articles, the one conflicting date stated, opinions labeled, no overpromising.
+- Your blanks: receipt, Ultimate opinion, your library demo, rule, plan and next video.
 - Disclose any affiliate links once added.
