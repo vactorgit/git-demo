@@ -18,6 +18,12 @@ Your Short says "Wolverine." The Wolverine in the Vault is Laura Kinney (X-23), 
 3. Comic lens: Synch and Laura in the Vault.
 4. Reframe: [your own words].
 
+## Story check
+- One sentence: a man spends 537 years in love with a woman, then walks out of a door and she doesn't remember him.
+- Emotion map: curiosity (0:00, how can someone be in love for 537 years?), sympathy (a lonely, resurrected man who feels left behind), awe (centuries of survival and a love built in the dark), stress (the trap, Darwin lost, Laura holds the line), grief (the wake-up, claws out, no memory), then bittersweet release (the smile, then choosing patience). Your own reframe is the last beat.
+- What the viewer feels at the end: that remembering alone can still be an act of love, if you say it in your own words.
+- Weak spot: 2:00 to 3:00 is plot summary. Tell it through Synch's loneliness (decades alone, digging under the Vault), not as a list of events.
+
 ## Script
 
 **0:00** In a Marvel comic, a man spends 537 years in love with someone. Then he walks out of a door, and she doesn't remember any of it. This is Synch, and this is the story of the X-Man who remembers what nobody else does.
