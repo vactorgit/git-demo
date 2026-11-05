@@ -56,7 +56,7 @@ v3 is about 1463 spoken words plus your blanks. At your pace (about 250 words a 
 
 **4:56** In 2010, in Doomwar, Doom invades Wakanda and plunders its vibranium. It takes the X-Men, the Fantastic Four and two Black Panthers to stand against him.
 
-**5:03** Doom has chased godlike power before. In the original Secret Wars, in 1984, he steals the Beyonder's godlike power, and it's too vast for him to control. The Beyonder takes it back. In 2015, in Secret Wars by Jonathan Hickman and Esad Ribić, he tries again. The universes are colliding and the multiverse is being destroyed. Doom, Doctor Strange and the Molecule Man confront the beings behind it, the Beyonders, and this time Doom keeps their power. He builds a patchwork planet called Battleworld out of pieces of the lost worlds, and he rules it as God Emperor Doom.
+**5:03** Doom has chased godlike power before. In the original Secret Wars, in 1984, he steals the Beyonder's power, and it's too vast for him to control. The Beyonder takes it back. In 2015, in Secret Wars by Jonathan Hickman and Esad Ribić, he tries again. The universes are colliding and the multiverse is being destroyed. Doom, Doctor Strange and the Molecule Man confront the beings behind it, the Beyonders, and this time Doom keeps their power. He builds a patchwork planet called Battleworld out of pieces of the lost worlds, and he rules it as God Emperor Doom.
 
 **5:26** Doctor Strange is his closest ally there. In the end, Doom kills him, holds a funeral, and covers up what he did. And Reed points out the first thing Doom did with the power of a god. He took Reed's wife and children for himself.
 
