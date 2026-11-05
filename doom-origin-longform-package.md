@@ -68,7 +68,7 @@ The final script is about 1630 words, all spoken, which is about 6:56 at your pa
 
 **6:35** To me, Doom is both a villain and a tragedy. And my rule is simple: pride is the real villain.
 
-**6:41** If you want to read Doom, start with Secret Wars, the 2015 one by Jonathan Hickman and Esad Ribić. I read it as it came out, and it's a Buy. If you want the origin itself, it's in Fantastic Four Annual number 2, from 1964. Now that you know Doom, watch how Mystique became Nightcrawler's father next.
+**6:41** If you want to read Doom, start with Secret Wars, the 2015 one by Jonathan Hickman and Esad Ribić. I read it as it came out, and it's a Buy. If you want the origin itself, it's in Fantastic Four Annual number 2, from 1964. Now that you know Doom, watch how Mystique became Nightcrawler's father next. Victor von Doom, Doctor Doom, if you're nasty.
 
 ## Graphics and visuals
 (v3 additions after the original list: the embassy party and Encephalo-Gun panels from Annual #2 at the showdown beat; Kristoff panel; baby Valeria panel; Unthinkable cover; Battleworld map; the God Emperor Doom splash; Reed and Doom face-off; Doom's unmasked healed face; Infamous Iron Man cover. Use official or publisher images where you can.)

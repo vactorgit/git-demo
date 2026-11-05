@@ -28,7 +28,7 @@ This replaces both drafts (the lore explainer and the controversy take). It keep
 
 **0:57** I read Amazing Spider-Man 1000 by Joe Kelly and Pepe Larraz. [Why you liked it, in your words.] [Your verdict: Buy, Library or Skip.]
 
-**1:04** Is Cormac a villain, or a son? One word in the comments. And if you're new to comics, my free Starter Kit, three comics to start with, is in the pinned comment.
+**1:04** Is Cormac a villain, or a son? One word in the comments. And if you're new to comics, my free Starter Kit, three comics to start with, is in the pinned comment. Cormac Crane, Ravage, if you're nasty.
 
 ## Visuals
 1. The ASM #1000 cover (0:00), then the panel where May doesn't recognize Peter.

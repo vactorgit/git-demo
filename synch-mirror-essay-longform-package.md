@@ -50,7 +50,7 @@ Your Short says "Wolverine." The Wolverine in the Vault is Laura Kinney (X-23), 
 
 **7:45** [Your rule in your words, if you have one that fits, for example "Let people come to you."]
 
-**8:00** If you want to read Synch's story, start with X-Men number 19 from 2021. [Only say Buy, Library or Skip if you have read it.] Now that you know Synch, watch [your next video] next.
+**8:00** If you want to read Synch's story, start with X-Men number 19 from 2021. [Only say Buy, Library or Skip if you have read it.] Now that you know Synch, watch [your next video] next. Everett Thomas, Synch, if you're nasty.
 
 ## Graphics and visuals
 1. Synch's first appearance cover, X-Men number 36 (0:30).

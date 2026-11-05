@@ -42,7 +42,7 @@ This keeps the timeline the viewer asked for, but follows one character through 
 
 **7:40** And now Cyclops is coming to the big screen. James Marsden is returning as Cyclops in Avengers: Doomsday this December. [Your opinion of what Doomsday should do with him, in your words. Say "this is my read."]
 
-**8:10** If you want to read Cyclops, start with [your pick, and only if you have read it: for example, Avengers vs. X-Men number 11, or House of X number 1 from the Starter Kit]. [Your verdict: Buy, Library or Skip.] Now that you know Cyclops, watch [your next video] next.
+**8:10** If you want to read Cyclops, start with [your pick, and only if you have read it: for example, Avengers vs. X-Men number 11, or House of X number 1 from the Starter Kit]. [Your verdict: Buy, Library or Skip.] Now that you know Cyclops, watch [your next video] next. Scott Summers, Cyclops, if you're nasty.
 
 ## Graphics and visuals
 1. X-Men number 1 cover (0:35). A black bar over Scott's eyes, then a glow, to show the visor.
