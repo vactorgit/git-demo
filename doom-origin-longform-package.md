@@ -3,7 +3,7 @@
 Prepared 5 Nov 2026 for Vactor (This Comic COOKS!). Edited video with graphics. Chosen because the poll (209 votes) put "Doctor Doom: his comic origin before Doomsday" first at 48%, and vidIQ shows "doctor doom origin" at about 19.5K estimated monthly searches, up about 96%, competition 55 (high). Fill every `[ ]` blank in your own words.
 
 ## Runtime note (v3)
-v3 is about 1158 spoken words plus your blanks. At your pace (about 250 words a minute), that is about 5:47 with your blanks and short pauses. The skill says drafts shrink to about 60% once edited, so expect about 6 to 7 minutes if you cut hard. To hold 8 to 10 minutes, keep the pauses and visuals; do not trim the story beats.
+v3 is about 1377 spoken words plus your blanks. At your pace (about 250 words a minute) that is about 6:47 including your blanks and short pauses. Keep the pauses and visuals; do not trim the story beats if you want 8 minutes.
 
 ## Story check
 - **One sentence:** The man who became Doctor Doom was warned that his machine had a mistake in it, threw out the person who warned him, and became Doom because of what happened next.
@@ -24,43 +24,47 @@ v3 is about 1158 spoken words plus your blanks. At your pace (about 250 words a 
 
 **0:50** Quick pause. If you've been meaning to start reading comics, I made a free Starter Kit: three comics to start with, sent to your email. The link is in the description.
 
-**0:57** The mask came before the man. Doctor Doom debuts in Fantastic Four number 5, in July 1962, by Stan Lee and Jack Kirby. His full origin comes two years later, in Fantastic Four Annual number 2. For two years, nobody knew who was under there.
+**0:57** The mask came before the man. Doctor Doom debuts in Fantastic Four number 5, in July 1962, by Stan Lee and Jack Kirby. He kidnaps Sue Richards, and he sends the rest of the team back in time, with his time machine, to steal Blackbeard's treasure chest. When Doom speaks, Reed recognizes his voice. It's a college classmate, a brilliant student who blew up a lab and his own face. Reed tricks him by swapping the treasure for old chains, and Ben Grimm ends up as the pirate history remembers as Blackbeard. Doom's full origin doesn't come until two years later, in Fantastic Four Annual number 2.
 
-**1:08** A scholarship brings Victor to a university in America, and that's where he meets Reed Richards. Reed tries to be friendly. He even offers to be roommates. Victor insists on a private room, so Reed ends up rooming with Ben Grimm. And Victor takes it personally.
+**1:22** A scholarship brings Victor to a university in America, and that's where he meets Reed Richards. Reed tries to be friendly. He even offers to be roommates. Victor insists on a private room, so Reed ends up rooming with Ben Grimm. And Victor takes it personally.
 
-**1:19** Now Victor builds a machine. He wants to reach the netherworld, so he can reach his mother. Reed sees his notes, finds mistakes in the calculations, and tells him. Victor doesn't even look at what Reed wrote. He throws him out. And he turns the machine on.
+**1:33** Now Victor builds a machine. He wants to reach the netherworld, so he can reach his mother. Reed sees his notes, finds mistakes in the calculations, and tells him. Victor doesn't even look at what Reed wrote. He throws him out. And he turns the machine on.
 
-**1:30** Reed was right. The machine explodes in Victor's face. It scars him, and the university expels him. And Victor decides it was Reed's fault. In the comics, he believes Reed sabotaged his work.
+**1:45** Reed was right. The machine explodes in Victor's face. It scars him, and the university expels him. And Victor decides it was Reed's fault. In the comics, he believes Reed sabotaged his work.
 
-**1:38** [Beat 2, in your words: a time someone tried to warn you, or a time you wouldn't listen. One or two sentences. This is the heart of the video. I don't write this one.]
+**1:52** [Beat 2, in your words: a time someone tried to warn you, or a time you wouldn't listen. One or two sentences. This is the heart of the video. I don't write this one.]
 
-**1:52** So Victor goes to Tibet, where monks forge him a suit of armor and an iron mask. And he can't wait. He puts the mask on before the metal has cooled. Then he returns to Latveria, overthrows the monarchy, and rules it.
+**2:06** So Victor goes to Tibet, where monks forge him a suit of armor and an iron mask. And he can't wait. He puts the mask on before the metal has cooled. Then he returns to Latveria, overthrows the monarchy, and rules it.
 
-**2:02** Today, Doom is a scientific genius and a sorcerer. His armor gives him superhuman strength and weapons. And he rules Latveria with diplomatic immunity.
+**2:16** Today, Doom is a scientific genius and a sorcerer. His armor gives him superhuman strength and weapons. And he rules Latveria with diplomatic immunity. His origin also places him in a Romani community, and one Slashfilm writer points out that the movies have never acknowledged that. [Your read on that, in your words. Say "this is my read."]
 
-**2:07** So how bad is the scar? In some stories it's a small scar, and Victor's pride makes it the end of the world. In others the burning mask does the real damage. Different writers answer it differently, and the comics never fully settle it. [Your read: what do you think the scar is really about? Say "this is my read."]
+**2:35** So how bad is the scar? In some stories it's a small scar, and Victor's pride makes it the end of the world. In others the burning mask does the real damage. Different writers answer it differently, and the comics never fully settle it. [Your read: what do you think the scar is really about? Say "this is my read."]
 
-**2:28** And he never lets go of his mother. In Astonishing Tales number 8, Doom fights a demon once a year to free her soul. Later comics name that demon Mephisto. And in Triumph and Torment, a 1989 story by Roger Stern and Mike Mignola, Doom and Doctor Strange go down to hell to save her. [Only if you've read it: your one sentence on it.]
+**2:56** And he never lets go of his mother. In Astonishing Tales number 8, Doom fights a demon once a year to free her soul. Later comics name that demon Mephisto. Then, in Triumph and Torment, a 1989 story by Roger Stern and Mike Mignola, Doctor Strange wins a sorcery contest, with Doom in second place. As the winner, Strange owes Doom a favor. Doom asks for help saving his mother's soul. The two of them go down to hell. [Only if you've read it: your one sentence on it.]
 
-**2:47** Back in that same origin issue, Doom is still sure he's right. He invites the Fantastic Four to a party at the Latverian embassy, and he drugs their drinks. Everyone starts seeing the others attack them, and the team turns on itself. Then they work out what's happening. A contest follows to see whose mind is better, each with a device that runs on thought. Reed offers Doom one last drink. It's the same drug. Doom believes he has destroyed Reed, and he walks away in triumph. He was fooled by his own trick.
+**3:21** Back in that same origin issue, Doom is still sure he's right. He invites the Fantastic Four to a party at the Latverian embassy, and he drugs their drinks. Everyone starts seeing the others attack them, and the team turns on itself. Then they work out what's happening. A contest follows to see whose mind is better, each with a device that runs on thought. Reed offers Doom one last drink. It's the same drug. Doom believes he has destroyed Reed, and he walks away in triumph. He was fooled by his own trick.
 
-**3:09** That's the root of the feud. Doom blames Reed for his scar, he wants to prove he's the better mind, and he never admits that Reed is a genius too. But Doom isn't only a man who won't listen. In the comics, he takes in an orphaned boy named Kristoff and raises him as his heir. The boy ends up believing he is Doom. So is Doom just a monster? The comics never let it be that simple.
+**3:43** That's the root of the feud. Doom blames Reed for his scar, he wants to prove he's the better mind, and he never admits that Reed is a genius too. But Doom isn't only a man who won't listen. In the comics, he takes in an orphaned boy named Kristoff and raises him as his heir. The boy ends up believing he is Doom. So is Doom just a monster? The comics never let it be that simple.
 
-**3:28** Then there's Reed's daughter. When Sue Richards's pregnancy turns dangerous, Doom helps deliver the baby. His price is the right to name her, and he calls her Valeria, after his long-lost first love. He becomes her godfather. And then, with the newborn in his arms, he casts a spell that makes her his familiar, a link between Doom and Reed's family.
+**4:02** Then there's Reed's daughter. When Sue Richards's pregnancy turns dangerous, Doom helps deliver the baby. His price is the right to name her, and he calls her Valeria, after his long-lost first love. He becomes her godfather. And then, with the newborn in his arms, he casts a spell that makes her his familiar, a link between Doom and Reed's family.
 
-**3:42** He uses that link in Unthinkable, by Mark Waid and Mike Wieringo. Doom attacks the Fantastic Four through their children. He sends Reed's son, Franklin, to hell. Reed has always refused to accept magic, and now the only way to save his family is to learn it. Doctor Strange teaches him the basics. Reed frees his family, and Doom ends up in hell in Franklin's place. That's how far Doom's pride goes. He gave up science for magic, and he used a baby to get at the man who warned him.
+**4:16** He uses that link in Unthinkable, by Mark Waid and Mike Wieringo. Doom attacks the Fantastic Four through their children. He sends Reed's son, Franklin, to hell. Reed has always refused to accept magic, and now the only way to save his family is to learn it. Doctor Strange teaches him the basics. Reed frees his family, and Doom ends up in hell in Franklin's place. That's how far Doom's pride goes. He gave up science for magic, and he used a baby to get at the man who warned him.
 
-**4:04** Now jump to Secret Wars, in 2015, by Jonathan Hickman and Esad Ribić. The universes are colliding and the multiverse is being destroyed. Doom, Doctor Strange and the Molecule Man confront the beings behind it, the Beyonders, and Doom ends up with their power. He uses it to build a patchwork planet called Battleworld out of pieces of the lost worlds, and he rules it as God Emperor Doom. And Reed points out the first thing Doom did with the power of a god. He took Reed's wife and children for himself.
+**4:38** In 2010, in Doomwar, Doom invades Wakanda and plunders its vibranium. It takes the X-Men, the Fantastic Four and two Black Panthers to stand against him.
 
-**4:26** In the end, Reed comes for him. The Molecule Man cuts off most of Doom's power, so the fight is fair. Reed tells Doom he has never thought he was better than him, and he calls out his insecurity. Then the Molecule Man hands the Beyonders' power to Reed instead, and Battleworld ends. Reed uses it to rebuild the multiverse, one world at a time. And he heals the scars on Doom's face. In Latveria, Doom takes off his mask, finds his face whole, and laughs with joy.
+**4:44** Doom has tried to become a god before. In the original Secret Wars, in 1984, he steals the Beyonder's godlike power, and it's too vast for him to control. The Beyonder takes it back. In 2015, in Secret Wars by Jonathan Hickman and Esad Ribić, he tries again. The universes are colliding and the multiverse is being destroyed. Doom, Doctor Strange and the Molecule Man confront the beings behind it, the Beyonders, and this time Doom keeps their power. He builds a patchwork planet called Battleworld out of pieces of the lost worlds, and he rules it as God Emperor Doom.
 
-**4:47** Afterward, Doom tries to be a hero. In Infamous Iron Man, by Brian Michael Bendis and Alex Maleev, he takes up the Iron Man name. Doom was warned, and the man he blamed for everything is the one who gave him his face back.
+**5:08** Doctor Strange is his closest ally there. In the end, Doom kills him, holds a funeral, and covers up what he did. And Reed points out the first thing Doom did with the power of a god. He took Reed's wife and children for himself.
 
-**4:57** [Thanks in your words: you voted on my poll, and Doom won.] In July 2024, at San Diego Comic-Con, Marvel announced Robert Downey Jr. as Doctor Doom for Avengers: Doomsday, which opens this December. @LordBrittish asked how the movies will handle his origin. I don't know yet. [Your take: what would you keep from the comics? Say "this is my read."]
+**5:19** In the end, Reed comes for him. The Molecule Man cuts off most of Doom's power, so the fight is fair. Reed tells Doom he has never thought he was better than him, and he calls out his insecurity. Then the Molecule Man hands the Beyonders' power to Reed instead, and Battleworld ends. Reed uses it to rebuild the multiverse, one world at a time. And he heals the scars on Doom's face. In Latveria, Doom takes off his mask, finds his face whole, and laughs with joy. Doom was warned, and the man he blamed for everything is the one who gave him his face back.
 
-**5:20** [Your thesis: is Doom a villain, or a tragedy? Say "this is my read."] [Your rule in your words, for example "Listen to the warning."]
+**5:44** Afterward, Doom tries to be a hero. In Infamous Iron Man, by Brian Michael Bendis and Alex Maleev, he takes up the Iron Man name. And Marvel's biggest comic event of 2025 was called One World Under Doom, after he became Sorcerer Supreme.
 
-**5:34** If you want to read Doom's origin, start with Fantastic Four Annual number 2 from 1964. [Your verdict: Buy, Library or Skip, only if you've read it.] Now that you know Doom, watch [your next video] next.
+**5:54** [Thanks in your words: you voted on my poll, and Doom won.] In July 2024, at San Diego Comic-Con, Marvel announced Robert Downey Jr. as Doctor Doom for Avengers: Doomsday, which opens this December. Iron Man writer David Michelinie called Doom "Tony's reflection in a dark mirror." @LordBrittish asked how the movies will handle his origin. I don't know yet. [Your take: what would you keep from the comics? Say "this is my read."]
+
+**6:20** [Your thesis: is Doom a villain, or a tragedy? Say "this is my read."] [Your rule in your words, for example "Listen to the warning."]
+
+**6:34** If you want to read Doom's origin, start with Fantastic Four Annual number 2 from 1964. [Your verdict: Buy, Library or Skip, only if you've read it.] Now that you know Doom, watch [your next video] next.
 
 ## Graphics and visuals
 (v3 additions after the original list: the embassy party and Encephalo-Gun panels from Annual #2 at the showdown beat; Kristoff panel; baby Valeria panel; Unthinkable cover; Battleworld map; the God Emperor Doom splash; Reed and Doom face-off; Doom's unmasked healed face; Infamous Iron Man cover. Use official or publisher images where you can.)
@@ -118,7 +122,7 @@ This Comic COOKS! is for people who want to love comics but don't know where to 
 Fixes applied after the script-review: promise the payoff in the hook; one-sentence receipt; compressed boyhood; added the blame beat right after the explosion (Doom believes Reed sabotaged him); moved your personal beat after the explosion; added the powerset; neutral monks wording; removed the banned-phrase opener; cut the Books of Doom line (it stays in the description); added the origin issue's ending (Doom fooled by his own drug); closed the loop with a callback; thanks moved to the movie section.
 
 ## v3 additions (expansion)
-Added beats: the full Annual #2 embassy showdown; Kristoff; Valeria's birth and naming; Unthinkable; Secret Wars (2015) and Reed healing Doom's face; Infamous Iron Man. Every added claim below has two sources.
+Added beats (second pass): the full Fantastic Four #5 debut story; Doom's Romani origin (Slashfilm's note); the Aged Genghis contest in Triumph and Torment; Doomwar; Secret Wars 1984; Strange's death; the Michelinie quote; One World Under Doom. First pass: the full Annual #2 embassy showdown; Kristoff; Valeria's birth and naming; Unthinkable; Secret Wars (2015) and Reed healing Doom's face; Infamous Iron Man. Every added claim below has two sources.
 
 | Claim | Confidence | Sources |
 |---|---|---|
@@ -132,9 +136,17 @@ Added beats: the full Annual #2 embassy showdown; Kristoff; Valeria's birth and 
 | Doom takes Reed's wife and children for himself | High | Marvel.com; Wikipedia (Secret Wars) |
 | Molecule Man cuts Doom's power; Reed tells Doom he never thought he was better; Molecule Man gives Reed the power; Reed rebuilds the multiverse | High | Wikipedia; Popverse; Slashfilm |
 | Reed heals the scars on Doom's face; Doom removes his mask and laughs | High | Popverse; Slashfilm; Wikipedia (Doom's face no longer disfigured) |
+| FF #5 (July 1962, Lee and Kirby): Doom kidnaps Sue, sends the others back in time for Blackbeard's treasure chest; Reed recognizes him as a college classmate who blew up a lab and his face; Reed swaps the treasure for chains; Ben becomes the Blackbeard history remembers | High | Marvel.com; Nick Peron; Codedread; I Cavalieri dello Zodiaco; Wikipedia |
+| Triumph and Torment (1989): Strange wins a sorcery contest, Doom second; Strange owes Doom a favor; they go to hell for his mother's soul | High | Marvel.com; Wikipedia (Aged Genghis tournament) |
+| Doomwar (2010): Doom invades Wakanda and plunders its vibranium; the X-Men, Fantastic Four and two Black Panthers oppose him | High | Marvel's blurb (Uncanny X-Men.net); mycomicscollection; Wikipedia |
+| Secret Wars 1984: Doom steals the Beyonder's power, cannot control it, the Beyonder reclaims it | High | Marvel.com; Popverse; Wikipedia |
+| Doom kills Doctor Strange in Secret Wars (2015), holds a funeral, covers up his involvement | High | Wikipedia (Secret Wars); Marvel.com |
+| Michelinie called Doom "Tony's reflection in a dark mirror" | Medium | Wikipedia (quote); Slashfilm (Iron Man and Doom as shadow selves) |
+| Marvel's biggest comic event of 2025 was One World Under Doom, after Doom became Sorcerer Supreme | High | Slashfilm; Marvel.com; Wikipedia (Sorcerer Supreme) |
+| Slashfilm notes the movies have never acknowledged Doom's Romani heritage | Medium (an attributed opinion) | Slashfilm |
 | Infamous Iron Man (Bendis and Maleev): Doom takes the Iron Man name after Secret Wars, seeking rehabilitation | High | CBR; Popverse |
 
-Cut: Doom killing Strange in Secret Wars (one source); "first word was Doom" (one source); Reed being a captive of the Inhumans at Valeria's birth (one source); Doom maiming Reed in Unthinkable (one source); Franklin's trauma (one source); the mirror scene in Annual #2 (one source).
+Cut: "first word was Doom" (one source); Reed being a captive of the Inhumans at Valeria's birth (one source); Doom maiming Reed in Unthinkable (one source); Franklin's trauma (one source); the mirror scene in Annual #2 (one source).
 
 ## Fact check
 Read in full on 5 Nov 2026 (Wikipedia, Nick Peron, Bellevue University Library, Mac McEntire, mycomicscollection, Overstreet Access, The Astromech, Slashfilm; the Comic-Con reveal from Slashfilm, Fox 35, Complex and DTNext in search results).
