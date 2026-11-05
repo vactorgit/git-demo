@@ -10,21 +10,25 @@ This replaces both drafts (the lore explainer and the controversy take). It keep
 - **Emotion map:** curiosity (she forgot him?), sympathy (a son May never knew she had), unease (he blames Peter for Ben's death), heartbreak (he holds her memories of Peter), then a question for the comments.
 - **What the viewer feels at the end:** that this villain is a hurt person, and that makes him scarier.
 
-## Script
+## Script (v2, powers added)
 
 **0:00** In Amazing Spider-Man number 1000, Aunt May looks at Peter Parker and doesn't know who he is. The man who took those memories is her son.
 
-**0:10** His name is Cormac Crane. He's a wealthy man who turns out to be Ben and May Parker's biological son, a son May never knew she had.
+**0:07** His name is Cormac Crane. He's a wealthy man who turns out to be Ben and May Parker's biological son, a son May never knew she had.
 
-**0:22** He finds out because a killer named Torment, who was hunting Peter's family, points to Peter as his cousin. At first he's just a rich man looking for family. Then he learns something. He blames Peter for his father's death.
+**0:14** A killer named Torment, who was hunting Peter's family, singles him out as Peter's cousin. Then Cormac learns one more thing. He blames Peter for his father's death.
 
-**0:38** So he becomes Ravage. His power is memory. He takes Aunt May's memories of Peter, and he still holds them.
+**0:21** So he becomes Ravage. He has superhuman strength, strong enough to fight Spider-Man hand to hand. But his real power is the scariest part. He can reach into a person's mind and pull their memories out. Once he takes them, that person doesn't have them anymore. He holds them, and he can watch them himself.
 
-**0:50** This isn't a villain who wants money or the city. He's jealous. [Your read in your words, one sentence. For example, what you felt reading it. Say "this is my read."]
+**0:33** Then he turns those memories into a weapon. In the fight, he swings a weapon made from May's memories of Peter. And when it hits, Peter relives them. Spider-Man isn't just fighting a man. He's fighting the memories of the woman who raised him.
 
-**1:00** I read Amazing Spider-Man 1000 by Joe Kelly and Pepe Larraz. [Why you liked it, in your words.] [Your verdict: Buy, Library or Skip.]
+**0:44** He even tries to erase Peter's memories of May, too. And here's what's unsettling. Reviewers say the issue barely explains how the power works, so nobody knows its limits yet.
 
-**1:08** Is Cormac a villain, or a son? One word in the comments. And if you're new to comics, my free Starter Kit, three comics to start with, is in the pinned comment.
+**0:52** This isn't a villain who wants money or the city. He's jealous. [Your read in your words, one sentence. Say "this is my read."]
+
+**0:57** I read Amazing Spider-Man 1000 by Joe Kelly and Pepe Larraz. [Why you liked it, in your words.] [Your verdict: Buy, Library or Skip.]
+
+**1:04** Is Cormac a villain, or a son? One word in the comments. And if you're new to comics, my free Starter Kit, three comics to start with, is in the pinned comment.
 
 ## Visuals
 1. The ASM #1000 cover (0:00), then the panel where May doesn't recognize Peter.
@@ -71,13 +75,18 @@ Read in full on 5 Nov 2026 (ComicBookMovie reveal, preview, review and "Aunt May
 | Ravage's actions stem from jealousy | High | ComicBookMovie review; mycomicscollection |
 | He blames Peter for his father's (Ben's) death | High | ComicBookMovie review; mycomicscollection |
 | Ravage took May's memories of Peter and now holds them | High | ComicBookMovie review; mycomicscollection |
+| He absorbs memories, the person loses them, and he can see through them | High | Wikipedia (Ravage); Marvel Fandom; Spider-Man Crawlspace (Craig's Critique) |
+| He turns the memories into a weapon; when it hits, the victim relives them | High | Comical Opinions; Spider-Man Crawlspace (Marco and Craig); Marvel Fandom; mycomicscollection |
+| He tries to erase Peter's memories of May too | High | Comical Opinions; Spider-Man Crawlspace (Craig) |
+| He has superhuman strength | Medium | Wikipedia (Ravage); Marvel Fandom (fan wiki, counts as one) |
+| Reviewers say the issue explains little about how the power works | High | AIPT; Bits and Bytes |
 
 Cut (one source only, unverified, or conflicting):
 - **"Richard Benjamin Parker":** one explainer only.
 - **Stillborn/hospital mix-up details, the Crane family, the issue-by-issue backstory:** mycomicscollection only.
 - **"Replaced with himself":** mycomicscollection says he did; ComicBookMovie says only that he removed them.
 - **Whether Ravage caused May's stroke:** ComicBookMovie says he did, while the other sources say she had the stroke before #1000. They conflict, so the script says nothing about the cause.
-- **Memories as physical weapons** (burglar, Crusher Hogan, Green Goblin): mycomicscollection only.
+- **The shape of the weapon** (a maul per Craig's Critique, a sword per Comic Book RoundUp) and the stone-wall punch (Marvel Fandom only), the chain whip (Wikipedia only), and the specific memories shown (burglar, Crusher Hogan, Green Goblin; one source).
 - **Bird-skull chain whip, "Aunt May's Paul," "half of Reddit," "issue #1002 divide," and "Peter written like a jealous child":** I found no source.
 - **Calling #1000 a "retcon that broke the fanbase":** no solid post-release backlash coverage found. If you want a reaction beat, name a real source and I'll check it.
 
