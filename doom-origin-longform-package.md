@@ -2,8 +2,8 @@
 
 Prepared 5 Nov 2026 for Vactor (This Comic COOKS!). Edited video with graphics. Chosen because the poll (209 votes) put "Doctor Doom: his comic origin before Doomsday" first at 48%, and vidIQ shows "doctor doom origin" at about 19.5K estimated monthly searches, up about 96%, competition 55 (high). Fill every `[ ]` blank in your own words.
 
-## Runtime note (a correction to my earlier packages)
-At your pace (about 250 words a minute, from reading the Ravage script aloud), my earlier word counts were too low. The Marvel Unlimited script was meant to run 6 to 7 minutes and came out at 4:24. This script is about 1,300 spoken words plus your blanks, so expect about 7 to 8 minutes. Don't pad it.
+## Runtime note (corrected 5 Nov 2026)
+I earlier said this script was about 1,300 spoken words and 7 to 8 minutes. That was wrong. The first draft was about 830 words, and the revised draft (v2) is about 700 spoken words plus your blanks, which is about 4 minutes at your pace (about 250 words a minute). This is a tight 4-minute story, not an 8-minute video. See the options in the reply: ship it tight, or add sourced beats (not padding).
 
 ## Story check
 - **One sentence:** The man who became Doctor Doom was warned that his machine had a mistake in it, threw out the person who warned him, and became Doom because of what happened next.
@@ -12,43 +12,45 @@ At your pace (about 250 words a minute, from reading the Ravage script aloud), m
 - **What the viewer feels at the end:** that Doom is a tragedy before he is a villain, and that this makes him more dangerous.
 - **Weak spots:** the long stretch from 1:55 to 4:15 is backstory. Keep each beat short and end each on a want or a loss. The 3:30 and 5:10 beats are yours.
 
-## Script
+## Script (v2, after the script-review pass)
 
-**0:00** Doctor Doom was warned. Before the mask, before the armor, before Latveria, one person told Victor von Doom that his machine had a mistake in it. He threw that person out of his room. That one decision made Doctor Doom. This is Doom's origin the way the comics tell it, and why it matters before Avengers: Doomsday.
+**0:00** Doctor Doom was warned. One person told Victor von Doom his machine had a mistake in it, and he threw that person out. The machine exploded, and Doom has blamed the man who warned him ever since. That's his origin in the comics, and it's the key to what Robert Downey Jr. is walking into in Avengers: Doomsday.
 
-**0:20** [Your receipt: what you have read about Doom, and when. One sentence.] [Thanks in your words: you voted on my poll, and Doom won. @LordBrittish asked how Doom's origin works in the movies, so I'll get to that at the end.]
+**0:14** [Your receipt: what you have read about Doom, and when. One sentence.]
 
-**0:40** Start with the boy. Victor von Doom is born in Latveria to a Romani family. His father, Werner, is a healer. His mother, Cynthia, is a witch, and she is killed when Victor is a baby. One day a ruler's men come for Werner, because the ruler's wife is dying and Werner can't save her. When she dies, the ruler's men come after him. Werner and young Victor run into the mountains. In the snow, Werner wraps his coat around his son. Victor lives. Werner doesn't. He dies of exposure. And just like that, both of Victor's parents are gone.
+**0:20** Start with the boy. Victor von Doom is born in Latveria to a Romani family. His father, Werner, is a healer. His mother, Cynthia, is a witch, and she dies young. When a ruler's wife dies in Werner's care, the ruler's men come for him. Werner and young Victor run into the mountains. In the snow, Werner wraps his coat around his son. Victor lives. Werner dies of exposure.
 
-**1:25** Victor goes back and digs up a chest that belonged to his mother. It's full of potions and books. That's where his magic comes from. And in the comics, her soul ends up trapped in hell. He grows into a brilliant inventor and sorcerer who protects his people and tricks the wealthy, and when the ruler's men catch him, they only catch robot copies of him.
+**0:36** Victor digs up a chest that belonged to his mother. It's full of potions and books, and that's where his magic starts. In later comics, her soul is trapped in hell. He grows into an inventor and sorcerer who protects his people and tricks the wealthy, and when the ruler's men catch him, they only catch robot copies.
 
-**2:00** Quick pause. If you've been meaning to start reading comics, I made a free Starter Kit: three comics to start with, sent to your email. The link is in the description.
+**0:50** Quick pause. If you've been meaning to start reading comics, I made a free Starter Kit: three comics to start with, sent to your email. The link is in the description.
 
-**2:20** Here's something strange. Readers met the mask first. Doctor Doom debuts in Fantastic Four number 5, in July 1962, by Stan Lee and Jack Kirby. His full origin comes two years later, in Fantastic Four Annual number 2. So for two years, nobody knew who was under there.
+**0:58** The mask came before the man. Doctor Doom debuts in Fantastic Four number 5, in July 1962, by Stan Lee and Jack Kirby. His full origin comes two years later, in Fantastic Four Annual number 2. For two years, nobody knew who was under there.
 
-**2:45** A scholarship brings Victor to a university in America, and that's where he meets Reed Richards. Reed tries to be friendly. He even offers to be roommates. Victor insists on a private room, so Reed ends up rooming with Ben Grimm. And Victor takes it personally.
+**1:08** A scholarship brings Victor to a university in America, and that's where he meets Reed Richards. Reed tries to be friendly. He even offers to be roommates. Victor insists on a private room, so Reed ends up rooming with Ben Grimm. And Victor takes it personally.
 
-**3:15** [Beat 2, in your words: a time someone tried to warn you, or a time you wouldn't listen. One or two sentences. This is the heart of the video. I don't write this one.]
+**1:19** Now Victor builds a machine. He wants to reach the netherworld, so he can reach his mother. Reed sees his notes, finds mistakes in the calculations, and tells him. Victor doesn't even look at what Reed wrote. He throws him out. And he turns the machine on.
 
-**3:45** Now Victor builds a machine. He wants to reach the netherworld, so he can reach his mother. Reed sees the notes, finds mistakes in the calculations, and tells him. Victor doesn't even look at what Reed wrote. He throws him out. And he turns the machine on.
+**1:30** Reed was right. The machine explodes in Victor's face. It scars him, and the university expels him. And Victor decides it was Reed's fault. In the comics, he believes Reed sabotaged his work.
 
-**4:20** Reed was right. The machine explodes in Victor's face. It scars him, and the university expels him.
+**1:38** [Beat 2, in your words: a time someone tried to warn you, or a time you wouldn't listen. One or two sentences. This is the heart of the video. I don't write this one.]
 
-**4:40** So Victor goes to Tibet. Monks take him in and teach him magic. He asks them to forge a suit of armor and an iron mask. And he can't wait. He puts the mask on before the metal has cooled. That's Doom's birth. He leaves, returns to Latveria, overthrows the monarchy, and rules it.
+**1:52** So Victor goes to Tibet, where monks forge him a suit of armor and an iron mask. And he can't wait. He puts the mask on before the metal has cooled. Then he returns to Latveria, overthrows the monarchy, and rules it.
 
-**5:20** Now here's what I can't stop thinking about. How bad is the scar? In some stories it's a small scar, and Victor's pride makes it the end of the world. In others the burning mask does the real damage. Different writers answer it differently, and the comics never fully settle it. [Your read: what do you think the scar is really about? Say "this is my read."]
+**2:03** Today, Doom is a scientific genius and a sorcerer. His armor gives him superhuman strength and weapons. And he rules Latveria with diplomatic immunity.
 
-**6:05** And he never lets go of his mother. In Astonishing Tales number 8, Doom fights a demon once a year to free her soul. Later comics name that demon Mephisto. And in Triumph and Torment, a 1989 story by Roger Stern and Mike Mignola, Doom and Doctor Strange go down to hell to save her. [Only if you've read it: your one sentence on it.]
+**2:08** So how bad is the scar? In some stories it's a small scar, and Victor's pride makes it the end of the world. In others the burning mask does the real damage. Different writers answer it differently, and the comics never fully settle it. [Your read: what do you think the scar is really about? Say "this is my read."]
 
-**6:50** Everything Doom does after that runs through one man. Doom blames Reed Richards for his scar. He wants to prove he's the better mind. And he never admits that Reed is a genius too. That's why he's the Fantastic Four's greatest enemy, and why Reed's name matters in his story.
+**2:29** And he never lets go of his mother. In Astonishing Tales number 8, Doom fights a demon once a year to free her soul. Later comics name that demon Mephisto. And in Triumph and Torment, a 1989 story by Roger Stern and Mike Mignola, Doom and Doctor Strange go down to hell to save her. [Only if you've read it: your one sentence on it.]
 
-**7:20** If you want the origin told again, Ed Brubaker retold it in Books of Doom, in 2005 and 2006.
+**2:48** And in that same origin issue, Doom is still sure he's right. He drugs the Fantastic Four's drinks, and Reed turns it around. He slips Doom the same drug, and Doom walks away believing he has destroyed Reed. He was fooled by his own trick.
 
-**7:35** And now the movies. In July 2024, at San Diego Comic-Con, Marvel announced Robert Downey Jr. as Doctor Doom for Avengers: Doomsday, which opens this December. @LordBrittish asked how the movies will handle his origin. I don't know yet. [Your take: what would you keep from the comics? Say "this is my read."]
+**2:59** That's the root of the feud. Doom blames Reed for his scar, he wants to prove he's the better mind, and he never admits that Reed is a genius too.
 
-**8:10** [Your thesis: is Doom a villain, or a tragedy? Say "this is my read."] [Your rule in your words, for example "Listen to the warning."]
+**3:06** [Thanks in your words: you voted on my poll, and Doom won.] In July 2024, at San Diego Comic-Con, Marvel announced Robert Downey Jr. as Doctor Doom for Avengers: Doomsday, which opens this December. @LordBrittish asked how the movies will handle his origin. I don't know yet. [Your take: what would you keep from the comics? Say "this is my read."]
 
-**8:30** If you want to read Doom's origin, start with Fantastic Four Annual number 2 from 1964. [Your verdict: Buy, Library or Skip, only if you've read it.] Now that you know Doom, watch [your next video] next.
+**3:28** Doom was warned, and he's been proving the warning wrong ever since. [Your thesis: is Doom a villain, or a tragedy? Say "this is my read."] [Your rule in your words, for example "Listen to the warning."]
+
+**3:45** If you want to read Doom's origin, start with Fantastic Four Annual number 2 from 1964. [Your verdict: Buy, Library or Skip, only if you've read it.] Now that you know Doom, watch [your next video] next.
 
 ## Graphics and visuals
 1. Doom's face-less cover from Fantastic Four #5 (0:00 and 2:20).
@@ -101,6 +103,9 @@ This Comic COOKS! is for people who want to love comics but don't know where to 
 
 **TikTok caption:** Doctor Doom was warned. He threw the person who warned him out of the room. #doctordoom #marvel #avengersdoomsday
 
+## Revision log (v2)
+Fixes applied after the script-review: promise the payoff in the hook; one-sentence receipt; compressed boyhood; added the blame beat right after the explosion (Doom believes Reed sabotaged him); moved your personal beat after the explosion; added the powerset; neutral monks wording; removed the banned-phrase opener; cut the Books of Doom line (it stays in the description); added the origin issue's ending (Doom fooled by his own drug); closed the loop with a callback; thanks moved to the movie section.
+
 ## Fact check
 Read in full on 5 Nov 2026 (Wikipedia, Nick Peron, Bellevue University Library, Mac McEntire, mycomicscollection, Overstreet Access, The Astromech, Slashfilm; the Comic-Con reveal from Slashfilm, Fox 35, Complex and DTNext in search results).
 
@@ -127,6 +132,10 @@ Read in full on 5 Nov 2026 (Wikipedia, Nick Peron, Bellevue University Library, 
 | Triumph and Torment (1989, Roger Stern and Mike Mignola): Doom and Doctor Strange descend into hell to save her | High | mycomicscollection; The Astromech; Nick Peron |
 | Doom blames Reed Richards for his scar and wants to prove his superior mind | High | Wikipedia; Overstreet Access |
 | Brubaker's Books of Doom (2005 to 2006) retells the origin | High | Wikipedia; Nick Peron |
+| Doom believes Reed sabotaged him and blames him for the scar | High | Wikipedia; 13th Dimension; Looper; Slashfilm |
+| Doom drugs the Fantastic Four's drinks; Reed gives Doom the same drug; Doom walks away believing he destroyed Reed | Medium | Nick Peron; Mac McEntire (a fresh search found no third source) |
+| Doom is a genius scientist and sorcerer; his armor gives superhuman strength and weapons; he rules Latveria with diplomatic immunity | High | Wikipedia; mycomicscollection; SuperHeroHype |
+| Monks forge his armor and mask in Tibet (whether they taught or were forced is not stated) | High | Nick Peron; Bellevue; Marvel.com; Overstreet Access |
 | Marvel announced Robert Downey Jr. as Doctor Doom for Avengers: Doomsday at San Diego Comic-Con, July 2024 | High | Slashfilm; Fox 35; Complex; DTNext |
 
 Cut: "Reed's calculations were wrong in the machine" (the sources agree Reed was right, and this script says so); whether the ruler was a baron or a king (sources conflict, so the script says "a ruler"); how Cynthia died (the original issue and later retcons differ); the Doomsday release date (sources conflict, so the script says "this December"); Kirby's "mask as Death" quote (single source); Slashfilm's "dark mirror of Iron Man" line (single source, left for you to say as your own read if you want).
