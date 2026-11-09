@@ -1,23 +1,28 @@
 # Short: 4 Kids Walk Into a Bank (fact-checked rebuild of the user's draft)
 
-Prepared 8 Nov 2026 for Vactor. About 1:06 at your pace if your blank runs about 14 seconds (220 spoken words, computed). Keep it over 60 seconds for TikTok Creator Rewards. Fill the `[ ]` blank in your own words, and only if you have read the book.
+Prepared 8 Nov 2026, reviewed 9 Nov 2026 for Vactor. Keep it over 60 seconds for TikTok Creator Rewards. Fill the `[ ]` blank in your own words, and only if you have read the book.
 
-## Script
-**0:00** Four kids decide to rob a bank, so one of their dads doesn't have to. That's 4 Kids Walk Into a Bank, by Matthew Rosenberg and Tyler Boss.
+## Script (v2, passed the review gate on 9 Nov 2026 once your blanks are filled)
 
-**0:06** Paige and her friends Stretch, Berger and Walter play Dungeons and Dragons and get into regular kid trouble. Then a gang of ex-cons shows up, and Paige's dad is about to rob a bank and go to jail. So Paige makes a plan: pull off the heist herself.
+**0:00** Four kids decide to rob a bank, so one of their dads doesn't have to. [YOUR RECEIPT: one sentence. When you read it, and one detail you remember.]
 
-**0:18** Reviewers have compared it to The Goonies and Stand By Me. One called it Wes Anderson remaking Reservoir Dogs. It's funny, it's dark, and a lot of reviewers say it's, above all else, Paige's coming-of-age story.
+**0:11** That's 4 Kids Walk Into a Bank, by Matthew Rosenberg and Tyler Boss.
 
-**0:26** When the first issue came out in 2016, the whole 31,000-copy print run sold out, and it went back for a second printing.
+**0:14** Paige and her friends Stretch, Berger and Walter play Dungeons and Dragons and get into regular kid trouble. Then a gang of criminals needs her dad's help with a heist, and he's about to rob a bank and go to jail. So Paige makes a plan: pull off the heist herself.
 
-**0:32** And one reviewer wouldn't spoil the ending, because they said it's what sets this book apart from every comparison.
+**0:26** Reviewers have compared it to The Goonies and Stand By Me. One called it Wes Anderson remaking Reservoir Dogs. Graphic Policy calls it very dark and moderately humorous, and Comic Bastards says that above all else, it's Paige's coming-of-age story.
 
-**0:36** Now it's being made into a movie with Liam Neeson in the cast. There's no firm release date yet, but it was delayed from 2026.
+**0:36** Before it even hit shelves in 2016, the first issue's 31,000-copy print run sold out to stores, and the book went to a second and a third printing.
 
-**0:42** [YOUR RECEIPT: when you read it. YOUR READ: why it works for you. Say "this is my read." YOUR VERDICT: Buy, Library or Skip.]
+**0:43** And a reviewer at Comic Watch wouldn't spoil the ending, because it's what sets the book apart from every comparison.
 
-**0:56** Is Paige a hero, or a kid in over her head? One word in the comments. And if you're new to comics, my free Starter Kit, three comics to start with, is in the pinned comment. Paige Turner, if you're nasty.
+**0:47** Now it's headed to the big screen with Liam Neeson in the cast, and it's listed for 2027.
+
+**0:52** [YOUR READ: why it works for you, 1 to 2 sentences. Say "this is my read." YOUR VERDICT: Buy, Library or Skip.]
+
+**1:04** Is Paige a hero, or a kid in over her head? One word in the comments. And if you're new to comics, my free Starter Kit, three comics to start with, is in the pinned comment. Paige Turner, if you're nasty.
+
+Runtime: 226 spoken words is about 54 seconds, plus your two blanks. You need at least 6 seconds in the blanks to pass 60 seconds; the target is about 1:10.
 
 ## SEO
 **Title:** Four Kids Rob a Bank (The Comic You NEED To Read)
@@ -54,3 +59,6 @@ Cut from the draft: Paige's exact age (sources say 11 and 12); the basement and 
 
 ## Trust check
 Met: sourced facts, attributed reviewer lines, a one-word comment prompt, Starter Kit line, sign-off. Your blanks: receipt, read, verdict. Do not recommend it unless you have read it. I did not verify whether it is on Hoopla or Libby, so don't say it is. The sign-off uses Paige's real name from Wikipedia; there is no hero name, so tell me if you want a different one.
+
+## Review gate result (9 Nov 2026)
+Fresh sources read this session: Bleeding Cool (31,000 print run sold out at Diamond before release), Graphic Policy (second printing sold out, third printing), GoCollect (second printing), Box Office Mojo and Wikipedia (2027), Comic Watch, Comic Bastards. Fixes from the review: the 31,000 sellout happened before release (Bleeding Cool), so the script says so; "ex-cons" cut to "criminals" (one source); a receipt added in the first 15 seconds; the vague "funny, dark" line replaced by attributed reviewer wording; the movie date is "listed for 2027" (Wikipedia, Box Office Mojo, The Numbers; older listings still say April 2026). Conflict not used: the film's synopsis calls Paige's guardian her grandfather in some listings and her father in another, so the script says nothing about the movie plot.
