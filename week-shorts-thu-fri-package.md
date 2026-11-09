@@ -9,29 +9,45 @@ Both run over 60 seconds so they qualify for TikTok Creator Rewards (Thursday ab
 - **Long-forms:** timely MCU videos get 2K to 4K (VisionQuest ep 7 3.8K, Brave New World 2.7K, Nightcrawler 2.1K with 25 comments). Non-MCU or how-to videos flop: Marvel Unlimited 297, 1973 Joker cover 382, the Deadpool and Wolverine budget video 585 in two days.
 - **Takeaway for these Shorts:** lead with a famous character and one surprising twist, use plain words, and keep it a character story and not news.
 
-## Thursday: Cyclops and Mister Sinister (teaser for the Cyclops long-form)
+## Thursday: Cyclops and Mister Sinister (teaser for the Cyclops long-form) - PASSED the review gate 10 Nov 2026 (v2)
 Title: Cyclops's Worst Enemy Was Watching Him Since Childhood
 
-**0:00** Cyclops's worst enemy has been watching him since he was a kid.
+**0:00** Cyclops's worst enemy has been watching him since he was a kid. He even created the woman Cyclops married.
 
-**0:04** Scott Summers was a boy when an alien Shi'ar ship attacked his family's plane over Alaska. His parents pushed Scott and his little brother Alex out with a single parachute.
+**0:04** Scott Summers was a boy when an alien Shi'ar ship attacked his family's plane over Alaska. His parents got Scott and his little brother Alex out of the plane.
 
-**0:14** The brothers were separated, and Scott ended up in an orphanage. Marvel and Looper both say the man behind it was Mister Sinister, a geneticist who had taken a deep interest in Scott. Looper says the kids there were used for experiments.
+**0:11** The brothers were separated, and Scott ended up in an orphanage. The man behind that orphanage was Mister Sinister, a geneticist who had taken a deep interest in young Scott and treated him as a subject for tests and experiments.
 
-**0:27** Years later, Scott marries a woman named Madelyne Pryor, who looks just like his lost love, Jean Grey. She turns out to be a clone made by Mister Sinister. Looper calls it a long con, and Wikipedia says Sinister had been meddling with the Summers family for decades. And then Scott leaves her and their baby for the real Jean.
+**0:20** Years later, Scott marries Madelyne Pryor, who looks just like his lost love, Jean Grey. She turns out to be a clone of Jean, made by Sinister, who even arranged for them to meet. Then Jean turns up alive, and Scott leaves Madelyne and their baby to start a new team with Jean.
 
-**0:46** [YOUR READ, 1 to 2 sentences: what that tells you about Cyclops. Say "this is my read."]
+**0:33** [YOUR READ, 1 to 2 sentences: what that tells you about Cyclops. Say "this is my read."]
 
-**0:56** This is one thread in the story of how Cyclops ended up killing his own teacher. The full story is coming to the channel. [YOUR PICK, only if you have read it, and YOUR VERDICT: Buy, Library or Skip.]
+**0:43** This is one thread in the story of how Cyclops ended up killing his own teacher. The full story is coming to the channel. [YOUR PICK, only if you have read it, and YOUR VERDICT: Buy, Library or Skip.]
 
-**1:02** Was Sinister the real villain of Cyclops's life? One word in the comments. And if you're new to comics, my free Starter Kit, three comics to start with, is in the pinned comment. Scott Summers, Cyclops, if you're nasty.
+**0:57** Was Sinister the real villain of Cyclops's life? One word in the comments. And if you're new to comics, my free Starter Kit, three comics to start with, is in the pinned comment. Scott Summers, Cyclops, if you're nasty.
 
-**Description:** Cyclops was a boy when a Shi'ar ship attacked his family's plane. The man behind the orphanage he ended up in was Mister Sinister. Free Starter Kit (3 comics to start with, by email): https://this-comic-cooks.beehiiv.com/subscribe. #XMen #Cyclops #MisterSinister
+Runtime: 204 spoken words is about 49 seconds. Your two blanks must add at least 12 seconds to pass 60 seconds; the target is about 1:06.
+
+**Description:** Cyclops was a boy when a Shi'ar ship attacked his family's plane. The man behind the orphanage he ended up in was Mister Sinister, who later created the woman Scott married. Free Starter Kit (3 comics to start with, by email): https://this-comic-cooks.beehiiv.com/subscribe. #XMen #Cyclops #MisterSinister
 **Tags:** cyclops, mister sinister, scott summers, madelyne pryor, cyclops origin, x-men villain, who is mister sinister, x-men explained, this comic cooks
 **Pinned comment:** Was Sinister the real villain of Cyclops's life? One word. Free Starter Kit (3 comics to start with): https://this-comic-cooks.beehiiv.com/subscribe
 **TikTok caption:** Cyclops's worst enemy has been watching him since he was a kid. #xmen #cyclops #marvel
 
-**Fact check (Marvel.com, Looper, Wikipedia, read 8 Nov):** Shi'ar attack on the family plane over Alaska, parents push the boys out with one parachute (Marvel.com; Looper; Wikipedia). Brothers separated, Scott to an orphanage linked to Sinister (Marvel.com; Looper). Sinister took a deep interest in Scott, orphanage experiments (Marvel.com; Looper). Madelyne marries Scott, is a Sinister clone (Wikipedia; Marvel.com; Looper). "Long con" (Looper). Sinister meddling with the Summers family for decades (Wikipedia). Scott leaves Madelyne and the baby when Jean is found alive (Wikipedia; Marvel.com; Looper). Cut: Omaha and "Mr. Milbury" (Looper only); that Sinister gave him his glasses (Marvel.com only).
+**Fact check (fresh sources read 10 Nov 2026: Marvel.com Mister Sinister explainer, Wikipedia Mister Sinister, Overstreet Access "Becoming Cyclops", plus Marvel.com and Looper Cyclops pieces):**
+| Claim | Sources |
+|---|---|
+| An alien Shi'ar ship attacked the Summers family plane over Alaska | Marvel.com (Cyclops); Looper; Overstreet Access (alien spaceship, Anchorage) |
+| The parents got Scott and Alex out of the plane (parachute count conflicts, so not stated) | Marvel.com; Looper; Overstreet Access; Wikipedia |
+| The brothers were separated; Scott went to an orphanage | Marvel.com; Looper; Marvel.com Sinister explainer |
+| Mister Sinister was behind the orphanage | Marvel.com Sinister explainer; Overstreet Access (Mr. Milbury alias); Looper; Wikipedia (Classic X-Men #41 to 42) |
+| Sinister took a deep interest in young Scott; tests and experiments on him | Marvel.com; Overstreet Access; Looper |
+| Sinister is Cyclops's nemesis or archenemy | Marvel.com Sinister explainer ("nemesis"); Wikipedia ("archenemy") |
+| Madelyne Pryor is a clone of Jean made by Sinister; he orchestrated their meeting; they married and had Nathan | Marvel.com Sinister explainer; Looper; Wikipedia |
+| Jean turns up alive; Scott leaves Madelyne and the baby to start X-Factor with Jean | Wikipedia; Marvel.com; Looper |
+
+Cut: Omaha, "Mr. Milbury", Sinister giving him the glasses (conflicting or single-source); the parachute count; the head injury; Madelyne's fate (sources conflict: killed by Jean, or took her own life).
+
+**Review notes (script-review skill, 10 Nov 2026):** Paddy and YouTube guidance searched fresh (vidIQ and Subscribr summaries and the benchmarks they cite are secondary and unverified; the consistent advice is a strong 3-second hook, a curiosity gap, and judging against your own baseline). Hook: Pass after the revision (a second "he created the woman Cyclops married" line adds the curiosity gap). Retention: the outlet names ("Marvel and Looper both say") were cut because they slowed the Short. Banned phrases: none. Expected performance: about 3K to 6K views (a famous name plus a twist, similar to the Kitty Pryde and Moira Shorts), with upside if the hook lands. Remaining risk: it is a lot of backstory in 50 seconds, so keep your read to one sentence if you are running long.
 
 ## Friday: Static and Milestone (teaser for the Saturday long-form)
 Title: Static Shock Started As A Comic From A Black-Owned Company
