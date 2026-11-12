@@ -11,7 +11,8 @@
 | Sat 14 | Long-form: Milestone and Dakota City (record) | milestone-midtier-longform-package.md | Done 9 Nov | Run Fri 13 | receipt, beat, thesis, pick, verdict | NOT CLEARED until reviewed |
 | Sun 15 | Post Doom | | | | | check at 72 hours Wed 18 (under 3K views = no more Doom long-forms) |
 | Wed 18 | Post Milestone | | | | | check at 72 hours Sat 21 |
-| Next week | Long-form: Cyclops v4 | xmen-cyclops-timeline-longform-package.md | Done 8 Nov | Not run | many | HOLD until Doom is posted |
+| Sat 21 (proposed) | Long-form: Wolverine's kids, Worth It? verdicts (proposed 12 Nov, not yet approved) | to be written | Not started | Not run | you must read the key books first | PROPOSED, needs your yes |
+| Then | Long-form: Cyclops v4 | xmen-cyclops-timeline-longform-package.md | Done 8 Nov | Not run | many | HOLD until Doom is posted |
 
 Free-edit videos (live action, free edit from his editor, about 30 minutes of his time) are a side lane: cap at 1 to 2 a week, never ahead of the rows above. Each still gets the fact check, and any strong claim in a title needs two sources.
 
