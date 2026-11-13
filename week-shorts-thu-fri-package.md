@@ -50,17 +50,19 @@ Cut: Omaha, "Mr. Milbury", Sinister giving him the glasses (conflicting or singl
 **Review notes (script-review skill, 10 Nov 2026):** Paddy and YouTube guidance searched fresh (vidIQ and Subscribr summaries and the benchmarks they cite are secondary and unverified; the consistent advice is a strong 3-second hook, a curiosity gap, and judging against your own baseline). Hook: Pass after the revision (a second "he created the woman Cyclops married" line adds the curiosity gap). Retention: the outlet names ("Marvel and Looper both say") were cut because they slowed the Short. Banned phrases: none. Expected performance: about 3K to 6K views (a famous name plus a twist, similar to the Kitty Pryde and Moira Shorts), with upside if the hook lands. Remaining risk: it is a lot of backstory in 50 seconds, so keep your read to one sentence if you are running long.
 
 ## Friday: Static and Milestone (teaser for the Saturday long-form)
+**Review v2, 13 Nov 2026: PASSED once your receipt blank is filled.** Fixes: hook said "three Black creators" but four founders are listed (now "Black-owned company that kept the rights", Wikipedia Milestone page plus Static Shock page); the unsourced colorism/teen pregnancy line replaced with an attributed McDuffie line; the "top WB cartoon for two seasons" claim was single-source and is cut; the Humanitas line now names the episode (Wikipedia episode list and Static Shock page, IMDb, Animation Magazine; the 2003 award). Needs 62+ seconds with your blank. No verdict on Static Year One until you finish it.
+
 Title: Static Shock Started As A Comic From A Black-Owned Company
 
-**0:00** Static Shock was a comic first, and it came from a company three Black creators built so they could own their own heroes.
+**0:00** Static Shock was a comic first, and it came from a Black-owned company that kept the rights to its own heroes.
 
 **0:08** In 1993, Dwayne McDuffie, Denys Cowan, Michael Davis and Derek Dingle launched Milestone Media. They felt minorities were severely underrepresented in American comics, and they wanted to fix that themselves.
 
 **0:20** They made a deal with DC. DC would publish and distribute the books, but Milestone would keep its characters. Almost every story took place in one made-up city, Dakota. And one of the first four books was Static.
 
-**0:34** Static is Virgil Hawkins, a teenager who gets electromagnetic powers and cracks jokes while he figures out what to do with them. Milestone's own history says its books took on subjects like colorism, teen pregnancy and police brutality.
+**0:34** Static is Virgil Hawkins, a teenager who gets electromagnetic powers and cracks jokes while he figures out what to do with them. McDuffie said Milestone's books dealt with real subjects, including gun control and gang violence.
 
-**0:47** The cartoon debuted in 2000, ran 52 episodes, and was one of the WB's top Saturday morning cartoons for two seasons. McDuffie won a Humanitas Award for an episode about gun violence in schools. He said, quote, Superman isn't all white people and neither is Lex Luthor.
+**0:47** The cartoon debuted in 2000 and ran 52 episodes. McDuffie and Alan Burnett won a Humanitas Prize for an episode called Jimmy, about a bullied teen who gets hold of his father's gun. He said, quote, Superman isn't all white people and neither is Lex Luthor.
 
 **1:00** [YOUR RECEIPT: what you have read of Static so far. For example, "I'm reading Static Year One right now." YOUR READ in one sentence, with "this is my read."]
 

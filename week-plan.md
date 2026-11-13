@@ -6,7 +6,7 @@
 |---|---|---|---|---|---|---|
 | Mon 9 to Tue 10 | Short: 4 Kids Walk Into a Bank | four-kids-bank-short-package.md | Done 9 Nov | PASSED 9 Nov | done | DONE (recorded by the user 10 Nov); log views and viewed vs swiped away at 48 to 72 hours |
 | Thu 12 | Short: Cyclops and Mister Sinister | week-shorts-thu-fri-package.md | Done 10 Nov | PASSED 10 Nov (v2) | read, pick, verdict | NEXT TO RECORD, ready once your blanks are in |
-| Fri 13 | Short: Static and Milestone | week-shorts-thu-fri-package.md | Done 9 Nov | Run Thu 12 night | receipt (Static Year One), read | NOT CLEARED until reviewed |
+| Fri 13 | Short: Static and Milestone | week-shorts-thu-fri-package.md | Done 9 Nov | PASSED 13 Nov (v2) | receipt (Static Year One), read | READY once your receipt is in |
 | Sat 14 | Long-form: Doom origin (record) | doom-origin-longform-package.md | Done 5 Nov | Final version needs a full re-review (v2 was reviewed 5 Nov, v3 was not) | many, see file | NOT CLEARED until re-reviewed |
 | Sat 14 | Long-form: Milestone and Dakota City (record) | milestone-midtier-longform-package.md | Done 9 Nov | Run Fri 13 | receipt, beat, thesis, pick, verdict | NOT CLEARED until reviewed |
 | Sun 15 | Post Doom | | | | | check at 72 hours Wed 18 (under 3K views = no more Doom long-forms) |
