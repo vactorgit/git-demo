@@ -302,3 +302,30 @@ Never guess what the channel covers from its name. If something isn't listed her
 - **Brand: the researcher (user, 13 Nov 2026):** he wants the brand to be "I do the research people are too lazy to do," so he can sound like an expert after researching a character without knowing everything off the top of his head, and the audience need not be told the research happens behind the scenes. Guardrails: researched facts (double-sourced) are separate from read verdicts; never claim he has read or knows what he hasn't (no "I've read every X-Men comic"); honest phrasing such as "I dug into this" or "here's what the record shows" is fine, and Buy / Library / Skip verdicts only on books he has read a key arc of. Errors cost more when presenting as the expert, so keep the fact rule and openly correct mistakes.
 
 - **Think Media four formats (user shared transcript, 17 Nov 2026; host's client results and view counts are his own claims, and the video ends with a workshop ad):** how to (saturated; works only with a specific problem plus a specific audience plus a clear outcome in the title), how I (own story or result), how they (someone else's story; open a loop in the title), I tried (test something and document it: "you don't have to be the expert, you can be the experiment"). TCC application: his character stories are already "how they". The honest fit for the researcher brand is "I tried" and "how I": "I read [3 books] so you don't have to" with Buy / Library / Skip, a library or Hoopla week, and his own how-I-got-into-comics story. Only claim what he actually read. Proposed: reshape the Wolverine's-kids long-form into "I read the Wolverine kids comics, here's which are worth it" (pending his yes and his reading).
+
+## HANDOFF FOR A FRESH SESSION (written 18 Nov 2026)
+
+**Start here:** read week-plan.md and show the next video, its script and its gate status (SESSION START RULE). Then ask the open questions below.
+
+**Pages (all published artifacts):**
+- Script Board: https://claude.ai/artifact/VdjduQAoLFurdzhCU43CVd (db collection "scripts"; URL taken from the old Daily Pick routine prompt)
+- Daily Pick: https://claude.ai/artifact/H2aL2FtMZVGrgsEf9GWd53 (db collection "requests"; last rebuilt about 30 Oct, so it is stale)
+- Starter Kit page: https://claude.ai/artifact/6wcAgMgwGHEsJSXytRzi6o ("Three doors into the X-Men")
+- Media Kit: https://claude.ai/artifact/Qj42Kj4L245Rrg4k8VHJfP
+- Brand and Income Plan: https://claude.ai/artifact/3j1erCUABqoMmoMWhPGVzW
+- Floor Tracker: https://claude.ai/artifact/M5Ry4QEWiH8W2iuRagGETo (needs the 21 Nov payment, about $449)
+- Money Plan: https://claude.ai/artifact/5ye5f1wC219GEGBEF16ed1; Growth Plan: https://claude.ai/artifact/JQ3HEsUx1VsNMZLvb9r4QA
+- Stray duplicates (delete only if he asks): https://claude.ai/artifact/NeVint68dJ1cvYHurpJede and https://claude.ai/artifact/FF9Q4whHJuqm4p6ByAUDhX
+- Idea bank sheet: https://docs.google.com/spreadsheets/d/1t4QrQ3SDLkFQpdXHjI11ffVHRJaciivrbff8gmjxl1o/edit
+- Signup: https://this-comic-cooks.beehiiv.com/subscribe
+
+**Decisions made:** the "TCC Daily Pick (evening, for tomorrow)" scheduled task (trig_01J1JhQRgbGb3ToJDA5WjqpY) was DELETED by the user's request on 18 Nov; it had been failing with ACCESS_DENIED since 30 Oct. Packages are built on request in a session, no automatic nightly run. Review gate stays. Brand = the researcher (13 Nov). Friday Static Short passed review v2 (13 Nov). Think Media four formats logged (17 Nov).
+
+**Open items:**
+1. Were Doom and Milestone long-forms recorded and posted on Sat 14 Nov? UNKNOWN; ask. If posted, check Doom at 72 hours (under about 3K views = no more Doom long-forms) and Milestone.
+2. Wolverine's-kids long-form (proposed Sat 21 Nov, reshaped as "I read the Wolverine kids comics, which are worth it"): needs his yes and which Wolverine books he has read. Cyclops v4 must go up before Doomsday (18 Dec) and still needs a full script-review.
+3. Doom v3 and Milestone long-form still need full script-review passes if not already posted.
+4. Post-hoc fact check of the Sabretooth (125.7K) and Secret Son (47.7K) Shorts: needs their scripts.
+5. Viewed-vs-swiped screenshots for Sabretooth, 4 Kids and the Cyclops Short; the cut-off "Popular with regular viewers" card.
+6. Funnel fix: Shorts produce almost no Starter Kit signups; pin the link on the biggest Shorts, test a Wolverine "3 comics to start with" Short, consider a short address and a QR code on long-forms. Welcome-email survey question is draft only (beehiiv changes need his yes).
+7. Update the Floor Tracker on 21 Nov; ask about December reading budget in late November; confirm the "Paige Turner, if you're nasty" sign-off; GlobalComix sponsor inquiry draft is his to send.
