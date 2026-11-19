@@ -1,6 +1,6 @@
 # TCC: GTA 6 Comics Script v3 (revised after script-review, 19 Nov 2026)
 
-Status: LOCKED EXCEPT YOUR BLANKS. Read ONLY the plain lines. Lines in [BRACKETS] are notes or blanks that are yours to fill. Never read a bracket aloud.
+Status: LOCKED (19 Nov 2026). Your blanks are filled from your interview answers. Read ONLY the plain lines. Lines in [BRACKETS] are on-screen or edit notes, never read them aloud.
 
 Titles (pick one, thumbnail text "PLAY IT -> READ IT"):
 - Lead: GTA 6 Is Out. These 6 Comics Already Did It.
@@ -32,7 +32,7 @@ I found a comic for each one. By the end, you'll have a full crew, and you'll kn
 
 The last pick has a couple that the first pages tell you won't end well. You still won't look away.
 
-[YOUR RECEIPT, one line in your words: which of these six you have actually read. Be honest about the rest, for example "I dug into the other four." Do not claim more than you read.]
+Full disclosure: I've read three of these. Criminal, Superior Foes and Sin City. The other three, I dug into, so I'll tell you which is which.
 
 [ON SCREEN: CREW 0/6]
 
@@ -50,7 +50,9 @@ So when that score comes knocking, his first answer is no. The book is about wha
 
 [CARD: Criminal Vol. 1: Coward, issues #1 to 5. Mature readers.]
 
-[YOUR VERDICT, only if you read it: Buy / Library / Skip, one reason.]
+[ON SCREEN: VERDICT: BUY]
+
+I've read this one. Verdict: Buy. Amazing art and storytelling.
 
 If you've never read a comic, I put three to start with in a free Starter Kit. The link is below.
 
@@ -74,7 +76,7 @@ So now Felicia is on the run from the Guild and its boss. That's the most GTA se
 
 [CARD: Black Cat Vol. 1: Grand Theft Marvel, issues #1 to 5, MacKay and Foreman.]
 
-[YOUR VERDICT if you read it.]
+I dug into this one but haven't read it, so no verdict from me.
 
 A planner and a thief. But nobody escapes on foot. Next up is the driver, and his superpower is the most GTA thing I've seen in a comic.
 
@@ -102,9 +104,15 @@ That's every GTA side character you've ever loved. Big talk. Small time. Zero lo
 
 [CARD: The Superior Foes of Spider-Man, 17 issues.]
 
-[YOUR VERDICT if you read it.]
+I've read this one. Verdict: Buy. Great comedy and heart.
 
-[ONLY-YOU BEAT, about 40 seconds, yours alone: one true story about what GTA meant to you, who you played it with, or where it led you. End by landing back on the crew.]
+Quick confession. I've never been a huge GTA guy. I respect how far each game pushes the tech, and the satire and the soundtracks are always fun. But open worlds overwhelm me. Too much choice, and I never finish the story.
+
+Then Red Dead Redemption clicked. I realized I could just do the main missions and skip every side mission. I had way more fun, and I finished both campaigns.
+
+So that's my plan for GTA 6. Main missions only, and I finally finish my first GTA.
+
+Honestly, a crew of six comics is my kind of game. No side quests. One clean path.
 
 ### Midpoint re-hook
 
@@ -134,7 +142,7 @@ It's by Christopher Sebela, with art by Ro Stein and Ted Brandt. Image Comics, 2
 
 [CARD: Crowded Vol. 1.]
 
-[YOUR VERDICT if you read it.]
+I dug into this one but haven't read it, so no verdict from me.
 
 And look at what Crowded is underneath. Two people. On the run. Stuck with each other. Hold onto that. It's where this whole crew is heading.
 
@@ -150,7 +158,7 @@ No powers. Just desperate people in a town that chews them up. Black and white, 
 
 [CARD: Sin City: The Hard Goodbye, Frank Miller. Mature readers.]
 
-[YOUR VERDICT if you read it.]
+I've read this one. Verdict: Buy. Classic noir.
 
 Five slots filled. Planner. Thief. Driver. Heat. City. One left. The one GTA 6 is actually about.
 
@@ -176,7 +184,7 @@ That's the exact question GTA 6 is about to keep you up at night with. How does 
 
 [CARD: Violent Love Vol. 1: Stay Dangerous.]
 
-[YOUR VERDICT if you read it.]
+I dug into this one but haven't read it, so no verdict from me.
 
 [CREW 6/6]
 
@@ -188,9 +196,13 @@ Now pick a seventh member. Which comic character would you put on a GTA crew? On
 
 We waited more than a decade for GTA 6. This crew has been ready the whole time.
 
-[NEXT-VIDEO LINE, yours: "Now that you've got a crew, watch [VIDEO TITLE] next." Put the end screen on that video.]
+Now that you've got your crew, there's another video on screen. Watch that one next.
 
-[SIGN-OFF, yours: confirm the names. Proposed: "Daisy Jane and Rock Bradley, if you're nasty."]
+[END SCREEN: YouTube's best-for-viewer pick until a Starter Kit / where-to-start video exists. If it exists when you post, point the end screen at it and change the line to its title.]
+
+Alright, now that you know which comics to read, you can stop pooping and get back to playing GTA 6.
+
+[SIGN-OFF: you chose a closing line only, with no character name or "if you're nasty" for this video. That skips your usual rule on purpose.]
 
 ---
 
@@ -231,5 +243,5 @@ Merged-decade check: Criminal's 2006 launch is kept apart from Black Cat's 2019 
 
 ## TRUST CHECK
 Meets: promise matches the title, facts double-sourced or softened, opinions labeled, mature-content warnings on the cards, Starter Kit link once.
-Yours to fill: receipt, verdicts, Only-You story, next-video line, sign-off. Disclose any affiliate links on screen and in the description.
+Filled from your interview: receipt, verdicts, Only-You story, next-video line, closing line. Open: you skipped the "if you're nasty" sign-off this time. Disclose any affiliate links on screen and in the description.
 Open: whether GTA 6 has actually shipped; the Felicia and Hawkeye lines are Medium.
