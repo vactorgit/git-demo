@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fcpxml>
+<fcpxml version="1.9">
+<resources>
+<format id="r1" name="FFVideoFormat1080p30" frameDuration="100/3000s" width="1920" height="1080" colorSpace="1-1-1 (Rec. 709)"/>
+</resources>
+<library><event name="GTA 6 Comics"><project name="GTA6 Comics - Edit Map">
+<sequence format="r1" duration="1137900/3000s" tcStart="0s" tcFormat="NDF" audioLayout="stereo" audioRate="48k"><spine>
+<gap name="Drop A-roll here" offset="0s" duration="1137900/3000s" start="0s">
+<chapter-marker start="0/3000s" duration="100/3000s" value="COLD OPEN: hook"/>
+<marker start="18600/3000s" duration="100/3000s" value="CUT to Coward panels, hard push-in. Music sting low, tension drone"/>
+<marker start="42100/3000s" duration="100/3000s" value="SILENCE 0.5s then SMASH CUT to camera"/>
+<marker start="49300/3000s" duration="100/3000s" value="TITLE CARD: PLAY IT -&gt; READ IT, neon whoosh"/>
+<chapter-marker start="63600/3000s" duration="100/3000s" value="INTRO: six pieces"/>
+<marker start="63600/3000s" duration="100/3000s" value="Six slot icons slam in one per word, SFX tick each"/>
+<marker start="85000/3000s" duration="100/3000s" value="CREW 0/6 counter appears bottom-right"/>
+<marker start="102100/3000s" duration="100/3000s" value="Heartbeat bass hit, slow zoom on camera, then cut to black 0.3s"/>
+<chapter-marker start="125000/3000s" duration="100/3000s" value="SLOT 1: THE PLANNER (Criminal)  CREW 1/6"/>
+<marker start="140000/3000s" duration="100/3000s" value="Pickpocket-hand B-roll or Leo panels, fast cuts every 2s"/>
+<marker start="167900/3000s" duration="100/3000s" value="TEXT: POWERS: NONE, freeze, stamp SFX"/>
+<marker start="175000/3000s" duration="100/3000s" value="Music drops to a drone"/>
+<marker start="191800/3000s" duration="100/3000s" value="CARD: Criminal Vol. 1: Coward, issues #1-5, Mature readers (hold 4s)" completed="0"/>
+<marker start="192100/3000s" duration="100/3000s" value="Beat of silence before this line, deadpan"/>
+<marker start="198600/3000s" duration="100/3000s" value="Whip pan transition to Black Cat art"/>
+<chapter-marker start="214300/3000s" duration="100/3000s" value="SLOT 2: THE THIEF (Black Cat)  CREW 2/6"/>
+<marker start="262900/3000s" duration="100/3000s" value="Painting-heist visuals, Guild logo-style placeholder text"/>
+<marker start="284300/3000s" duration="100/3000s" value="Cut to camera close-up, eye contact, no B-roll"/>
+<marker start="300700/3000s" duration="100/3000s" value="Quick-cut montage: Doctor Strange, Iron Man, Fantastic Four covers, one per beat, SFX each"/>
+<marker start="322100/3000s" duration="100/3000s" value="Engine rev SFX build, ramp music"/>
+<chapter-marker start="342900/3000s" duration="100/3000s" value="SLOT 3: THE DRIVER (Superior Foes)  CREW 3/6"/>
+<marker start="355700/3000s" duration="100/3000s" value="Car-transform graphic: simple before/after swap with whoosh"/>
+<marker start="377100/3000s" duration="100/3000s" value="Menu-style 'UPGRADE' text pop (game UI feel, not Rockstar's)"/>
+<marker start="425700/3000s" duration="100/3000s" value="Beat. Let the joke land: hold on camera"/>
+<marker start="435000/3000s" duration="100/3000s" value="Rapid-fire: one cover or panel per character, 1.2s each, name tag + one-word power"/>
+<marker start="474300/3000s" duration="100/3000s" value="Music flips to sly, lighter"/>
+<marker start="505700/3000s" duration="100/3000s" value="Cut to camera, grin"/>
+<marker start="515700/3000s" duration="100/3000s" value="YOUR PERSONAL GTA STORY (about 40s): film on camera, no B-roll, warm and slow, photo of you playing if you have one. Not scripted." completed="0"/>
+<chapter-marker start="635700/3000s" duration="100/3000s" value="MIDPOINT RE-HOOK  CREW 3/6"/>
+<marker start="642900/3000s" duration="100/3000s" value="Music darkens, police-siren-style rising tone (original sound, not Rockstar's)"/>
+<marker start="658600/3000s" duration="100/3000s" value="Siren hit, red/blue flicker on screen edge 1s"/>
+<chapter-marker start="667900/3000s" duration="100/3000s" value="SLOT 4: THE HEAT (Crowded)  CREW 4/6"/>
+<marker start="704300/3000s" duration="100/3000s" value="Five empty star outlines fill one by one (generic stars, no game assets)"/>
+<marker start="741400/3000s" duration="100/3000s" value="Credits as lower-third, 3s"/>
+<marker start="755700/3000s" duration="100/3000s" value="Cut to camera, keep casual"/>
+<marker start="793600/3000s" duration="100/3000s" value="Whisper tone, slow push-in. PLANT this: it pays off in Slot 6"/>
+<chapter-marker start="812100/3000s" duration="100/3000s" value="SLOT 5: THE MAP (Sin City)  CREW 5/6"/>
+<marker start="844300/3000s" duration="100/3000s" value="B-roll flips to high-contrast black and white, drop saturation on camera too"/>
+<marker start="875000/3000s" duration="100/3000s" value="Hold on Sin City panels, slow drift"/>
+<marker start="896400/3000s" duration="100/3000s" value="Five crew icons stack on screen, sixth flashes"/>
+<chapter-marker start="908600/3000s" duration="100/3000s" value="SLOT 6: THE COUPLE (Violent Love)  CREW 5/6, sixth flashing"/>
+<marker start="933600/3000s" duration="100/3000s" value="Text quote card, attributed to Rockstar"/>
+<marker start="954300/3000s" duration="100/3000s" value="Neon pink/teal grade returns"/>
+<marker start="1012100/3000s" duration="100/3000s" value="Freeze on Violent Love cover, hit"/>
+<marker start="1020000/3000s" duration="100/3000s" value="Cut to camera, slow down, lower voice"/>
+<marker start="1043600/3000s" duration="100/3000s" value="Callback to Crowded line: 'Two people on the run' text echo"/>
+<chapter-marker start="1075000/3000s" duration="100/3000s" value="CLOSE  CREW 6/6, full crew grid animates in"/>
+<marker start="1097100/3000s" duration="100/3000s" value="Starter Kit / newsletter link card + QR code (TV viewers cannot click)"/>
+<marker start="1112100/3000s" duration="100/3000s" value="Comment prompt on screen, one-word reply ask"/>
+<marker start="1126400/3000s" duration="100/3000s" value="Last line to camera, music resolves, hold 1s"/>
+<marker start="1136400/3000s" duration="100/3000s" value="SIGN-OFF (blank: your rule is real name, hero name, 'if you're nasty'), then end screen on your next video" completed="0"/>
+</gap>
+</spine></sequence></project></event></library></fcpxml>
