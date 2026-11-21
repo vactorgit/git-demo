@@ -322,6 +322,8 @@ Never guess what the channel covers from its name. If something isn't listed her
 
 **Decisions made:** the "TCC Daily Pick (evening, for tomorrow)" scheduled task (trig_01J1JhQRgbGb3ToJDA5WjqpY) was DELETED by the user's request on 18 Nov; it had been failing with ACCESS_DENIED since 30 Oct. Packages are built on request in a session, no automatic nightly run. Review gate stays. Brand = the researcher (13 Nov). Friday Static Short passed review v2 (13 Nov). Think Media four formats logged (17 Nov).
 
+**Status 21 Nov 2026 (vidIQ):** Doom posted 19 Nov (635 views at about 2 days); Milestone NOT posted, review run 21 Nov = needs revision; no Cyclops or Static Short found among posts since 11 Nov. Big Shorts since 14 Nov: Animalia ("The X-Men's Newest Mutant Can NEVER Turn Human Again") 196K views and 8.2K likes, Colossus secret 37K, Cannon Foot/Daken 31.8K. About 8 free-edit movie long-forms posted or scheduled 12 to 30 Nov (over the 1 to 2 a week cap), each 250 to 980 views; also GTA 6 comic experiments (Shorts 0.7K to 1.2K, long-form 250).
+
 **Open items:**
 1. Were Doom and Milestone long-forms recorded and posted on Sat 14 Nov? UNKNOWN; ask. If posted, check Doom at 72 hours (under about 3K views = no more Doom long-forms) and Milestone.
 2. Wolverine's-kids long-form (proposed Sat 21 Nov, reshaped as "I read the Wolverine kids comics, which are worth it"): needs his yes and which Wolverine books he has read. Cyclops v4 must go up before Doomsday (18 Dec) and still needs a full script-review.

@@ -1,4 +1,4 @@
-# Week plan: 9 to 15 Nov 2026 (source of truth for "what do I film next")
+# Week plan: from 9 Nov 2026, updated 21 Nov (source of truth for "what do I film next")
 
 **Review gate (user rule, 9 Nov 2026): nothing is cleared to post unless it passes the Paddy Galloway and YouTube review (script-review skill, fresh sources searched in the current session) AND the two-source fact check.** Stages per video: (1) facts double-sourced, (2) review passed, (3) your blanks filled in your own words, (4) cleared to post.
 
@@ -7,8 +7,8 @@
 | Mon 9 to Tue 10 | Short: 4 Kids Walk Into a Bank | four-kids-bank-short-package.md | Done 9 Nov | PASSED 9 Nov | done | DONE (recorded by the user 10 Nov); log views and viewed vs swiped away at 48 to 72 hours |
 | Thu 12 | Short: Cyclops and Mister Sinister | week-shorts-thu-fri-package.md | Done 10 Nov | PASSED 10 Nov (v2) | read, pick, verdict | NEXT TO RECORD, ready once your blanks are in |
 | Fri 13 | Short: Static and Milestone | week-shorts-thu-fri-package.md | Done 9 Nov | PASSED 13 Nov (v2) | receipt (Static Year One), read | READY once your receipt is in |
-| Sat 14 | Long-form: Doom origin (record) | doom-origin-longform-package.md | Done 5 Nov | Final version needs a full re-review (v2 was reviewed 5 Nov, v3 was not) | many, see file | NOT CLEARED until re-reviewed |
-| Sat 14 | Long-form: Milestone and Dakota City (record) | milestone-midtier-longform-package.md | Done 9 Nov | Run Fri 13 | receipt, beat, thesis, pick, verdict | NOT CLEARED until reviewed |
+| Sat 14 | Long-form: Doom origin | doom-origin-longform-package.md | Done 5 Nov | v3 not re-reviewed | filled | POSTED 19 Nov as "Doctor Doom's Origin: His Scar Was Tiny. He Did the Rest" (7:24); 635 views at about 2 days; 72-hour check Sun 22 Nov (under 3K = no more Doom long-forms); email tag removed 21 Nov |
+| NEXT | Long-form: Milestone and Dakota City (promised to @angelkingsley5299) | milestone-midtier-longform-package.md | Re-checked 21 Nov: 4 lines to fix or cut | Review run 21 Nov: NEEDS REVISION (hook says three founders, body names four; too short at about 3:26; title fails stranger test) | receipt, beat, thesis, pick, verdict | NOT CLEARED; v2 on request |
 | Sun 15 | Post Doom | | | | | check at 72 hours Wed 18 (under 3K views = no more Doom long-forms) |
 | Wed 18 | Post Milestone | | | | | check at 72 hours Sat 21 |
 | Sat 21 (proposed) | Long-form: Wolverine's kids, Worth It? verdicts (proposed 12 Nov, not yet approved) | to be written | Not started | Not run | you must read the key books first | PROPOSED, needs your yes |
